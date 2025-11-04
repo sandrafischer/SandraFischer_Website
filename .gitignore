@@ -1,0 +1,28 @@
+# Exclude the JetBrains PhpStorm project directory from version control
+.idea/
+
+# Exclude Visual Studio directory
+.vscode/
+
+# Local history for Visual Studio Code
+.history/
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+._*
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
