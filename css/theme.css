@@ -1,0 +1,8 @@
+section {
+    background-color: lightgrey;
+    border-radius: 1rem;
+}
+
+section:nth-child(2n) {
+    background-color: antiquewhite;
+}

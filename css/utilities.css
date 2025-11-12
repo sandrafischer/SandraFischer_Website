@@ -1,0 +1,8 @@
+/*Klasse, die ich immer anwenden kann, wenn ich den Text zentriert will*/
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,26 @@
+body {
+    font-family: system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;     /*Text in Mitte*/
+    font-weight: 700;       /*Schriftstärke*/
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+p {
+    text-align: center;
+}
+
+/*Klassen*/
+.main-title,
+.tagline {
+    color: azure;
+}

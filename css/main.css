@@ -1,0 +1,7 @@
+@layer base, theme, component, utilities;
+
+/* machen beide Schreibweisen das gleiche */
+@import "base.css" layer(base);
+@import "theme.css" layer(theme);
+@import url("components.css") layer(components);
+@import url("utilities.css") layer(utilities);
