@@ -6,3 +6,8 @@ section {
 section:nth-child(2n) {
     background-color: antiquewhite;
 }
+
+.topbar {
+    background-color: rgb(32 32 32 / 0.7);  /* Dunkelgrauer Hintergrund mit Transparenz */
+    border-radius: 1rem 1rem 0 0;
+}

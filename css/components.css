@@ -2,7 +2,43 @@ header {
     /*background-image: url("../images/background.jpg");*/
     /*background-color: rgb(24 24 24);*/
     background-color: darkturquoise;
-    background-size: cover;         /*Hintergrund-Bild Größe*/
-    background-position: center;    /*Hintergrund-Bild Position*/
-    border-radius: 1rem;            /*Ecken abrunden*/
+    background-size: cover;         /* Hintergrund-Bild Größe */
+    background-position: center;    /* Hintergrund-Bild Position */
+    border-radius: 1rem;            /* Ecken abrunden */
+    height: calc(100vh - 2rem);     /* so groß wie Desktop Startseite (minus den margin) */
+    margin: 1rem;                   /* weiße Ränder rundherum */
+    width: calc(100% - 2rem);       /* so breit wie Desktop Startseite (minus den margin) */
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 73rem;                  /* Breite des Containers 73 * 16px = 1168px */
+    margin: 0 auto;                /* zentriert den Container automatisch horizontal */
+    height: 100%;
+}
+
+nav ul li {
+    display: inline-block;      /* Listenelemente nebeneinander */
+    margin-right: 2rem;         /* Abstand zwischen den Listenelementen */
+}
+
+.topbar .logo {
+    float: left;
+}
+
+.topbar nav {
+    float: right;
+}
+
+.topbar{
+    overflow: auto;             /* Damit der Container die Höhe der gefloateten Elemente annimmt (Hintergrundfarbe) */
+}
+
+@media screen and (max-width: 75rem) {  /* 75rem = 1200px */
+    .container {
+        width: 100%;            /* Container nimmt die volle Breite vom Browserfenster ein */
+    }
 }
