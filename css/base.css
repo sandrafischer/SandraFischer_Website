@@ -1,10 +1,31 @@
-body {
-    font-family: system-ui, sans-serif;
+@font-face {
+    font-family: 'Momo Trust Display';
+    src: url('../fonts/MomoTrustDisplay-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
-h1, h2, h3 {
-    text-align: center;     /*Text in Mitte*/
-    font-weight: 700;       /*Schriftstärke*/
+@font-face {
+    font-family: 'Google Sans Flex';
+    src: url('../fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf') format('truetype');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Google Sans Flex", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Momo Trust Display", system-ui, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: var(--space-md);
 }
 
 h1 {
@@ -16,11 +37,17 @@ h2 {
 }
 
 p {
-    text-align: center;
+    text-align: left;
+}
+
+.subheadline{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--secondary-pink-500);
 }
 
 /*Klassen*/
 .main-title,
 .tagline {
-    color: azure;
+    /*color: azure;*/
 }

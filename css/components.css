@@ -1,14 +1,13 @@
 header {
-    /*background-image: url("../images/background.jpg");*/
-    /*background-color: rgb(24 24 24);*/
-    background-color: darkturquoise;
-    background-size: cover;         /* Hintergrund-Bild Größe */
-    background-position: center;    /* Hintergrund-Bild Position */
-    border-radius: 1rem;            /* Ecken abrunden */
-    height: calc(100vh - 2rem);     /* so groß wie Desktop Startseite (minus den margin) */
-    margin: 1rem;                   /* weiße Ränder rundherum */
-    width: calc(100% - 2rem);       /* so breit wie Desktop Startseite (minus den margin) */
-}
+    /*background-image: url("../images/background.jpg");
+    /*background-color: rgb(24 24 24);
+    background-size: cover;         /* Hintergrund-Bild Größe
+    background-position: center;    /* Hintergrund-Bild Position
+    border-radius: 1rem;            /* Ecken abrunden
+    height: calc(100vh - 2rem);     /* so groß wie Desktop Startseite (minus den margin)
+    margin: 1rem;                   /* weiße Ränder rundherum
+    width: calc(100% - 2rem);       /* so breit wie Desktop Startseite (minus den margin)
+}*/
 
 body {
     margin: 0;
@@ -25,20 +24,182 @@ nav ul li {
     margin-right: 2rem;         /* Abstand zwischen den Listenelementen */
 }
 
-.topbar .logo {
-    float: left;
-}
-
-.topbar nav {
-    float: right;
-}
-
-.topbar{
-    overflow: auto;             /* Damit der Container die Höhe der gefloateten Elemente annimmt (Hintergrundfarbe) */
-}
-
 @media screen and (max-width: 75rem) {  /* 75rem = 1200px */
     .container {
         width: 100%;            /* Container nimmt die volle Breite vom Browserfenster ein */
     }
+}
+
+/* Topbar-Styling  */
+.topbar {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+    margin: 0 0 var(--space-xs);
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;  /* Behält das Seitenverhältnis bei */
+    display: block;
+    padding: 0 var(--space-lg);
+}
+
+
+nav ul {
+    list-style: none; /* Keine Bullet-Points */
+    display: flex;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    font-family: 'Google Sans Flex', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:link, nav a:visited {
+    color: var(--neutral-dark);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Weicher Übergang */
+}
+
+nav a:hover, nav a:active {
+    color: var(--secondary-pink-500);
+}
+
+
+/* Button-Styling  */
+.btn {
+    padding: 12px 32px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--secondary-pink-500);
+    color: var(--neutral-light);
+    border: none;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-pink-400);}
+}
+
+.btn-secondary {
+    background-color: var(--neutral-light);
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+}
+.btn-secondary:hover{
+    background-color: var(--accent-blue);
+    color: var(--neutral-light);
+}
+
+
+/* Kontaktbereich */
+.contact-subheadline {
+    color: var(--primary-teal-500);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl); /* Großer Abstand zwischen Mail und Tel */
+    margin-top: var(--space-xl);
+}
+
+.info-item strong {
+    display: block;
+    font-family: 'Google Sans Flex', sans-serif; /
+    margin-bottom: var(--space-xs);
+}
+
+.info-item a {
+    color: #1E1E1E;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.info-item a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    background-color: var(--primary-teal-500); /* Gleicher Teal-Ton wie CTA */
+    color: white;
+    padding: var(--space-xl) 0; /* 60px Padding oben/unten */
+    position: relative;
+}
+
+/* Footer */
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-xl);
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.footer-nav a {
+    color: var(--neutral-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/* vertikale Trennlinie */
+.footer-divider {
+    width: 2px;
+    height: 150px;
+    background-color: var(--neutral-light);
+}
+
+/* Rechte Seite: Adressdaten */
+.footer-contact {
+    font-family: 'Google Sans Flex', sans-serif;
+    line-height: 1.6;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: var(--space-md);
+}
+
+.footer-contact a {
+    color: var(--neutral-light);
+    text-decoration: none;
+}
+
+.back-to-top {
+    position: absolute;
+    top: var(--space-md);
+    right: 96px;
+}
+
+.back-to-top img {
+    width: 24px;
+    transition: transform 0.3s;
+}
+
+.back-to-top:hover img {
+    transform: translateY(-5px);
 }

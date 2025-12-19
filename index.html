@@ -2,73 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sandra Fischer | Portfolio</title>
     <meta name="author" content="Sandra Fischer">
     <meta name="description" content="Personal portfolio of Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design -->
-
-    <!-- Stylesheet einbinden -->
+    <title>Sandra Fischer | Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header id="home">
+<header>
+
+    <!--navigation-->
+    <div class="topbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Personal logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!--hero section-->
     <div class="container">
-        <div class="topbar">
-            <div class="logo">
-                <img src="images/logo.svg" alt="Personal logo"><nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li> <!--projects.html-->
-                    <li><a href="#aboutme">About me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div id="home" class="hero-content grid-2-col">
+
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <p class="subheadline">Hi, I'm Sandra Fischer</p>
+                <h1>a Mediatechnology and <br>
+                    -design Student</h1>
+                <p class="hero-description"> Transforming concepts into thoughtful visuals —
+                    combining design, technology, and interaction to create work that engages and inspires.</p>
+                <!-- Buttons -->
+                <div>
+                    <a href="#aboutme" class="btn btn-primary">about me</a>
+                    <a href="#contact" class="btn btn-secondary">contact</a>
+                </div>
+            </div>
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="images/hero-avatar.jpg" alt="Portrait of Sandra Fischer">
             </div>
         </div>
-
-        <hgroup>
-            <h1 class="main-title">Sandra Fischer</h1>
-            <p class="tagline">Portfolio</p>
-        </hgroup>
-
-        <div>
-            <a href="#welcome">
-                <img src="" alt="A downward arrow leading down">
-            </a>
-        </div>
     </div>
+
 </header>
 
 <main>
+
     <!--projects-->
-    <section id="projects">
-        <h2>Hello, I'm Sandra</h2>
-        <p>Lorem ipsum dolor sit amet</p>
-        <div>
-            <a href="#home">
-                <img src="" alt="Arrow up to top of the page">
-            </a>
+    <section id="projects" class="container">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-gallery">
+                <div class="project-item"><img src="images/projects/project-picture10.jpg" alt="Project 1"></div>
+                <div class="project-item"><img src="images/projects/project-picture6.jpg" alt="Project 2"></div>
+                <div class="project-item"><img src="images/projects/project-picture4.jpg" alt="Project 3"></div>
+                <div class="project-item"><img src="images/projects/project-picture3.jpg" alt="Project 4"></div>
+                <div class="project-item"><img src="images/projects/project-picture5.jpg" alt="Project 5"></div>
+                <div class="project-item"><img src="images/projects/project-picture7.jpg" alt="Project 6"></div>
+                <div class="project-item"><img src="images/projects/project-picture2.jpg" alt="Project 7"></div>
+                <div class="project-item"><img src="images/projects/project-picture8.jpg" alt="Project 8"></div>
+            </div>
+            <div class="text-center"><br>
+                <a href="#projects" class="btn btn-primary">see more</a>
+            </div>
         </div>
     </section>
 
-    <!--projects-->
-    <section>
-        <h2>second section</h2>
-        <p>Lorem ipsum dolor sit amet</p>
-        <div>
-            <a href="#home">
-                <img src="" alt="Arrow up to top of the page">
-            </a>
-        </div>
-    </section>
-
-    <!--aboutme-->
-    <section id="aboutme">
-    </section>
-
-    <!--contacts-->
+    <!--contact me - call to action-->
     <section id="contact">
+        <div>
+            <h2 class="text-center">You have a question?</h2>
+            <p class="contact-subheadline">Don't hesitate to contact me by sending an email or just call me!</p>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <strong>e-mail adress:</strong>
+                    <a href="mailto:sandrafischer2904@gmail.com">sandra@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <strong>phone number:</strong>
+                    <a href="tel:+43123412345678">+43 1234 12345678</a>
+                </div>
+            </div>
+
+            <form action="mailto:sandra@gmail.com" method="post" class="contact-form">
+            </form>
+        </div>
     </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container footer-wrapper">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-contact">
+                <address><br>
+                    Musterstraße 1<br>
+                    A-1234 Musterstadt
+                </address>
+                <div class="footer-links">
+                    <a href="mailto:sandra@gmail.com">sandra@gmail.com</a><br>
+                    <a href="tel:+43234512345678">+43 2345 12345678</a>
+                </div>
+            </div>
+
+            <a href="#home" class="back-to-top">
+                <img src="images/arrow-top.svg" alt="Back to top">
+            </a>
+        </div>
+    </footer>
+
+
 </main>
 </body>
 </html>
