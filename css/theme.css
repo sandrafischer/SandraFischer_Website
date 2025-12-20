@@ -1,5 +1,4 @@
 :root {
-    /* Colors aus Figma */
     --primary-teal-500: #0C847F;
     --primary-teal-100: #C2E0DF;
     --secondary-pink-500: #D1396E;
@@ -8,21 +7,12 @@
     --neutral-dark: #1E1E1E;
     --neutral-light: #F9F9F9;
 
-    /* Spacing aus der Variable-Tabelle */
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 24px;
     --space-lg: 32px;
     --space-xl: 48px;
 }
-
-/*section {
-    border-radius: 1rem;
-}
-
-section:nth-child(2n) {
-    background-color: antiquewhite;
-}*/
 
 .topbar {
     background-color: var(--primary-teal-100);

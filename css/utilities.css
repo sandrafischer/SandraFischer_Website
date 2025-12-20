@@ -26,49 +26,6 @@
     .grid-2-col { grid-template-columns: 1fr; } /* Mobile View */
 }
 
-.project-gallery {
-    display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 gleich breite Spalten */
-    grid-auto-rows: 300px;
-    gap: var(--space-md);
-    margin-top: var(--space-xl);
-}
-
-.project-item {
-    overflow: hidden;
-    border-radius: var(--space-md);
-}
-
-.project-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Responsive: Auf dem Handy nur 1 Spalte */
-@media (max-width: 768px) {
-    .project-gallery {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 250px;
-    }
-}
-
-
-/* Footer-Responsive */
-@media (max-width: 768px) {
-    .footer-wrapper {
-        flex-direction: column; /* Stapeln */
-        align-items: center;
-        text-align: center;
-        gap: var(--space-xl);
-    }
-
-    .footer-nav ul { text-align: center; }
-    .footer-divider { display: none; } /* Linie weg auf Mobile */
-    .back-to-top { right: var(--space-md); }
-}
-
 /* Container für die Skills */
 .skills-grid {
     display: grid;
@@ -99,4 +56,68 @@
 .skill-item span {
     font-family: 'Google Sans Flex', sans-serif;
     font-weight: 500;
+}
+
+/* Projekte */
+.project-gallery {
+    display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 gleich breite Spalten */
+    grid-auto-rows: auto;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    width: 100%;
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-text{
+    margin-left: var(--space-sm);
+}
+
+.project-text p {
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+.project-text h3 {
+    margin-bottom: 0;
+}
+
+/* Responsive: Auf dem Handy nur 1 Spalte */
+@media (max-width: 768px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+}
+
+
+/* Footer-Responsive */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column; /* Stapeln */
+        align-items: center;
+        text-align: center;
+        gap: var(--space-xl);
+    }
+
+    .footer-nav ul { text-align: center; }
+    .footer-divider { display: none; } /* Linie weg auf Mobile */
+    .back-to-top { right: var(--space-md); }
 }
