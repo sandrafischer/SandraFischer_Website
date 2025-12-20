@@ -13,12 +13,6 @@ body {
     margin: 0;
 }
 
-.container {
-    width: 73rem;                  /* Breite des Containers 73 * 16px = 1168px */
-    margin: 0 auto;                /* zentriert den Container automatisch horizontal */
-    height: 100%;
-}
-
 nav ul li {
     display: inline-block;      /* Listenelemente nebeneinander */
     margin-right: 2rem;         /* Abstand zwischen den Listenelementen */
@@ -75,6 +69,7 @@ nav a:link, nav a:visited {
 nav a:hover, nav a:active {
     color: var(--secondary-pink-500);
 }
+}
 
 
 /* Button-Styling  */
@@ -89,10 +84,11 @@ nav a:hover, nav a:active {
 .btn-primary {
     background-color: var(--secondary-pink-500);
     color: var(--neutral-light);
-    border: none;
+    border: 2px solid var(--secondary-pink-500);
 }
 .btn-primary:hover {
-    background-color: var(--secondary-pink-400);}
+    background-color: var(--secondary-pink-400);
+    border: 2px solid var(--secondary-pink-400);
 }
 
 .btn-secondary {
@@ -105,6 +101,14 @@ nav a:hover, nav a:active {
     color: var(--neutral-light);
 }
 
+/* Skills-Bereich */
+.skills-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
 
 /* Kontaktbereich */
 .contact-subheadline {
@@ -137,19 +141,19 @@ nav a:hover, nav a:active {
     opacity: 0.7;
 }
 
+/* Footer */
 footer {
-    background-color: var(--primary-teal-500); /* Gleicher Teal-Ton wie CTA */
-    color: white;
-    padding: var(--space-xl) 0; /* 60px Padding oben/unten */
+    background-color: var(--primary-teal-500);
+    color: var(--neutral-light);
+    padding: var(--space-xl) 0;
     position: relative;
 }
 
-/* Footer */
 .footer-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--space-xl);
+    gap: 200px;
 }
 
 .footer-nav ul {
@@ -168,7 +172,8 @@ footer {
 
 /* vertikale Trennlinie */
 .footer-divider {
-    width: 2px;
+    margin-top: var(--space-sm);
+    width: 1px;
     height: 150px;
     background-color: var(--neutral-light);
 }
@@ -191,7 +196,7 @@ address {
 
 .back-to-top {
     position: absolute;
-    top: var(--space-md);
+    top: var(--space-lg);
     right: 96px;
 }
 

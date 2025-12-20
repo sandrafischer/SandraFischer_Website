@@ -8,9 +8,10 @@
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 73rem;
     margin: 0 auto;
     padding: 0 96px;
+    margin-bottom: var(--space-xl);
 }
 
 /* Grid für die Hero-Section */
@@ -68,3 +69,34 @@
     .back-to-top { right: var(--space-md); }
 }
 
+/* Container für die Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsives Raster */
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+/* Einzelnes Skill-Element */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+    transform: scale(1.1); /* Kleiner Interaktionseffekt */
+}
+
+.skill-item span {
+    font-family: 'Google Sans Flex', sans-serif;
+    font-weight: 500;
+}

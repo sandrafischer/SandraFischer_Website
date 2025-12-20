@@ -45,9 +45,3 @@ p {
     text-transform: uppercase;
     color: var(--secondary-pink-500);
 }
-
-/*Klassen*/
-.main-title,
-.tagline {
-    /*color: azure;*/
-}

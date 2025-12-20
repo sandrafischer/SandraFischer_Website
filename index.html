@@ -12,9 +12,9 @@
 <header>
 
     <!--navigation-->
-    <div class="topbar">
+    <div class="topbar" id="home">
         <div class="logo">
-            <img src="images/logo.png" alt="Personal logo">
+            <a href="#home"><img src="images/logo.png" alt="Personal logo"></a>
         </div>
         <nav>
             <ul>
@@ -29,7 +29,7 @@
 
     <!--hero section-->
     <div class="container">
-        <div id="home" class="hero-content grid-2-col">
+        <div class="hero-content grid-2-col">
 
             <!-- Hero Text -->
             <div class="hero-text">
@@ -40,8 +40,8 @@
                     combining design, technology, and interaction to create work that engages and inspires.</p>
                 <!-- Buttons -->
                 <div>
-                    <a href="#aboutme" class="btn btn-primary">about me</a>
-                    <a href="#contact" class="btn btn-secondary">contact</a>
+                    <a href="#projects" class="btn btn-primary">projects</a>
+                    <a href="#contact" class="btn btn-secondary">contact me</a>
                 </div>
             </div>
             <!-- Hero Image -->
@@ -55,8 +55,51 @@
 
 <main>
 
+    <!--about me-->
+    <section id="aboutme">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm Sandra, a passionate Mediatechnology and -design student with a keen eye for detail and a love for creativity. My journey in the world of design and technology has been fueled by my desire to create meaningful and engaging experiences.</p>
+                <p>With a strong foundation in both design principles and technical skills, I strive to bridge the gap between aesthetics and functionality. I enjoy working on diverse projects that challenge me to think outside the box and push the boundaries of conventional design.</p>
+                <p>When I'm not immersed in my studies or working on projects, I love exploring new technologies, attending design workshops, and collaborating with fellow creatives. I'm always eager to learn and grow in this ever-evolving field.</p>
+                <p>Feel free to explore my portfolio and reach out if you'd like to connect or collaborate!</p>
+
+                <h3>My Skills</h3>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="images/icons/graphic.svg" alt="Icon Graphic Design">
+                        <span>Graphic Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/icons/web.svg" alt="Icon Web Development">
+                        <span>Web Development</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/icons/uiux.svg" alt="Icon UI/UX Design">
+                        <span>UI/UX Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/icons/folder.svg" alt="Icon Adobe Suite">
+                        <span>Adobe Creative Suite</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/icons/3d.svg" alt="Icon 3D Modeling">
+                        <span>3D Modeling</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/icons/film.svg" alt="Icon Video Editing">
+                        <span>Video Editing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!--projects-->
-    <section id="projects" class="container">
+    <section id="projects">
         <div class="container">
             <h2>My Projects</h2>
             <div class="project-gallery">
@@ -75,9 +118,10 @@
         </div>
     </section>
 
+
     <!--contact me - call to action-->
     <section id="contact">
-        <div>
+        <div class="container">
             <h2 class="text-center">You have a question?</h2>
             <p class="contact-subheadline">Don't hesitate to contact me by sending an email or just call me!</p>
 
@@ -99,7 +143,7 @@
 
     <!--footer-->
     <footer>
-        <div class="container footer-wrapper">
+        <div class="footer-wrapper">
             <div class="footer-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -122,6 +166,7 @@
                 </div>
             </div>
 
+            <!-- Back to top arrow -->
             <a href="#home" class="back-to-top">
                 <img src="images/arrow-top.svg" alt="Back to top">
             </a>
