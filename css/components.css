@@ -111,34 +111,57 @@ nav a:hover, nav a:active {
 }
 
 /* Kontaktbereich */
+#contact {
+    padding: var(--space-xl) 0;
+}
+
 .contact-subheadline {
     color: var(--primary-teal-500);
     margin-bottom: var(--space-xl);
     text-align: center;
 }
 
-.contact-info {
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: 800px; /* Formular nicht zu breit machen */
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-xs);
+    text-align: center;
+}
+
+.form-group label {
+    font-family: 'Google Sans Flex', sans-serif;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: var(--space-sm);
+    border: 2px solid var(--primary-teal-100);
+    border-radius: 25px;
+    font-family: 'Google Sans Flex', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-buttons {
     display: flex;
     justify-content: center;
-    gap: 150px;
-    margin-top: var(--space-xl);
-}
-
-.info-item strong {
-    display: block;
-    font-family: 'Google Sans Flex', sans-serif; /
-    margin-bottom: var(--space-xs);
-    font-size: 1.1rem;
-}
-
-.info-item a {
-    color: var(--neutral-dark);
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.info-item a:hover {
-    opacity: 0.7;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
 }
 
 /* Footer */
@@ -178,7 +201,6 @@ footer {
     background-color: var(--neutral-light);
 }
 
-/* Rechte Seite: Adressdaten */
 .footer-contact {
     font-family: 'Google Sans Flex', sans-serif;
     line-height: 1.6;
