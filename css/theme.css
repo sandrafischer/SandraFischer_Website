@@ -1,3 +1,4 @@
+/* Color and spacing definitions */
 :root {
     --primary-teal-500: #0C847F;
     --primary-teal-100: #C2E0DF;
@@ -12,8 +13,4 @@
     --space-md: 24px;
     --space-lg: 32px;
     --space-xl: 48px;
-}
-
-.topbar {
-    background-color: var(--primary-teal-100);
 }

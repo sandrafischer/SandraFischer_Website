@@ -1,3 +1,4 @@
+/* Font Definitions */
 @font-face {
     font-family: 'Momo Trust Display';
     src: url('../fonts/MomoTrustDisplay-Regular.ttf') format('truetype');
@@ -14,22 +15,23 @@
     font-display: swap;
 }
 
+/* Global resets and typography */
 body {
     font-family: "Google Sans Flex", system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    text-align: left;
+    color: var(--neutral-dark);
+    margin: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-family: "Momo Trust Display", system-ui, sans-serif;
-    font-weight: 700;
-    text-align: left;
     margin-bottom: var(--space-md);
 }
 
 h1 {
-    font-size: 2.75rem;
+    word-wrap: break-word;
+    font-size: clamp(2rem, 8vw, 2.9rem); /* Responsive font-size */
 }
 
 h2 {
@@ -37,11 +39,16 @@ h2 {
 }
 
 p {
-    text-align: left;
+    font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
+/* Utility Classes */
 .subheadline{
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 4vw, 1.25rem);
     text-transform: uppercase;
     color: var(--secondary-pink-500);
+}
+
+.text-center {
+    text-align: center;
 }
