@@ -24,24 +24,6 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .topbar {
-        flex-direction: column;
-        height: auto;
-        padding: var(--space-md);
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo img {
-        padding: 0;
-        margin-bottom: var(--space-md);
-    }
-}
-
 
 /* Topbar-Styling  */
 .topbar {
@@ -87,6 +69,33 @@ nav a:link, nav a:visited {
 
 nav a:hover, nav a:active {
     color: var(--secondary-pink-500);
+}
+@media screen and (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        height: auto;
+        padding: var(--space-md);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .topbar nav ul li {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+        padding: 0;
+        margin: 0 auto var(--space-md) auto;
+        display: block;
+    }
 }
 
 
