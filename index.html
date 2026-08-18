@@ -123,6 +123,101 @@
         </div>
     </section>
 
+
+    <!-- Featured Work Section -->
+    <section id="projects" class="work-section">
+        <div class="container">
+
+            <!-- Header mit Überschrift & Filter-Pills -->
+            <div class="work-header">
+                <h2 class="work-title">Featured Work</h2>
+
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All Works</button>
+                    <button class="filter-btn" data-filter="digital">Digital & Web</button>
+                    <button class="filter-btn" data-filter="brand">Brand & Print</button>
+                    <button class="filter-btn" data-filter="photo">Photography</button>
+                </div>
+            </div>
+
+            <!-- Asymmetrisches Projekt-Grid -->
+            <div class="work-grid" id="workGrid">
+
+                <!-- Projekt 1 (Breit) -->
+                <a href="project-verd.html" class="work-card span-7" data-category="digital">
+                    <div class="work-card-img">
+                        <img src="images/hero-avatar.jpg" alt="Verd Digital Platform">
+                    </div>
+                    <div class="work-card-content">
+                        <div class="work-meta">
+                            <span class="work-tag">WEB DESIGN & DEV</span>
+                            <span class="work-year">2026</span>
+                        </div>
+                        <div class="work-footer">
+                            <h3 class="work-name">Verd Digital Platform</h3>
+                            <span class="work-arrow">↗</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Projekt 2 (Kompakt) -->
+                <a href="project-atelier.html" class="work-card span-5" data-category="brand">
+                    <div class="work-card-img">
+                        <img src="images/projects/project-picture4.jpg" alt="Atelier Brûlé Identity">
+                    </div>
+                    <div class="work-card-content">
+                        <div class="work-meta">
+                            <span class="work-tag">CORPORATE IDENTITY</span>
+                            <span class="work-year">2025</span>
+                        </div>
+                        <div class="work-footer">
+                            <h3 class="work-name">Atelier Brûlé Identity</h3>
+                            <span class="work-arrow">↗</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Projekt 3 (Kompakt Portrait) -->
+                <a href="project-portrait.html" class="work-card span-5" data-category="photo">
+                    <div class="work-card-img">
+                        <img src="images/projects/project-picture2.jpg" alt="Editorial Fashion Portrait">
+                    </div>
+                    <div class="work-card-content">
+                        <div class="work-meta">
+                            <span class="work-tag">PHOTOGRAPHY</span>
+                            <span class="work-year">2026</span>
+                        </div>
+                        <div class="work-footer">
+                            <h3 class="work-name">Editorial Portrait Series</h3>
+                            <span class="work-arrow">↗</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Projekt 4 (Breit) -->
+                <a href="project-editorial.html" class="work-card span-7" data-category="brand">
+                    <div class="work-card-img">
+                        <img src="images/projects/project-picture5.jpg" alt="Print Magazine Editorial">
+                    </div>
+                    <div class="work-card-content">
+                        <div class="work-meta">
+                            <span class="work-tag">EDITORIAL DESIGN</span>
+                            <span class="work-year">2025</span>
+                        </div>
+                        <div class="work-footer">
+                            <h3 class="work-name">Manifesto Print Publication</h3>
+                            <span class="work-arrow">↗</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!--about me-->
     <section id="aboutme">
         <div class="container">
@@ -312,6 +407,30 @@
         link.addEventListener('click', () => {
             menuToggle.classList.remove('is-active');
             mainNav.classList.remove('is-open');
+        });
+    });
+
+    // Filter-Funktion für Featured Work
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const workCards = document.querySelectorAll('.work-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Aktiven Button hervorheben
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            workCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.classList.remove('is-hidden');
+                } else {
+                    card.classList.add('is-hidden');
+                }
+            });
         });
     });
 </script>

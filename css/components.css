@@ -18,15 +18,14 @@ header {
     box-sizing: border-box;
 
     /* --- Frosted Glass Effekt --- */
-    background-color: rgba(248, 246, 241, 0.75); /* Leicht transparente Hintergrundfarbe (75% Deckkraft) */
-    backdrop-filter: blur(12px);                 /* Weichzeichner für den Hintergrund darunter */
-    -webkit-backdrop-filter: blur(12px);         /* Safari Support */
+    background-color: rgba(248, 246, 241, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    border: 1.5px solid rgba(229, 225, 216, 0.8); /* Leicht transparenter Rand */
+    border: 1.5px solid #DCD6CA;
     border-radius: 999px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);   /* Weicherer Schatten */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 }
-
 
 /* 1. Logo & Name links */
 .logo-area {
@@ -44,7 +43,7 @@ header {
 
 /* Styling für dein Logo-Bild */
 .nav-logo {
-    width: 44px;      /* Gleiche Größe wie der bisherige Kreis */
+    width: 44px;
     height: 44px;
     object-fit: contain;
     display: block;
@@ -66,7 +65,6 @@ header {
     font-size: 0.8rem;
     color: #757575;
 }
-
 
 /* 2. Mittlere Menü-Links */
 .topbar nav {
@@ -194,7 +192,6 @@ nav a:hover, nav a:active {
     color: var(--neutral-light);
 }
 
-
 /* Form-Styling */
 .contact-subheadline {
     color: var(--primary-teal-500);
@@ -234,7 +231,6 @@ nav a:hover, nav a:active {
     border-radius: 25px;
     transition: border-color 0.3s ease;
 }
-
 
 /* Footer-Styling */
 footer {
@@ -309,7 +305,8 @@ address {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: var(--color-bg-card);
+    background-color: #ECE7DE;
+    border: 1px solid #DCD6CA;
     padding: 6px 14px;
     border-radius: 999px;
     font-size: 0.82rem;
@@ -375,7 +372,7 @@ address {
 
 .btn-hero-secondary:hover {
     background-color: var(--color-text-dark);
-    color: var(--color-bg-paper);
+    color: #F6F4EF;
 }
 
 /* --- Bild-Collage Styling --- */
@@ -390,7 +387,7 @@ address {
     position: relative;
     width: 100%;
     max-width: 540px;
-    height: 560px; /* Mehr Höhe, damit sich nichts erdrückt */
+    height: 560px;
 }
 
 /* 1. Browser-Fenster im Hintergrund */
@@ -444,13 +441,14 @@ address {
     display: block;
 }
 
-/* 2. Photography Card (links unten im Polaroid-Look) */
+/* 2. Photography Card (links unten) */
 .card-photo {
     position: absolute;
     top: 260px;
-    left: -15px; /* Weiter nach links geschoben */
+    left: -15px;
     width: 44%;
-    background-color: white;
+    background-color: #ECE7DE;
+    border: 1.5px solid #DCD6CA;
     border-radius: 22px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
@@ -473,24 +471,25 @@ address {
 
 .photo-badge {
     display: block;
-    padding: 10px 4px 0 4px;
+    padding: 10px 4px 4px 8px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: var(--color-eucalyptus);
 }
 
-/* 3. Branding Card (rechts schwebend, bündiges Bild & Inspo-Neigung) */
+/* 3. Branding Card (rechts schwebend) */
 .card-brand {
     position: absolute;
     top: 140px;
-    right: -70px; /* Weiter nach rechts gerückt */
+    right: -70px;
     width: 62%;
     background-color: #FFFFFF;
+    border: 1.5px solid #DCD6CA;
     border-radius: 22px;
-    overflow: hidden; /* Sorgt dafür, dass das Bild oben bündig an den Ecken anliegt */
+    overflow: hidden;
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.22);
-    transform: rotate(-5deg); /* Neigung nach links wie in der Inspiration */
+    transform: rotate(-5deg);
     z-index: 3;
 }
 
@@ -523,4 +522,177 @@ address {
     margin: 4px 0 0 0;
     font-size: 0.85rem;
     color: #7A7874;
+}
+
+/* --- Featured Work Styling --- */
+.work-section {
+    padding: 3rem 0 6rem 0;
+}
+
+/* Header & Filter Buttons */
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.work-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0;
+    letter-spacing: -0.02em;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #ECE7DE; /* Fill ECE7DE */
+    border: 1px solid #DCD6CA;   /* Stroke DCD6CA */
+    color: var(--color-text-dark);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.filter-btn:hover {
+    background-color: #E2DDD3;
+    border-color: #D0C9BC;
+}
+
+.filter-btn.active {
+    background-color: var(--color-petrol);
+    border-color: var(--color-petrol);
+    color: #ffffff;
+}
+
+/* Grid & Cards */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.work-card {
+    text-decoration: none;
+    background-color: #ECE7DE; /* Fill ECE7DE */
+    border: 1.5px solid #DCD6CA; /* Stroke DCD6CA */
+    border-radius: 28px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    border-color: #CEC7B9;
+    box-shadow: 0 16px 36px rgba(24, 23, 22, 0.08);
+}
+
+/* Asymmetrische Spaltenbreiten */
+.work-card.span-7 { grid-column: span 7; }
+.work-card.span-5 { grid-column: span 5; }
+
+/* Filter-Ausblendung */
+.work-card.is-hidden {
+    display: none;
+}
+
+/* Card Image */
+.work-card-img {
+    width: 100%;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ded8cd;
+}
+
+.work-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.work-card:hover .work-card-img img {
+    transform: scale(1.03);
+}
+
+/* Card Content */
+.work-card-content {
+    padding: 16px 8px 6px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-tag {
+    background-color: rgba(68, 158, 158, 0.15);
+    color: var(--color-petrol);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+.work-year {
+    font-size: 0.85rem;
+    color: #7A7874;
+    font-weight: 500;
+}
+
+.work-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.work-arrow {
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: 1.5px solid #DCD6CA; /* Stroke DCD6CA */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.work-card:hover .work-arrow {
+    background-color: var(--color-text-dark);
+    border-color: var(--color-text-dark);
+    color: #F6F4EF;
+    transform: translate(2px, -2px);
 }
