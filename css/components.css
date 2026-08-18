@@ -1,51 +1,129 @@
 /* Navigation-Styling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.25rem 0; /* Abstand oben/unten für den schwebenden Pillen-Effekt */
+    background: transparent;
+}
+
 .topbar {
-    width: 100%;
-    min-height: 80px;
+    width: min(1350px, calc(100% - 2.5rem));
+    min-height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-md) 0;
+    padding: 0.5rem 1.25rem;
+    margin: 0 auto;
     box-sizing: border-box;
-    background-color: var(--primary-teal-100);
+
+    /* --- Frosted Glass Effekt --- */
+    background-color: rgba(248, 246, 241, 0.75); /* Leicht transparente Hintergrundfarbe (75% Deckkraft) */
+    backdrop-filter: blur(12px);                 /* Weichzeichner für den Hintergrund darunter */
+    -webkit-backdrop-filter: blur(12px);         /* Safari Support */
+
+    border: 1.5px solid rgba(229, 225, 216, 0.8); /* Leicht transparenter Rand */
+    border-radius: 999px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);   /* Weicherer Schatten */
 }
 
-.topbar nav ul li {
-    display: inline-block;
-    margin-right: 2rem;
+
+/* 1. Logo & Name links */
+.logo-area {
+    display: flex;
+    align-items: center;
 }
 
-.logo img {
-    height: 80px;
-    width: auto;
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--neutral-dark);
+}
+
+/* Styling für dein Logo-Bild */
+.nav-logo {
+    width: 44px;      /* Gleiche Größe wie der bisherige Kreis */
+    height: 44px;
+    object-fit: contain;
     display: block;
-    padding: 0 var(--space-lg);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--neutral-dark);
+}
+
+.logo-title {
+    font-size: 0.8rem;
+    color: #757575;
+}
+
+
+/* 2. Mittlere Menü-Links */
+.topbar nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-    margin-right: var(--space-lg);
+    align-items: center;
+    gap: 1.75rem;
+    margin: 0;
     padding: 0;
 }
 
-/* Link-States */
 nav a:link, nav a:visited {
     color: var(--neutral-dark);
     text-decoration: none;
-    transition: color 0.3s ease; /* Weicher Übergang */
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0.4rem 0.2rem;
+    transition: color 0.2s ease;
 }
 
+/* Hover-Zustand: Türkis */
 nav a:hover, nav a:active {
-    color: var(--secondary-pink-500);
+    background-color: transparent;
+    color: var(--primary-teal-500);
+}
+
+/* 3. Rechter CTA-Button */
+.btn-cta {
+    background-color: var(--btn-dark-teal);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--btn-dark-teal-hover);
+    transform: translateY(-1px);
 }
 
 /* Skip-Link-Styling */
 .SkipLink{
     position: absolute;
-    color: var(--primary-teal-100);
+    color: var(--neutral-light);
     z-index: 100;
 }
 
@@ -175,3 +253,5 @@ address {
 .back-to-top:hover img {
     transform: translateY(-5px);
 }
+
+

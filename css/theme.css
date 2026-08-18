@@ -1,12 +1,18 @@
 /* Color and spacing definitions */
 :root {
-    --primary-teal-500: #0C847F;
-    --primary-teal-100: #C2E0DF;
+    --primary-teal-500: #449e9e; /* new */
+    --primary-teal-100: #d8eded; /* new */
     --secondary-pink-500: #D1396E;
     --secondary-pink-400: #BE104D;
     --accent-blue: #334389;
     --neutral-dark: #1E1E1E;
     --neutral-light: #F9F9F9;
+
+    /* Navigationsbar: */
+    --nav-bg: #F8F6F1;
+    --nav-border: #E5E1D8;
+    --btn-dark-teal: #0D6069;
+    --btn-dark-teal-hover: #0a4d54;
 
     --space-xs: 8px;
     --space-sm: 16px;

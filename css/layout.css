@@ -1,6 +1,14 @@
-html, body {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip; /* 'clip' schneidet Überläufe ab, ohne position:sticky zu brechen */
+}
+
+section {
+    scroll-margin-top: 110px;
 }
 
 /* Main Layout Container */
@@ -114,30 +122,31 @@ html, body {
         margin-bottom: 0;
     }
 
-/* Responsive Navigation */
-    .topbar {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: var(--space-md);
-    }
-    nav ul {
-        flex-direction: column;
-        gap: var(--space-sm);
-        margin: 0 auto;
-    }
-    .topbar nav ul li {
-        margin-right: 0;
-        text-align: center;
-    }
-    .logo img {
-        height: 40px;
-        width: auto;
-        display: block;
-        padding: 0;
-        margin: 0 auto var(--space-md) auto;
-    }
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+        .topbar {
+            flex-direction: column;
+            border-radius: 24px; /* Auf Mobile leicht abgerundetes Rechteck statt Pille */
+            gap: var(--space-sm);
+            padding: var(--space-md);
+        }
 
+        nav ul {
+            flex-direction: column;
+            gap: var(--space-xs);
+            margin: 0 auto;
+        }
+
+        .cta-area {
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-cta {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 /* Responsive Skills Grid */
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);

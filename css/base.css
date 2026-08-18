@@ -1,15 +1,15 @@
 /* Font Definitions */
 @font-face {
-    font-family: 'Momo Trust Display';
-    src: url('../fonts/MomoTrustDisplay-Regular.ttf') format('truetype');
+    font-family: 'Clash Display';
+    src: url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Google Sans Flex';
-    src: url('../fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf') format('truetype');
+    font-family: 'Clash Grotesk';
+    src: url('../fonts/ClashGrotesk-Variable.ttf') format('truetype');
     font-weight: 100 1000;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 /* Global resets and typography */
 body {
-    font-family: "Google Sans Flex", system-ui, sans-serif;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: var(--neutral-dark);
@@ -25,7 +25,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "Momo Trust Display", system-ui, sans-serif;
+    font-family: "Clash Display", system-ui, sans-serif;
     margin-bottom: var(--space-md);
 }
 
