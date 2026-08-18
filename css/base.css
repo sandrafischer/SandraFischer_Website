@@ -22,6 +22,7 @@ body {
     line-height: 1.5;
     color: var(--neutral-dark);
     margin: 0;
+    background-color: var(--color-bg-paper);
 }
 
 h1, h2, h3 {

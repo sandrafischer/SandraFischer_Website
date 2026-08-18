@@ -1,18 +1,30 @@
 /* Color and spacing definitions */
 :root {
+    /* temporary colors */
     --primary-teal-500: #449e9e; /* new */
     --primary-teal-100: #d8eded; /* new */
     --secondary-pink-500: #D1396E;
     --secondary-pink-400: #BE104D;
     --accent-blue: #334389;
-    --neutral-dark: #1E1E1E;
-    --neutral-light: #F9F9F9;
+    /* end temporary colors */
 
-    /* Navigationsbar: */
-    --nav-bg: #F8F6F1;
-    --nav-border: #E5E1D8;
-    --btn-dark-teal: #0D6069;
-    --btn-dark-teal-hover: #0a4d54;
+
+    --color-bg-paper: #F6F4EF;       /* Naturpapier */
+    --color-bg-card: #ECE7DE;        /* Feinkarton */
+    --color-text-dark: #181716;      /* Druckerschwärze */
+    --color-petrol: #0D5C63;         /* Tiefes Petrol-Blau */
+    --color-petrol-dark: #0A4B52;    /* Sattes Petrol-Dunkel */
+    --color-eucalyptus: #449E9E;     /* Frisches Eukalyptus-Türkis */
+    --color-eucalyptus-100: #d8eded; /* Helles Eukalyptus-Türkis */
+    --color-border: #E2DDD3;         /* Dezenter Rand */
+
+    /* Mapping für bestehende Komponenten */
+    --neutral-light: var(--color-bg-paper);
+    --neutral-dark: var(--color-text-dark);
+    --nav-bg: var(--color-bg-paper);
+    --nav-border: var(--color-border);
+    --btn-dark-teal: var(--color-petrol);
+    --btn-dark-teal-hover: var(--color-petrol-dark);
 
     --space-xs: 8px;
     --space-sm: 16px;
