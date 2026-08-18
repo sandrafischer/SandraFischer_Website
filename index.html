@@ -47,29 +47,74 @@
 
 
 <main>
-    <!--hero section-->
-    <div class="container" id="hero">
-        <div class="hero-content grid-2-col">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-grid">
 
-            <!-- Hero Text -->
-            <div class="hero-text">
-                <p class="subheadline">Hi, I'm Sandra Fischer</p>
-                <h1>a Mediatechnology and
-                    -design Student</h1>
-                <p class="hero-description"> Transforming concepts into thoughtful visuals —
-                    combining design, technology, and interaction to create work that engages and inspires.</p>
-                <!-- Buttons -->
-                <div>
-                    <a href="#projects" class="btn btn-primary">projects</a>
-                    <a href="#contact" class="btn btn-secondary">contact me</a>
+            <!-- Linke Spalte: Badge, Headline, Subtext & Buttons -->
+            <div class="hero-text-col">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for new projects 2026</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Crafting tactile visual identities, digital experiences & photographic stories.
+                </h1>
+
+                <p class="hero-subtext">
+                    Independent designer based in Upper Austria. Bridging technical web implementation with refined print design and authentic visual storytelling.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-hero-primary">Explore Works</a>
+                    <a href="#contact" class="btn btn-hero-secondary">Start a Project</a>
                 </div>
             </div>
-            <!-- Hero Image -->
-            <div class="hero-image">
-                <img src="images/hero-avatar.jpg" alt="Picture of Sandra Fischer">
+
+            <!-- Rechte Spalte: Gestaffelte Collage -->
+            <div class="hero-visual-col">
+                <div class="collage-container">
+
+                    <!-- 1. Browser-Mockup im Hintergrund (leicht schräg) -->
+                    <div class="mockup-browser">
+                        <div class="browser-bar">
+                            <div class="browser-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="browser-address-bar"></div>
+                        </div>
+                        <div class="browser-content">
+                            <img src="images/hero-avatar.jpg" alt="Studio Setup Mockup">
+                        </div>
+                    </div>
+
+                    <!-- 2. Karte links unten: Photography -->
+                    <div class="card-photo">
+                        <div class="photo-inner">
+                            <img src="images/projects/project-picture2.jpg" alt="Portrait Photography">
+                        </div>
+                        <span class="photo-badge">PHOTOGRAPHY</span>
+                    </div>
+
+                    <!-- 3. Karte rechts: Corporate Identity (gedreht & schwebend) -->
+                    <div class="card-brand">
+                        <div class="brand-image">
+                            <img src="images/projects/project-picture4.jpg" alt="Atelier Brûlé Corporate Identity">
+                        </div>
+                        <div class="brand-info">
+                            <h4>Atelier Brûlé</h4>
+                            <p>Corporate Identity</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </div>
-    </div>
+    </section>
 
     <!--about me-->
     <section id="aboutme">

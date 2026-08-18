@@ -185,3 +185,131 @@ section {
         right: var(--space-md);
     }
 }
+
+/* --- Responsives Layout für Hero & Collage --- */
+
+/* 1. Tablet-Ansicht (bis 1024px) */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr; /* Einspaltig untereinander */
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-subtext {
+        margin: 0 auto 2rem auto;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+
+    .hero-visual-col {
+        justify-content: center;
+    }
+
+    .collage-container {
+        max-width: 500px;
+        height: 520px;
+    }
+
+    /* Auf Tablets etwas weniger weit nach außen schieben */
+    .card-brand {
+        right: -15px;
+    }
+
+    .card-photo {
+        left: 0;
+    }
+}
+
+/* 2. Smartphone-Ansicht (bis 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 1.5rem 0 3.5rem 0;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 2.6rem);
+    }
+
+    .collage-container {
+        width: 100%;
+        max-width: 420px;
+        height: 440px; /* Proportionen verkleinern */
+    }
+
+    .mockup-browser {
+        width: 84%;
+        left: 10px;
+    }
+
+    .browser-content img {
+        height: 220px;
+    }
+
+    .card-photo {
+        width: 46%;
+        left: 0;
+        bottom: 5px;
+    }
+
+    .photo-inner {
+        height: 155px;
+    }
+
+    .card-brand {
+        width: 60%;
+        top: 110px;
+        right: 0; /* Bündig im Viewport halten */
+        transform: rotate(-4deg);
+    }
+
+    .brand-image {
+        height: 135px;
+    }
+
+    .brand-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .brand-info p {
+        font-size: 0.75rem;
+    }
+}
+
+/* 3. Sehr kleine Smartphones (bis 480px) */
+@media (max-width: 480px) {
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .collage-container {
+        max-width: 340px;
+        height: 380px;
+    }
+
+    .browser-content img {
+        height: 180px;
+    }
+
+    .photo-inner {
+        height: 125px;
+    }
+
+    .brand-image {
+        height: 105px;
+    }
+
+    .card-brand {
+        top: 95px;
+    }
+}
