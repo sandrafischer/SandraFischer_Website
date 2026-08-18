@@ -176,6 +176,11 @@ section {
     .about-image-card img {
         height: 440px;
     }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
 }
 
 /* 2. Smartphone-Ansicht (bis 768px) */
@@ -411,6 +416,42 @@ section {
 
     .stat-divider {
         display: none;
+    }
+
+    .contact-section {
+        padding: 3.5rem 0;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem;
+        border-radius: 24px;
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+
+        .footer-left {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-legal {
+            gap: 1.25rem;
+        }
+
+        .footer-right {
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 }
 

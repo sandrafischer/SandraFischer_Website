@@ -398,136 +398,133 @@
     </section>
 
 
-
-
-
-    <!--projects-->
-    <section id="projects">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-gallery">
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture1.jpg" alt="Project Picture 1"></div>
-                    <div class="project-text"><h3>Blender Toy Castle</h3>
-                        <p class="subheadline">playful 3D World</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture6.jpg" alt="Project Picture 2"></div>
-                    <div class="project-text"><h3>Blender Room</h3>
-                        <p class="subheadline">cozy 3D living room</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture4.jpg" alt="Project Picture 3"></div>
-                    <div class="project-text"><h3>CI Good Eats</h3>
-                        <p class="subheadline">Businesscard for a restaurant</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture3.jpg" alt="Project Picture 4"></div>
-                    <div class="project-text"><h3>Floral Elegance</h3>
-                        <p class="subheadline">Photoproject with flowers</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture5.jpg" alt="Project Picture 5"></div>
-                    <div class="project-text"><h3>Flyer Design</h3>
-                        <p class="subheadline">Flyer for casa bonita</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture7.jpg" alt="Project Picture 6"></div>
-                    <div class="project-text"><h3>Blender Rocket</h3>
-                        <p class="subheadline">toon-style 3D rocket</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture2.jpg" alt="Project Picture 7"></div>
-                    <div class="project-text"><h3>Light-Portraits</h3>
-                        <p class="subheadline">Photoproject with lights</p></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image"><img src="images/projects/project-picture8.jpg" alt="Project Picture 8"></div>
-                    <div class="project-text"><h3>Business Photos</h3>
-                        <p class="subheadline">Photos for social media</p></div>
-                </div>
+
+            <!-- Header -->
+            <div class="contact-header">
+                <span class="subheadline-tag">CONTACT</span>
+                <h2 class="contact-title">Let's create something memorable together.</h2>
+                <p class="contact-subtitle">Based in Mettmach, Upper Austria — working worldwide and remote.</p>
             </div>
+
+            <!-- 2-Spalten Layout: Formular links, Infos rechts -->
+            <div class="contact-grid">
+
+                <!-- Linke Spalte: Formular Card -->
+                <div class="contact-form-card">
+                    <form action="mailto:sandra@gmail.com" method="post" class="inquiry-form">
+
+                        <!-- Row 1: Name & Email -->
+                        <div class="form-grid-2">
+                            <div class="form-field">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="name" placeholder="Anna Müller" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="emailAddress">Email Address</label>
+                                <input type="email" id="emailAddress" name="email" placeholder="anna@studio.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Project Type Pills -->
+                        <div class="form-field">
+                            <label>Project Type</label>
+                            <div class="project-type-pills">
+                                <label class="pill-checkbox">
+                                    <input type="checkbox" name="project_type" value="web">
+                                    <span>Web Design & Dev</span>
+                                </label>
+                                <label class="pill-checkbox">
+                                    <input type="checkbox" name="project_type" value="branding">
+                                    <span>Branding & Print</span>
+                                </label>
+                                <label class="pill-checkbox">
+                                    <input type="checkbox" name="project_type" value="photo">
+                                    <span>Photography</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Message -->
+                        <div class="form-field">
+                            <label for="projectMessage">Message / Project Scope</label>
+                            <textarea id="projectMessage" name="message" rows="5" placeholder="Tell me about your project — timeline, scope, and any specific needs." required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">Send Inquiry →</button>
+                    </form>
+                </div>
+
+                <!-- Rechte Spalte: Info Sidebar -->
+                <div class="contact-info-col">
+
+                    <!-- Direct contact -->
+                    <div class="info-block">
+                        <h4>Direct contact</h4>
+                        <a href="mailto:hello@sandrafischer.at" class="direct-link">hello@sandrafischer.at</a>
+                        <a href="tel:+430123456789" class="direct-link">+43 (0) 123 456 789</a>
+                    </div>
+
+                    <div class="info-divider"></div>
+
+                    <!-- What to expect -->
+                    <div class="info-block">
+                        <h4>What to expect</h4>
+                        <ul class="expect-list">
+                            <li>Response within 1–2 business days</li>
+                            <li>Free 30-min discovery call</li>
+                            <li>Transparent, fixed-fee pricing</li>
+                            <li>End-to-end project management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Availability Badge -->
+                    <div class="availability-card">
+                        <span class="status-dot"></span>
+                        <span>Currently available for new projects</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-container">
 
-    <!--contact me - call to action-->
-    <section id="contact">
-        <div class="container">
-            <h2 class="text-center">You have a question?</h2>
-            <p class="contact-subheadline">Don't hesitate to contact me!</p>
-
-            <form action="mailto:sandra@gmail.com" method="post" class="styled-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fname">First name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lname">Last name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="website">Website</label>
-                        <input type="url" id="website" name="website" placeholder="https://www.url.com/">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                </div>
-
-                <div class="form-buttons">
-                    <button type="submit" class="btn btn-primary">send</button>
-                    <button type="reset" class="btn btn-secondary">reset</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!--footer-->
-    <footer>
-        <div class="footer-wrapper">
-
-            <!-- Back to top arrow -->
-            <a href="#home" class="back-to-top">
-                <img src="images/arrow-top.svg" alt="Back to top">
-            </a>
-
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutme">About me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <!-- Links: Helles Logo & Copyright -->
+            <div class="footer-left">
+                <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+                    <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                </a>
+                <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
             </div>
 
-            <div class="footer-divider"></div>
-
-            <div class="footer-contact">
-                <address><br>
-                    Musterstraße 1<br>
-                    A-1234 Musterstadt
-                </address>
-                <div class="footer-links">
-                    <a href="mailto:s2510238060@students.fh-hagenberg.at">sandra@gmail.com</a><br>
-                    <a href="tel:+43234512345678">+43 2345 12345678</a>
-                </div>
+            <!-- Mitte: Rechtliches -->
+            <div class="footer-legal">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
             </div>
+
+            <!-- Rechts: Social Pills & Back to top Pfeil -->
+            <div class="footer-right">
+                <div class="social-pills">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
+                </div>
+
+                <!-- Pfeil nach oben (ohne Fragezeichen) -->
+                <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">
+                    ↑
+                </a>
+            </div>
+
         </div>
     </footer>
 
