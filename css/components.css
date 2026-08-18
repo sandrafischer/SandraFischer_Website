@@ -794,3 +794,89 @@ address {
     border-radius: 999px;
     white-space: nowrap;
 }
+
+/* --- Process Section Styling (Druckerschwärze #181716) --- */
+.process-section {
+    background-color: var(--color-text-dark); /* #181716 */
+    color: #F6F4EF;
+    padding: 6rem 0 7rem 0;
+    margin: 3rem 0;
+}
+
+.process-header {
+    margin-bottom: 4rem;
+}
+
+.process-title {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 700;
+    color: #F6F4EF;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+/* Timeline Layout */
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    position: relative;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Badge + Verbindungslinie */
+.step-badge-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.step-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-eucalyptus); /* #449E9E */
+    color: var(--color-eucalyptus);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+    background-color: var(--color-text-dark);
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+/* Horizontale Verbindungslinie zwischen den Punkten */
+.step-line {
+    position: absolute;
+    top: 50%;
+    left: 52px;
+    width: calc(100% + 3rem - 52px);
+    height: 1px;
+    background-color: #2F2D2B; /* Dezente dunkle Linie */
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.step-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #F6F4EF;
+    line-height: 1.25;
+    margin: 0 0 1.25rem 0;
+}
+
+.step-description {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #9C9890; /* Sanftes hellgraues Muted-Design */
+    margin: 0;
+}

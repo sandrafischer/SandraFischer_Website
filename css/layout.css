@@ -154,6 +154,19 @@ section {
     .discipline-card {
         padding: 2.2rem;
     }
+
+    .process-timeline {
+        grid-template-columns: 1fr; /* Vertikal untereinander */
+        gap: 3rem;
+    }
+
+    .step-line {
+        display: none; /* Aufgeräumt ohne horizontale Querlinien */
+    }
+
+    .step-badge-wrapper {
+        margin-bottom: 1.25rem;
+    }
 }
 
 /* 2. Smartphone-Ansicht (bis 768px) */
@@ -352,6 +365,21 @@ section {
     .discipline-number {
         font-size: 3.8rem;
         margin-bottom: 1.25rem;
+    }
+
+    .process-section {
+        padding: 4rem 0 4.5rem 0;
+        margin: 2rem 0;
+    }
+
+    .process-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .step-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
     }
 }
 
