@@ -880,3 +880,172 @@ address {
     color: #9C9890; /* Sanftes hellgraues Muted-Design */
     margin: 0;
 }
+
+/* --- About Section Styling --- */
+.about-section {
+    padding: 5rem 0 6rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+/* Linke Spalte: Bild mit versetztem Rahmen */
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.about-frame-outline {
+    position: absolute;
+    top: 18px;
+    right: -18px;
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #DCD6CA;
+    border-radius: 36px;
+    z-index: 1;
+}
+
+.about-image-card {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: #ECE7DE;
+    box-shadow: 0 20px 45px rgba(24, 23, 22, 0.08);
+    z-index: 2;
+}
+
+.about-image-card img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Experience Badge (Petrol) */
+.experience-badge {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background-color: var(--color-petrol); /* #0D5C63 */
+    color: #F6F4EF;
+    border-radius: 20px;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(13, 92, 99, 0.35);
+}
+
+.badge-number {
+    font-family: "Clash Display", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.badge-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(246, 244, 239, 0.85);
+    white-space: nowrap;
+}
+
+/* Rechte Spalte: Content */
+.about-title {
+    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 1.75rem 0;
+}
+
+.about-lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4A4742;
+    margin: 0 0 1.25rem 0;
+}
+
+.about-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6E6B65;
+    margin: 0 0 2.25rem 0;
+}
+
+/* Tools & Stack */
+.tools-block {
+    margin-bottom: 3rem;
+}
+
+.tools-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 1rem 0;
+}
+
+.tools-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-pill {
+    background-color: #ECE7DE;   /* Fill ECE7DE */
+    border: 1px solid #DCD6CA;   /* Stroke DCD6CA */
+    color: var(--color-text-dark);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tool-icon {
+    font-size: 0.85rem;
+    color: var(--color-eucalyptus); /* #449E9E */
+}
+
+/* Stats Bar */
+.about-stats-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 1.5px solid #E5E0D6;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-family: "Clash Display", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: #7A7874;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 45px;
+    background-color: #DCD6CA;
+}
