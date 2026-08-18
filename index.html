@@ -11,8 +11,7 @@
 <body>
 <a href="#" class="SkipLink">Skip to main content</a>
 <header>
-    <!--navigation-->
-    <div class="topbar-container"> <!-- Neuer Container für die Fixierung -->
+    <div class="topbar-container">
         <div class="topbar" id="home">
 
             <!-- 1. Linker Bereich: Logo/Name -->
@@ -26,18 +25,26 @@
                 </a>
             </div>
 
+            <!-- Hamburger Button (nur auf Mobile/Tablet sichtbar) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <!-- 2. Mittlerer Bereich: Navigation -->
-            <nav class="main-nav">
+            <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="#projects">Works</a></li> <!-- "projects" -> "Works" -->
-                    <li><a href="#disciplines">Disciplines</a></li> <!-- Neuer Link-Text -->
-                    <li><a href="#process">Process</a></li> <!-- Neuer Link-Text -->
-                    <li><a href="#aboutme">About</a></li> <!-- "aboutme" -> "About" -->
+                    <li><a href="#projects">Works</a></li>
+                    <li><a href="#aboutme">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="mobile-cta">
+                    <a href="#contact" class="btn-cta">Start a Project →</a>
+                </div>
             </nav>
 
-            <!-- 3. Rechter Bereich: Button -->
+            <!-- 3. Rechter Bereich: Desktop Button -->
             <div class="cta-area">
                 <a href="#contact" class="btn-cta">Start a Project →</a>
             </div>
@@ -290,5 +297,23 @@
 
 
 </main>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active');
+        mainNav.classList.toggle('is-open');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('is-active');
+            mainNav.classList.remove('is-open');
+        });
+    });
+</script>
 </body>
 </html>
