@@ -414,7 +414,8 @@
 
                 <!-- Linke Spalte: Formular Card -->
                 <div class="contact-form-card">
-                    <form action="mailto:sandra@gmail.com" method="post" class="inquiry-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="inquiry-form">
+                        <input type="hidden" name="access_key" value="5c32b4b0-5c2e-4dbc-8da3-5e9f16ed9708">
 
                         <!-- Row 1: Name & Email -->
                         <div class="form-grid-2">
@@ -433,15 +434,15 @@
                             <label>Project Type</label>
                             <div class="project-type-pills">
                                 <label class="pill-checkbox">
-                                    <input type="checkbox" name="project_type" value="web">
+                                    <input type="checkbox" name="project_type[]" value="Web Design & Dev">
                                     <span>Web Design & Dev</span>
                                 </label>
                                 <label class="pill-checkbox">
-                                    <input type="checkbox" name="project_type" value="branding">
+                                    <input type="checkbox" name="project_type[]" value="Branding & Print">
                                     <span>Branding & Print</span>
                                 </label>
                                 <label class="pill-checkbox">
-                                    <input type="checkbox" name="project_type" value="photo">
+                                    <input type="checkbox" name="project_type[]" value="Photography">
                                     <span>Photography</span>
                                 </label>
                             </div>
