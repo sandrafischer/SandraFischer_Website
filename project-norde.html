@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norde Digital Platform — Sandra Fischer</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="project-detail-page">
+
+<!-- Header / Navigation -->
+<header>
+    <div class="topbar-container">
+        <div class="topbar" id="home">
+
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <div class="logo-text">
+                        <span class="logo-name">Sandra Fischer</span>
+                        <span class="logo-title">Mediatechnology & -design</span>
+                    </div>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html#projects">Works</a></li>
+                    <li><a href="index.html#disciplines">Disciplines</a></li>
+                    <li><a href="index.html#process">Process</a></li>
+                    <li><a href="index.html#aboutme">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-cta">
+                    <a href="index.html#contact" class="btn-cta">Start a Project →</a>
+                </div>
+            </nav>
+
+            <div class="cta-area">
+                <a href="index.html#contact" class="btn-cta">Start a Project →</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Project Hero Section -->
+    <article class="project-hero">
+        <div class="container">
+
+            <!-- Back Link & Category -->
+            <div class="project-top-nav">
+                <a href="index.html#projects" class="back-link">← Back to Works</a>
+                <span class="subheadline-tag">WEB DESIGN & DEV</span>
+            </div>
+
+            <h1 class="project-main-title">Norde Digital Platform</h1>
+            <p class="project-lead-text">
+                A digital flagship experience combining brutalist layout principles with ultra-smooth interaction design and accessible web performance.
+            </p>
+
+            <!-- Project Meta Info Bar -->
+            <div class="project-meta-bar">
+                <div class="meta-col">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">Norde Studio</span>
+                </div>
+                <div class="meta-col">
+                    <span class="meta-label">Year</span>
+                    <span class="meta-value">2025</span>
+                </div>
+                <div class="meta-col">
+                    <span class="meta-label">Disciplines</span>
+                    <span class="meta-value">UI/UX Design, Web Dev, GSAP</span>
+                </div>
+                <div class="meta-col">
+                    <span class="meta-label">Live Link</span>
+                    <a href="https://example.com" target="_blank" rel="noopener" class="meta-link">Visit Website ↗</a>
+                </div>
+            </div>
+
+            <!-- Hero Image Showcase -->
+            <div class="project-showcase-hero">
+                <img src="images/hero-avatar.jpg" alt="Norde Digital Platform Mockup Showcase">
+            </div>
+
+            <!-- Project Content Sections -->
+            <div class="project-body-grid">
+
+                <div class="project-text-block">
+                    <h3>The Challenge</h3>
+                    <p>
+                        Norde Studio needed a digital platform that authentically reflects their physical craftsmanship while providing an intuitive, interactive experience for global clients. The goal was to break free from traditional template aesthetics and introduce tactile micro-interactions.
+                    </p>
+                </div>
+
+                <div class="project-text-block">
+                    <h3>The Solution</h3>
+                    <p>
+                        We established a bespoke design system rooted in Swiss typography, fine paper tones, and fluid interactive choreography. Using semantic HTML, lightweight CSS architectures, and performant JavaScript animations, the platform achieves both artistic distinction and top-tier loading speeds.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Secondary Image Grid Showcase -->
+            <div class="project-gallery-grid">
+                <div class="gallery-item span-6">
+                    <img src="images/projects/project-picture1.jpg" alt="Mobile interface detail">
+                </div>
+                <div class="gallery-item span-6">
+                    <img src="images/projects/project-picture6.jpg" alt="Desktop design system showcase">
+                </div>
+                <div class="gallery-item span-12">
+                    <img src="images/projects/project-picture4.jpg" alt="Typography and branding guide">
+                </div>
+            </div>
+
+            <!-- Next Project Footer Navigation -->
+            <div class="next-project-banner">
+                <span class="subheadline-tag">NEXT PROJECT</span>
+                <a href="project-faune.html" class="next-project-link">
+                    <h2 class="next-project-title">Faune Publication</h2>
+                    <span class="next-arrow">→</span>
+                </a>
+            </div>
+
+        </div>
+    </article>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-left">
+            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+            </a>
+            <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
+        </div>
+
+        <div class="footer-legal">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+
+        <div class="footer-right">
+            <div class="social-pills">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
+            </div>
+            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Nav Script -->
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active');
+        mainNav.classList.toggle('is-open');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('is-active');
+            mainNav.classList.remove('is-open');
+        });
+    });
+</script>
+</body>
+</html>
