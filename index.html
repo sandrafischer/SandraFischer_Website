@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sandra Fischer">
-    <meta name="description" content="Personal portfolio of Sandra Fischer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design -->
+    <meta name="description" content="Personal portfolio of Sandra Fischer — Media Technology & Design">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandra Fischer | Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<a href="#" class="SkipLink">Skip to main content</a>
+<a href="#hero" class="SkipLink">Skip to main content</a>
+
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
 
-            <!-- 1. Linker Bereich: Logo/Name -->
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
-                <a href="#" class="logo-link">
+                <a href="#hero" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
@@ -25,17 +29,19 @@
                 </a>
             </div>
 
-            <!-- Hamburger Button (nur auf Mobile/Tablet sichtbar) -->
+            <!-- Hamburger Button (Mobile / Tablet) -->
             <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
 
-            <!-- 2. Mittlerer Bereich: Navigation -->
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="#projects">Works</a></li>
+                    <li><a href="#disciplines">Disciplines</a></li>
+                    <li><a href="#process">Process</a></li>
                     <li><a href="#aboutme">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -44,21 +50,23 @@
                 </div>
             </nav>
 
-            <!-- 3. Rechter Bereich: Desktop Button -->
+            <!-- 3. Desktop CTA-Button rechts -->
             <div class="cta-area">
                 <a href="#contact" class="btn-cta">Start a Project →</a>
             </div>
+
         </div>
     </div>
 </header>
 
-
 <main>
-    <!-- Hero Section -->
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
     <section class="hero-section" id="hero">
         <div class="container hero-grid">
 
-            <!-- Linke Spalte: Badge, Headline, Subtext & Buttons -->
+            <!-- Linke Spalte: Status Badge, Title & CTA -->
             <div class="hero-text-col">
                 <div class="status-badge">
                     <span class="status-dot"></span>
@@ -74,16 +82,16 @@
                 </p>
 
                 <div class="hero-cta-group">
-                    <a href="#projects" class="btn btn-hero-primary">Explore Works</a>
-                    <a href="#contact" class="btn btn-hero-secondary">Start a Project</a>
+                    <a href="#projects" class="btn-hero-primary">Explore Works</a>
+                    <a href="#contact" class="btn-hero-secondary">Start a Project</a>
                 </div>
             </div>
 
-            <!-- Rechte Spalte: Gestaffelte Collage -->
+            <!-- Rechte Spalte: Gestaffelte Visual-Collage -->
             <div class="hero-visual-col">
                 <div class="collage-container">
 
-                    <!-- 1. Browser-Mockup im Hintergrund (leicht schräg) -->
+                    <!-- 1. Browser Mockup -->
                     <div class="mockup-browser">
                         <div class="browser-bar">
                             <div class="browser-dots">
@@ -98,22 +106,22 @@
                         </div>
                     </div>
 
-                    <!-- 2. Karte links unten: Photography -->
+                    <!-- 2. Photography Card -->
                     <div class="card-photo">
                         <div class="photo-inner">
-                            <img src="images/projects/project-picture2.jpg" alt="Portrait Photography">
+                            <img src="images/projects/hose.jpg" alt="Floral Elegance Photography">
                         </div>
                         <span class="photo-badge">PHOTOGRAPHY</span>
                     </div>
 
-                    <!-- 3. Karte rechts: Corporate Identity (gedreht & schwebend) -->
+                    <!-- 3. Branding Card -->
                     <div class="card-brand">
                         <div class="brand-image">
-                            <img src="images/projects/project-picture4.jpg" alt="Atelier Brûlé Corporate Identity">
+                            <img src="images/projects/project-picture4.jpg" alt="Feichtinger Brand Identity Mockup">
                         </div>
                         <div class="brand-info">
-                            <h4>Atelier Brûlé</h4>
-                            <p>Corporate Identity</p>
+                            <h4>Feichtinger Brand</h4>
+                            <p>Corporate Identity & Print</p>
                         </div>
                     </div>
 
@@ -124,14 +132,16 @@
     </section>
 
 
-    <!-- Featured Work Section -->
+    <!-- ==========================================================================
+         FEATURED WORK SECTION
+         ========================================================================== -->
     <section id="projects" class="work-section">
         <div class="container">
 
             <!-- Große beige Gesamt-Box -->
             <div class="work-box-container">
 
-                <!-- Header mit türkisem Tag, Überschrift & Filter-Pills -->
+                <!-- Header mit Section-Tag, Titel & Filter-Buttons -->
                 <div class="work-header">
                     <div class="work-title-group">
                         <span class="subheadline-tag">SELECTED WORKS</span>
@@ -146,11 +156,10 @@
                     </div>
                 </div>
 
-                <!-- Asymmetrisches Projekt-Grid -->
-                <!-- Asymmetrisches Projekt-Grid -->
+                <!-- 12-Spalten Projekt-Grid (Exakt kalkuliert ohne Lücken) -->
                 <div class="work-grid" id="workGrid">
 
-                    <!-- REIHE 1 (7 : 5) -->
+                    <!-- REIHE 1 (7 : 5) = 12 Spalten -->
                     <a href="project-website-feichtinger.html" class="work-card span-7" data-category="digital">
                         <div class="work-card-img">
                             <img src="images/hero-avatar.jpg" alt="Ortungstechnik Feichtinger Website">
@@ -184,9 +193,7 @@
                     </a>
 
 
-                    <!-- REIHE 2 (4 : 8 für maximalen Kontrast) -->
-
-                    <!-- Schmale Hochkant-Karte für Motion/Animation (4 Spalten) -->
+                    <!-- REIHE 2 (4 : 8) = 12 Spalten -->
                     <a href="project-motion-feichtinger.html" class="work-card span-4" data-category="digital">
                         <div class="work-card-img">
                             <img src="images/projects/project-picture1.jpg" alt="Character Animation Feichtinger">
@@ -195,7 +202,7 @@
                             </div>
                         </div>
                         <div class="work-card-content">
-                            <h3 class="work-name">Animations</h3>
+                            <h3 class="work-name">Interactive Motion Design</h3>
                             <div class="work-meta-right">
                                 <span class="work-tag">Motion</span>
                                 <span class="work-year">2026</span>
@@ -203,7 +210,6 @@
                         </div>
                     </a>
 
-                    <!-- Breites Panorama-Banner für FF Mettmach Plakate/Bilder (8 Spalten) -->
                     <a href="project-ff-mettmach.html" class="work-card span-8" data-category="brand">
                         <div class="work-card-img">
                             <img src="images/projects/project-picture5.jpg" alt="FF Mettmach Visual Identity">
@@ -221,58 +227,7 @@
                     </a>
 
 
-                    <!-- Projekt Self-Brand & Motion Kit -->
-                    <a href="project-self-brand.html" class="work-card span-5" data-category="brand">
-                        <div class="work-card-img">
-                            <img src="images/projects/project-picture6.jpg" alt="Personal Brand & Motion Kit">
-                            <div class="work-overlay">
-                                <span class="view-project-btn">View Project →</span>
-                            </div>
-                        </div>
-                        <div class="work-card-content">
-                            <h3 class="work-name">Personal Brand & Motion Kit</h3>
-                            <div class="work-meta-right">
-                                <span class="work-tag">Identity & Motion</span>
-                                <span class="work-year">2026</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 3D Alpine Sanctuary (Kompakt links: 4 Spalten) -->
-                    <a href="project-3d.html" class="work-card span-4" data-category="digital">
-                        <div class="work-card-img">
-                            <img src="images/projects/front4.jpg" alt="The Alpine Sanctuary 3D Design">
-                            <div class="work-overlay">
-                                <span class="view-project-btn">View Project →</span>
-                            </div>
-                        </div>
-                        <div class="work-card-content">
-                            <h3 class="work-name">The Alpine Sanctuary (3D)</h3>
-                            <div class="work-meta-right">
-                                <span class="work-tag">3D Design</span>
-                                <span class="work-year">2026</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Good Eats Identity (Breit rechts: 8 Spalten) -->
-                    <a href="project-good-eats.html" class="work-card span-8" data-category="brand">
-                        <div class="work-card-img">
-                            <img src="images/projects/project-picture4.jpg" alt="Good Eats Brand Identity & Design">
-                            <div class="work-overlay">
-                                <span class="view-project-btn">View Project →</span>
-                            </div>
-                        </div>
-                        <div class="work-card-content">
-                            <h3 class="work-name">Good Eats Brand Identity</h3>
-                            <div class="work-meta-right">
-                                <span class="work-tag">Brand & Print</span>
-                                <span class="work-year">2023</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Projekt Diplomarbeit ALUFEFA -->
+                    <!-- REIHE 3 (7 : 5) = 12 Spalten -->
                     <a href="project-alufefa.html" class="work-card span-7" data-category="brand">
                         <div class="work-card-img">
                             <img src="images/projects/project-picture4.jpg" alt="Corporate Identity ALUFEFA">
@@ -289,8 +244,59 @@
                         </div>
                     </a>
 
-                    <!-- Projekt Floral Elegance (Span 5 oder Span 6 im Grid) -->
-                    <a href="project-floral-elegance.html" class="work-card span-5" data-category="photo">
+                    <a href="project-self-brand.html" class="work-card span-5" data-category="brand">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture6.jpg" alt="Personal Brand & Motion Kit">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Personal Brand & Motion Kit</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Identity & Motion</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <!-- REIHE 4 (4 : 8) = 12 Spalten -->
+                    <a href="project-3d.html" class="work-card span-4" data-category="digital">
+                        <div class="work-card-img">
+                            <img src="images/projects/front4.jpg" alt="The Alpine Sanctuary 3D Design">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">The Alpine Sanctuary (3D)</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">3D Design</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-good-eats.html" class="work-card span-8" data-category="brand">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture4.jpg" alt="Good Eats Brand Identity & Design">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Good Eats Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Brand & Print</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <!-- REIHE 5 (6 : 6 Fotografie) = 12 Spalten -->
+                    <a href="project-floral-elegance.html" class="work-card span-6" data-category="photo">
                         <div class="work-card-img">
                             <img src="images/projects/hose.jpg" alt="Floral Elegance Editorial Photography">
                             <div class="work-overlay">
@@ -306,8 +312,7 @@
                         </div>
                     </a>
 
-                    <!-- Projekt Studio Photography (5 Spalten) -->
-                    <a href="project-color-portraits.html" class="work-card span-5" data-category="photo">
+                    <a href="project-portraits.html" class="work-card span-6" data-category="photo">
                         <div class="work-card-img">
                             <img src="images/projects/Silvio.jpg" alt="Dual-Tone Studio Portrait Series">
                             <div class="work-overlay">
@@ -329,61 +334,62 @@
         </div>
     </section>
 
-    <!-- Disciplines Section -->
+
+    <!-- ==========================================================================
+         DISCIPLINES SECTION
+         ========================================================================== */ -->
     <section id="disciplines" class="disciplines-section">
         <div class="container">
 
-            <!-- Header -->
             <div class="disciplines-header">
-                <span class="subheadline-tag">DISCIPLINES</span>
+                <span class="subheadline-tag">CAPABILITIES</span>
                 <h2 class="disciplines-title">Three pillars, one integrated practice.</h2>
             </div>
 
-            <!-- 3-Spalten Grid -->
             <div class="disciplines-grid">
 
-                <!-- Säule 01 -->
+                <!-- 01 Web -->
                 <div class="discipline-card">
                     <span class="discipline-number">01</span>
                     <h3 class="discipline-name">Web Design & Development</h3>
                     <p class="discipline-description">
-                        Concept & strategy, UI/UX design, responsive coding and interactive digital experiences — from wireframe to live product.
+                        Concept & strategy, UI/UX design, responsive coding, and interactive motion experiences — from wireframe to live production code.
                     </p>
                     <div class="discipline-tags">
-                        <span class="tag-pill">Concept</span>
                         <span class="tag-pill">UI/UX</span>
                         <span class="tag-pill">Responsive</span>
-                        <span class="tag-pill">Digital</span>
+                        <span class="tag-pill">Motion</span>
+                        <span class="tag-pill">Frontend</span>
                     </div>
                 </div>
 
-                <!-- Säule 02 -->
+                <!-- 02 Branding -->
                 <div class="discipline-card">
                     <span class="discipline-number">02</span>
                     <h3 class="discipline-name">Corporate Identity & Print</h3>
                     <p class="discipline-description">
-                        Logos, brand systems, stationery, signage, flyers, and editorial print — cohesive identity across every physical and digital touchpoint.
+                        Logos, brand systems, stationery, signage, event banners, and editorial publications — cohesive identity across physical and digital touchpoints.
                     </p>
                     <div class="discipline-tags">
-                        <span class="tag-pill">Logos</span>
                         <span class="tag-pill">Brand Systems</span>
                         <span class="tag-pill">Stationery</span>
-                        <span class="tag-pill">Editorial Print</span>
+                        <span class="tag-pill">Print Media</span>
+                        <span class="tag-pill">Brandbooks</span>
                     </div>
                 </div>
 
-                <!-- Säule 03 -->
+                <!-- 03 3D & Photography -->
                 <div class="discipline-card">
                     <span class="discipline-number">03</span>
-                    <h3 class="discipline-name">Editorial & Commercial Photography</h3>
+                    <h3 class="discipline-name">3D Design & Photography</h3>
                     <p class="discipline-description">
-                        Portraits, product staging, and visual storytelling that gives brands a face — technically precise and emotionally resonant.
+                        Studio portraits, editorial fashion staging, and realistic 3D spatial environments in Blender — technically precise and emotionally resonant.
                     </p>
                     <div class="discipline-tags">
+                        <span class="tag-pill">Blender 3D</span>
                         <span class="tag-pill">Portraits</span>
-                        <span class="tag-pill">Product</span>
                         <span class="tag-pill">Editorial</span>
-                        <span class="tag-pill">Commercial</span>
+                        <span class="tag-pill">Lighting</span>
                     </div>
                 </div>
 
@@ -392,17 +398,17 @@
     </section>
 
 
-    <!-- Process Section (Dark Section) -->
+    <!-- ==========================================================================
+         PROCESS SECTION (DARK)
+         ========================================================================== -->
     <section id="process" class="process-section">
         <div class="container">
 
-            <!-- Header -->
             <div class="process-header">
-                <span class="subheadline-tag">PROCESS</span>
+                <span class="subheadline-tag">WORKFLOW</span>
                 <h2 class="process-title">How we work together.</h2>
             </div>
 
-            <!-- Timeline Steps Grid -->
             <div class="process-timeline">
 
                 <!-- Step 1 -->
@@ -413,7 +419,7 @@
                     </div>
                     <h3 class="step-title">Discovery & Strategy</h3>
                     <p class="step-description">
-                        Deep-dive into your goals, audience, and competitive landscape. Defining scope, deliverables, and creative direction before a single pixel is placed.
+                        Deep-dive into your goals, audience, and market context. Defining scope, deliverables, and aesthetic direction before setting a single pixel.
                     </p>
                 </div>
 
@@ -425,7 +431,7 @@
                     </div>
                     <h3 class="step-title">Design & Iteration</h3>
                     <p class="step-description">
-                        Concepting, wireframing, and high-fidelity design cycles. Collaborative feedback loops ensure the outcome matches your vision — and exceeds it.
+                        Concepting, prototyping, and high-fidelity design cycles. Collaborative feedback loops ensure the outcome aligns with your vision.
                     </p>
                 </div>
 
@@ -436,7 +442,7 @@
                     </div>
                     <h3 class="step-title">Development & Launch</h3>
                     <p class="step-description">
-                        Pixel-precise implementation, QA across devices, and a clean handoff. For digital: live deployment. For print: press-ready files.
+                        Pixel-precise implementation, cross-device QA, and reliable delivery. For web: live deployment. For print: press-ready production files.
                     </p>
                 </div>
 
@@ -444,11 +450,13 @@
         </div>
     </section>
 
-    <!-- About Section -->
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
     <section id="aboutme" class="about-section">
         <div class="container about-grid">
 
-            <!-- Linke Spalte: Bild mit versetztem Rahmen & Badge -->
             <div class="about-image-wrapper">
                 <div class="about-frame-outline"></div>
                 <div class="about-image-card">
@@ -460,17 +468,16 @@
                 </div>
             </div>
 
-            <!-- Rechte Spalte: Bio, Tools & Statistiken -->
             <div class="about-content">
                 <span class="subheadline-tag">ABOUT</span>
                 <h2 class="about-title">Sandra Fischer</h2>
 
                 <p class="about-lead">
-                    I study Media Technology & Design at FH Hagenberg — one of Austria's most technically rigorous design programs — and work as an independent designer from Mettmach, Upper Austria.
+                    I study Media Technology & Design at FH Hagenberg and work as an independent designer from Mettmach, Upper Austria.
                 </p>
 
                 <p class="about-body">
-                    My practice sits at the intersection of technical craft and visual culture. I take projects from initial concept through to final implementation — whether that's a pixel-sharp web build, a press-ready corporate identity, or a photographic campaign.
+                    My practice sits at the intersection of technical craft and graphic elegance. I take projects from initial concept through to final delivery — whether that's a responsive web build, a comprehensive brand identity, or a photographic campaign.
                 </p>
 
                 <!-- Tools & Stack -->
@@ -479,19 +486,19 @@
                     <div class="tools-pills">
                         <span class="tool-pill"><span class="tool-icon">✦</span> Figma</span>
                         <span class="tool-pill"><span class="tool-icon">○</span> Adobe CC</span>
-                        <span class="tool-pill"><span class="tool-icon">◎</span> PhpStorm</span>
-                        <span class="tool-pill"><span class="tool-icon">☼</span> AI Workflows</span>
-                        <span class="tool-pill"><span class="tool-icon">△</span> React / Next.js</span>
-                        <span class="tool-pill"><span class="tool-icon">▫</span> TypeScript</span>
-                        <span class="tool-pill"><span class="tool-icon">◇</span> CSS / Tailwind</span>
-                        <span class="tool-pill"><span class="tool-icon">▷</span> GSAP</span>
+                        <span class="tool-pill"><span class="tool-icon">◎</span> Blender</span>
+                        <span class="tool-pill"><span class="tool-icon">☼</span> After Effects</span>
+                        <span class="tool-pill"><span class="tool-icon">△</span> HTML / CSS</span>
+                        <span class="tool-pill"><span class="tool-icon">▫</span> JavaScript</span>
+                        <span class="tool-pill"><span class="tool-icon">◇</span> InDesign</span>
+                        <span class="tool-pill"><span class="tool-icon">▷</span> Lightroom</span>
                     </div>
                 </div>
 
                 <!-- Stats Bar -->
                 <div class="about-stats-grid">
                     <div class="stat-item">
-                        <span class="stat-number">24+</span>
+                        <span class="stat-number">20+</span>
                         <span class="stat-label">Projects delivered</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -502,7 +509,7 @@
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">AT</span>
-                        <span class="stat-label">Based, works worldwide</span>
+                        <span class="stat-label">Based in Austria</span>
                     </div>
                 </div>
 
@@ -512,26 +519,25 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
     <section id="contact" class="contact-section">
         <div class="container">
 
-            <!-- Header -->
             <div class="contact-header">
                 <span class="subheadline-tag">CONTACT</span>
                 <h2 class="contact-title">Let's create something memorable together.</h2>
                 <p class="contact-subtitle">Based in Mettmach, Upper Austria — working worldwide and remote.</p>
             </div>
 
-            <!-- 2-Spalten Layout: Formular links, Infos rechts -->
             <div class="contact-grid">
 
-                <!-- Linke Spalte: Formular Card -->
+                <!-- Formular Card links -->
                 <div class="contact-form-card">
                     <form action="https://api.web3forms.com/submit" method="POST" class="inquiry-form">
                         <input type="hidden" name="access_key" value="5c32b4b0-5c2e-4dbc-8da3-5e9f16ed9708">
 
-                        <!-- Row 1: Name & Email -->
                         <div class="form-grid-2">
                             <div class="form-field">
                                 <label for="fullName">Full Name</label>
@@ -543,7 +549,6 @@
                             </div>
                         </div>
 
-                        <!-- Row 2: Project Type Pills -->
                         <div class="form-field">
                             <label>Project Type</label>
                             <div class="project-type-pills">
@@ -556,27 +561,24 @@
                                     <span>Branding & Print</span>
                                 </label>
                                 <label class="pill-checkbox">
-                                    <input type="checkbox" name="project_type[]" value="Photography">
-                                    <span>Photography</span>
+                                    <input type="checkbox" name="project_type[]" value="Photography & 3D">
+                                    <span>Photography & 3D</span>
                                 </label>
                             </div>
                         </div>
 
-                        <!-- Row 3: Message -->
                         <div class="form-field">
                             <label for="projectMessage">Message / Project Scope</label>
-                            <textarea id="projectMessage" name="message" rows="5" placeholder="Tell me about your project — timeline, scope, and any specific needs." required></textarea>
+                            <textarea id="projectMessage" name="message" rows="5" placeholder="Tell me about your project — timeline, scope, and specific requirements." required></textarea>
                         </div>
 
-                        <!-- Submit Button -->
                         <button type="submit" class="btn-submit">Send Inquiry →</button>
                     </form>
                 </div>
 
-                <!-- Rechte Spalte: Info Sidebar -->
+                <!-- Info Sidebar rechts -->
                 <div class="contact-info-col">
 
-                    <!-- Direct contact -->
                     <div class="info-block">
                         <h4>Direct contact</h4>
                         <a href="mailto:hello@sandrafischer.at" class="direct-link">hello@sandrafischer.at</a>
@@ -585,18 +587,16 @@
 
                     <div class="info-divider"></div>
 
-                    <!-- What to expect -->
                     <div class="info-block">
                         <h4>What to expect</h4>
                         <ul class="expect-list">
                             <li>Response within 1–2 business days</li>
                             <li>Free 30-min discovery call</li>
-                            <li>Transparent, fixed-fee pricing</li>
-                            <li>End-to-end project management</li>
+                            <li>Transparent project scoping</li>
+                            <li>End-to-end creative management</li>
                         </ul>
                     </div>
 
-                    <!-- Availability Badge -->
                     <div class="availability-card">
                         <span class="status-dot"></span>
                         <span>Currently available for new projects</span>
@@ -609,44 +609,43 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+
+    <!-- ==========================================================================
+         FOOTER SECTION
+         ========================================================================== -->
     <footer class="site-footer">
         <div class="container footer-container">
 
-            <!-- Links: Helles Logo & Copyright -->
             <div class="footer-left">
-                <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+                <a href="#hero" class="footer-logo-link" aria-label="Nach oben scrollen">
                     <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
                 </a>
                 <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
             </div>
 
-            <!-- Mitte: Rechtliches -->
             <div class="footer-legal">
                 <a href="impressum.html">Impressum</a>
                 <a href="datenschutz.html">Datenschutz</a>
             </div>
 
-            <!-- Rechts: Social Pills & Back to top Pfeil -->
             <div class="footer-right">
                 <div class="social-pills">
                     <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
                 </div>
-
-                <!-- Pfeil nach oben (ohne Fragezeichen) -->
-                <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">
-                    ↑
-                </a>
+                <a href="#hero" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
             </div>
 
         </div>
     </footer>
-
-
 </main>
 
+
+<!-- ==========================================================================
+     JAVASCRIPT: MOBILE NAVIGATION & ADAPTIVE GRID FILTER
+     ========================================================================== -->
 <script>
+    // 1. Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
     const navLinks = document.querySelectorAll('.main-nav a');
@@ -663,21 +662,29 @@
         });
     });
 
-    // Filter-Funktion für Featured Work
+    // 2. Filter-Funktion mit Umschaltung zwischen Asymmetrie & symmetrischem 2er-Raster
     const filterButtons = document.querySelectorAll('.filter-btn');
     const workCards = document.querySelectorAll('.work-card');
+    const workGrid = document.getElementById('workGrid');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Aktiven Button hervorheben
+            // Aktiven Button stylen
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
 
+            // Umschalten: Asymmetrisch bei 'all', 2-Spalten bei gefilterten Kategorien
+            if (filterValue === 'all') {
+                workGrid.classList.remove('is-filtered');
+            } else {
+                workGrid.classList.add('is-filtered');
+            }
+
+            // Cards ein-/ausblenden
             workCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-
                 if (filterValue === 'all' || cardCategory === filterValue) {
                     card.classList.remove('is-hidden');
                 } else {
