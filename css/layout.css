@@ -539,3 +539,31 @@ section {
     }
 }
 
+@media (max-width: 1024px) {
+    .work-card.span-7,
+    .work-card.span-5,
+    .work-card.span-4,
+    .work-card.span-8 {
+        grid-column: span 6; /* 2 gleichmäßige Spalten auf Tablets */
+    }
+
+    .work-card.span-4 .work-card-img,
+    .work-card.span-8 .work-card-img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-card.span-7,
+    .work-card.span-5,
+    .work-card.span-4,
+    .work-card.span-8 {
+        grid-column: span 1; /* 1 Spalte auf Handys */
+    }
+
+    .work-card.span-4 .work-card-img,
+    .work-card.span-8 .work-card-img {
+        height: 250px;
+    }
+}
+
