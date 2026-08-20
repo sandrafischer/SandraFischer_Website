@@ -1583,3 +1583,77 @@ nav a:active {
         height: 280px;
     }
 }
+
+/* ==========================================================================
+   CUSTOM CURSOR (INVERTING BLEND MODE)
+   ========================================================================== */
+/* Standard-Mauszeiger auf der gesamten Website ausblenden */
+*,
+*::before,
+*::after,
+a,
+button,
+input,
+textarea {
+    cursor: none !important;
+}
+
+/* ==========================================================================
+   CUSTOM CURSOR (INVERTING BLEND MODE)
+   ========================================================================== */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+    will-change: transform;
+}
+
+/* Dezente Vergrößerung nur beim Hover über Links/Buttons */
+.custom-cursor.is-hovering {
+    width: 44px;
+    height: 44px;
+}
+
+/* Touch-Geräte (Handy/Tablet): Systemzeiger wiederherstellen & Kreis ausblenden */
+@media (hover: none) and (pointer: coarse) {
+    *,
+    *::before,
+    *::after,
+    a,
+    button,
+    input,
+    textarea {
+        cursor: auto !important;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   PAGE TRANSITION OVERLAY
+   ========================================================================== */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-text-dark, #181716);
+    z-index: 99998;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.page-transition.is-hidden {
+    opacity: 0;
+}
