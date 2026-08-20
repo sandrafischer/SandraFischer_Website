@@ -1,5 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. PAGE TRANSITIONS ---
+
+    // --- 1. MOBILE NAVIGATION TOGGLE ---
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('is-active');
+            mainNav.classList.toggle('is-open');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('is-active');
+                mainNav.classList.remove('is-open');
+            });
+        });
+    }
+
+    // --- 2. WORK GRID CATEGORY FILTER (NUR STARTSEITE) ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const workCards = document.querySelectorAll('.work-card');
+    const workGrid = document.getElementById('workGrid');
+
+    if (filterButtons.length > 0 && workCards.length > 0 && workGrid) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                if (filterValue === 'all') {
+                    workGrid.classList.remove('is-filtered');
+                } else {
+                    workGrid.classList.add('is-filtered');
+                }
+
+                workCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('is-hidden');
+                    } else {
+                        card.classList.add('is-hidden');
+                    }
+                });
+            });
+        });
+    }
+
+    // --- 3. PAGE TRANSITIONS ---
     const transitionOverlay = document.getElementById('pageTransition');
     if (transitionOverlay) {
         setTimeout(() => {
@@ -23,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. INVERTING CUSTOM CURSOR (LENA HARRER STYLE) ---
+    // --- 4. INVERTING CUSTOM CURSOR ---
     const cursor = document.getElementById('customCursor');
     if (!cursor) return;
 
@@ -43,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cursor ausblenden, wenn das Browserfenster verlassen wird
     document.addEventListener('mouseleave', () => {
         cursor.style.opacity = '0';
         isVisible = false;
@@ -54,9 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
         isVisible = true;
     });
 
-    // Feste Nachlauf-Animation ohne Verzerrung
     function renderCursor() {
-        const ease = 0.25; // Schneller und direkter Nachlauf
+        const ease = 0.25;
         cursorX += (mouseX - cursorX) * ease;
         cursorY += (mouseY - cursorY) * ease;
 
@@ -65,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     renderCursor();
 
-    // Hover-Zustand für interaktive Elemente
     const interactiveElements = document.querySelectorAll('a, button, .work-card, .btn, .filter-btn, .pill-checkbox, input, textarea');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));

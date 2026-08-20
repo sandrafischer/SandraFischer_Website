@@ -16,10 +16,16 @@ section {
 
 /* Main Layout Container */
 .container {
-    max-width: 73rem;
+    max-width: 88rem;
     margin: 0 auto var(--space-xl) auto;
-    padding: 0 var(--space-md);
+    padding: 0 2rem;
     box-sizing: border-box;
+}
+
+/* Works Box Container */
+.work-box-container {
+    padding: 3.5rem 2.5rem;
+    border-radius: 32px;
 }
 
 /* Grid Fallbacks & Utility */
@@ -547,7 +553,27 @@ section {
         gap: 1rem;
     }
 
-    /* Detail Page Mobile */
+    /* Detail Page Mobile: Back-Link & Subheadline-Tag sauber gestapelt */
+    .project-top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .back-link {
+        font-size: 0.88rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .project-top-nav .subheadline-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 0;
+    }
+
     .project-meta-bar {
         grid-template-columns: 1fr;
         padding: 1.5rem;
