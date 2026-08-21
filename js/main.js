@@ -50,12 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. PAGE TRANSITIONS ---
+    // --- 3. PAGE TRANSITIONS (INKL. BFCACHE-FIX FÜR SWIPE-BACK) ---
     const transitionOverlay = document.getElementById('pageTransition');
     if (transitionOverlay) {
+        // Initial beim normalen Laden ausblenden
         setTimeout(() => {
             transitionOverlay.classList.add('is-hidden');
         }, 50);
+
+        // FIX: Wird gefeuert, wenn der Nutzer per Wisch-Geste / Browser-Back zurückkehrt
+        window.addEventListener('pageshow', (event) => {
+            transitionOverlay.classList.add('is-hidden');
+        });
 
         const internalLinks = document.querySelectorAll('a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"]):not([target="_blank"])');
 
@@ -73,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
     // --- 4. INVERTING CUSTOM CURSOR ---
     const cursor = document.getElementById('customCursor');
     if (!cursor) return;
