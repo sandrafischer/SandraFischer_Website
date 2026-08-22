@@ -633,10 +633,21 @@ nav a:active {
 
 
 /* ==========================================================================
-   5. DISCIPLINES SECTION
+   5. DISCIPLINES SECTION (DARK THEME)
    ========================================================================== */
 .disciplines-section {
-    padding: 4rem 0 6rem 0;
+    background-color: var(--color-text-dark, #181716);
+    color: #F6F4EF;
+    padding: 6rem 0 7rem 0;
+    margin: 3rem 0;
+}
+
+.disciplines-section .subheadline-tag {
+    color: var(--color-eucalyptus);
+}
+
+.disciplines-section .disciplines-title {
+    color: #F6F4EF;
 }
 
 .disciplines-grid {
@@ -646,14 +657,14 @@ nav a:active {
 }
 
 .discipline-card {
-    background-color: #ECE7DE;
-    border: 1.5px solid #DCD6CA;
+    background-color: #242220;
+    border: 1.5px solid #363330;
     border-radius: 32px;
     padding: 3rem 2.2rem 2.5rem 2.2rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -667,7 +678,7 @@ nav a:active {
     font-size: 4.8rem;
     font-weight: 800;
     line-height: 1;
-    color: rgba(24, 23, 22, 0.08);
+    color: rgba(246, 244, 239, 0.08);
     margin-bottom: 2rem;
     display: block;
     user-select: none;
@@ -676,7 +687,7 @@ nav a:active {
 .discipline-name {
     font-size: 1.55rem;
     font-weight: 700;
-    color: var(--color-text-dark);
+    color: #F6F4EF;
     line-height: 1.25;
     margin: 0 0 1.25rem 0;
 }
@@ -684,7 +695,7 @@ nav a:active {
 .discipline-description {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #63605A;
+    color: #A6A29A;
     margin: 0 0 2.5rem 0;
     flex-grow: 1;
 }
@@ -696,96 +707,14 @@ nav a:active {
 }
 
 .tag-pill {
-    background-color: rgba(68, 158, 158, 0.12);
-    color: var(--color-petrol);
+    background-color: rgba(68, 158, 158, 0.15);
+    color: var(--color-eucalyptus);
     font-size: 0.85rem;
     font-weight: 500;
     padding: 7px 16px;
     border-radius: 999px;
     white-space: nowrap;
 }
-
-
-/* ==========================================================================
-   6. PROCESS SECTION (DARK)
-   ========================================================================== */
-.process-section {
-    background-color: var(--color-text-dark);
-    color: #F6F4EF;
-    padding: 6rem 0 7rem 0;
-    margin: 3rem 0;
-}
-
-.process-section .subheadline-tag {
-    color: var(--color-eucalyptus);
-}
-
-.process-section .process-title {
-    color: #F6F4EF;
-}
-
-.process-timeline {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    position: relative;
-}
-
-.process-step {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.step-badge-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 2.5rem;
-}
-
-.step-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1.5px solid var(--color-eucalyptus);
-    color: var(--color-eucalyptus);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.15rem;
-    background-color: var(--color-text-dark);
-    z-index: 2;
-    flex-shrink: 0;
-}
-
-.step-line {
-    position: absolute;
-    top: 50%;
-    left: 52px;
-    width: calc(100% + 3rem - 52px);
-    height: 1px;
-    background-color: #2F2D2B;
-    z-index: 1;
-    transform: translateY(-50%);
-}
-
-.step-title {
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: #F6F4EF;
-    line-height: 1.25;
-    margin: 0 0 1.25rem 0;
-}
-
-.step-description {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    color: #9C9890;
-    margin: 0;
-}
-
 
 /* ==========================================================================
    7. ABOUT SECTION
