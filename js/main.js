@@ -125,3 +125,29 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
     });
 });
+
+// --- 5. FAQ ACCORDION ---
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+
+    if (questionBtn) {
+        questionBtn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open');
+
+            // Alle anderen einklappen (Accordion-Verhalten)
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('is-open');
+                const otherBtn = otherItem.querySelector('.faq-question');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            });
+
+            // Aktuelles Element toggeln
+            if (!isOpen) {
+                item.classList.add('is-open');
+                questionBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    }
+});

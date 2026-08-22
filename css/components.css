@@ -1657,3 +1657,100 @@ textarea {
 .page-transition.is-hidden {
     opacity: 0;
 }
+
+/* ==========================================================================
+   FAQ ACCORDION SECTION
+   ========================================================================== */
+.faq-section {
+    padding: 5rem 0 6rem 0;
+}
+
+.faq-container {
+    max-width: 58rem; /* Etwas kompakter für optimale Lesbarkeit */
+}
+
+.faq-header {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.faq-title {
+    font-family: "Clash Display", system-ui, sans-serif;
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--color-text-dark);
+    margin: 0 0 0.75rem 0;
+}
+
+.faq-subtitle {
+    font-size: 1.05rem;
+    color: #63605A;
+    margin: 0;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    border-top: 1.5px solid #DCD6CA;
+}
+
+.faq-item {
+    border-bottom: 1.5px solid #DCD6CA;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 0;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-family: "Clash Display", system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+    color: var(--color-petrol);
+}
+
+.faq-icon {
+    font-family: system-ui, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-petrol);
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.faq-item.is-open .faq-icon {
+    transform: rotate(45deg); /* Wird beim Öffnen zum Schließen-Kreuz */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.is-open .faq-answer {
+    max-height: 250px;
+    opacity: 1;
+}
+
+.faq-answer p {
+    padding-bottom: 1.6rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #63605A;
+}
