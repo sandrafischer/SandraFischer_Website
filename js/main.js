@@ -162,6 +162,32 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
     });
+
+    // --- VIDEO PLAY ON CLICK & AUTO-RESET ON END ---
+    const videoCards = document.querySelectorAll('.video-card');
+
+    videoCards.forEach(card => {
+        const video = card.querySelector('video');
+
+        if (video) {
+            // Klick auf die Karte toggelt Play/Pause
+            card.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    card.classList.add('is-playing');
+                } else {
+                    video.pause();
+                    card.classList.remove('is-playing');
+                }
+            });
+
+            // Wenn das Video 1x durchgelaufen ist: Stoppen, an den Anfang zurücksetzen & Button wieder anzeigen
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                card.classList.remove('is-playing');
+            });
+        }
+    });
 });
 
 // --- 5. FAQ ACCORDION ---
