@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character & 2D Motion Design — Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
+    <!-- Lottie Player Web Component -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="project-detail-page">
 
@@ -90,9 +92,85 @@
                 </div>
             </div>
 
-            <!-- Hero Image Showcase -->
+            <!-- Hero Image Showcase
             <div class="project-showcase-hero">
                 <img src="images/projects/project-picture1.jpg" alt="Character Animation Rigging Showcase">
+            </div>-->
+
+
+
+            <!-- 4 Character Moves Grid -->
+                    <div id="hero-lottie-container" class="lottie-container">
+
+
+            <div class="motion-states-grid">
+                <div class="motion-card">
+                    <div class="motion-media-placeholder">
+                        <lottie-player
+                                src="images/projects/project-motion/search.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%; position: relative; left: 45px; top: 15px;"
+                                loop
+                                autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="motion-card-footer">
+                        <h4>01. Precision Search</h4>
+                        <p>Locating scan with magnifying glass</p>
+                    </div>
+                </div>
+
+                <div class="motion-card">
+                    <div class="motion-media-placeholder">
+                        <lottie-player
+                                src="images/projects/project-motion/thumb-up.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%; position: relative; left: 45px; top: 15px;"
+                                loop
+                                autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="motion-card-footer">
+                        <h4>02. Verification Wink</h4>
+                        <p>Thumbs-up confirmation gesture</p>
+                    </div>
+                </div>
+
+                <div class="motion-card">
+                    <div class="motion-media-placeholder">
+                        <lottie-player
+                                src="images/projects/project-motion/walking.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%; position: relative; left: 45px; top: 15px;"
+                                loop
+                                autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="motion-card-footer">
+                        <h4>03. Locating Walk Cycle</h4>
+                        <p>Dynamic stride across sections</p>
+                    </div>
+                </div>
+
+                <div class="motion-card">
+                    <div class="motion-media-placeholder">
+                        <lottie-player
+                                src="images/projects/project-motion/from-button-up.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%; position: relative; top: 113px;"
+                                loop
+                                autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="motion-card-footer">
+                        <h4>04. CTA Button Lift</h4>
+                        <p>Playful hover interaction trigger</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Project Content Sections -->
@@ -114,49 +192,6 @@
 
             </div>
 
-            <!-- 4 Character Moves Grid -->
-            <div class="motion-states-grid">
-                <div class="motion-card">
-                    <div class="motion-media-placeholder">
-                        <img src="images/hero-avatar.jpg" alt="Character with Magnifying Glass">
-                    </div>
-                    <div class="motion-card-footer">
-                        <h4>01. Precision Search</h4>
-                        <p>Locating scan with magnifying glass</p>
-                    </div>
-                </div>
-
-                <div class="motion-card">
-                    <div class="motion-media-placeholder">
-                        <img src="images/hero-avatar.jpg" alt="Character Thumbs Up & Wink">
-                    </div>
-                    <div class="motion-card-footer">
-                        <h4>02. Verification Wink</h4>
-                        <p>Thumbs-up confirmation gesture</p>
-                    </div>
-                </div>
-
-                <div class="motion-card">
-                    <div class="motion-media-placeholder">
-                        <img src="images/hero-avatar.jpg" alt="Character Walking Loop">
-                    </div>
-                    <div class="motion-card-footer">
-                        <h4>03. Locating Walk Cycle</h4>
-                        <p>Dynamic stride across sections</p>
-                    </div>
-                </div>
-
-                <div class="motion-card">
-                    <div class="motion-media-placeholder">
-                        <img src="images/hero-avatar.jpg" alt="Character Button Lift Interaction">
-                    </div>
-                    <div class="motion-card-footer">
-                        <h4>04. CTA Button Lift</h4>
-                        <p>Playful hover interaction trigger</p>
-                    </div>
-                </div>
-            </div>
-
             <!-- Further Experiments Section (Wildlife Camping Short Film & Cycling) -->
             <div class="motion-experiments-block">
                 <span class="subheadline-tag">ACADEMIC & EXPERIMENTAL</span>
@@ -166,15 +201,37 @@
                 </p>
 
                 <div class="project-gallery-grid">
-                    <div class="gallery-item span-12">
-                        <!-- Hier kannst du das Video oder Standbild von Wildlife Camping einbinden -->
-                        <img src="images/projects/project-picture6.jpg" alt="Wildlife Camping 2D Animated Scene">
+                    <div class="gallery-item span-6" style="position: relative; cursor: pointer; overflow: hidden;" onclick="const v=this.querySelector('video'), b=this.querySelector('.play-btn'); if(v.paused){ v.play(); b.style.display='none'; } else { v.pause(); b.style.display='flex'; }">
+                        <video
+                                loop
+                                playsinline
+                                preload="metadata"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit;">
+                            <source src="images/projects/project-motion/Spring.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.25); transition: background 0.3s;">
+                            <div style="width: 64px; height: 64px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" style="margin-left: 3px;">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-picture2.jpg" alt="Cycling Character Rig">
-                    </div>
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-picture4.jpg" alt="Kinetic Lettering Detail">
+                    <div class="gallery-item span-6" style="position: relative; cursor: pointer; overflow: hidden;" onclick="const v=this.querySelector('video'), b=this.querySelector('.play-btn'); if(v.paused){ v.play(); b.style.display='none'; } else { v.pause(); b.style.display='flex'; }">
+                        <video
+                                loop
+                                playsinline
+                                preload="metadata"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit;">
+                            <source src="images/projects/project-motion/Wildlife_Camping.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.25); transition: background 0.3s;">
+                            <div style="width: 64px; height: 64px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" style="margin-left: 3px;">
+                                    <polygon points="5,3 19,12 5,21"></polygon>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
