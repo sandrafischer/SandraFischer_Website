@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 0. INTRO PRELOADER (0-100 COUNTER) ---
+    // --- 0. INTRO PRELOADER (ONLY ON FIRST VISIT PER SESSION) ---
     const introLoader = document.getElementById('introLoader');
     const loaderCounter = document.getElementById('loaderCounter');
 
-    if (introLoader && loaderCounter) {
-        // Verhindert Scrollen während des Intros
+    const hasSeenIntro = sessionStorage.getItem('introShown');
+
+    if (introLoader && !hasSeenIntro) {
+        // 1. Erster Besuch: Animation normal abspielen
         document.body.style.overflow = 'hidden';
 
         let count = 0;
@@ -14,17 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (count >= 100) {
                 count = 100;
                 clearInterval(interval);
-                loaderCounter.textContent = count;
+                if (loaderCounter) loaderCounter.textContent = count;
 
                 setTimeout(() => {
                     introLoader.classList.add('is-loaded');
                     document.body.classList.add('content-ready');
                     document.body.style.overflow = '';
+                    // Flag setzen, damit es beim Zurückkehren nicht wiederholt wird
+                    sessionStorage.setItem('introShown', 'true');
                 }, 250);
             } else {
-                loaderCounter.textContent = count;
+                if (loaderCounter) loaderCounter.textContent = count;
             }
         }, 25);
+    } else if (introLoader) {
+        // 2. Wiederholter Besuch (z. B. von Detailseite zurück): Loader sofort entfernen
+        introLoader.style.display = 'none';
+        document.body.classList.add('content-ready');
+        document.body.style.overflow = '';
     } else {
         document.body.classList.add('content-ready');
     }
