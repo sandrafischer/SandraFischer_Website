@@ -197,7 +197,45 @@ nav a:active {
     margin-bottom: 2.75rem;
 }
 
+/* ==========================================================================
+   1. INTRO PRELOADER ANIMATION
+   ========================================================================== */
+.intro-loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-text-dark, #181716);
+    color: #F6F4EF;
+    z-index: 100000;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    box-sizing: border-box;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
 
+.intro-loader.is-loaded {
+    transform: translateY(-100%);
+}
+
+.loader-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Clash Display", sans-serif;
+}
+
+.loader-name {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.loader-counter {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
 /* ==========================================================================
    3. HERO SECTION
    ========================================================================== */

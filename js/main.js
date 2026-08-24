@@ -1,5 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- 0. INTRO PRELOADER (0-100 COUNTER) ---
+    const introLoader = document.getElementById('introLoader');
+    const loaderCounter = document.getElementById('loaderCounter');
+
+    if (introLoader && loaderCounter) {
+        // Verhindert Scrollen während des Intros
+        document.body.style.overflow = 'hidden';
+
+        let count = 0;
+        const interval = setInterval(() => {
+            count += Math.floor(Math.random() * 8) + 2;
+            if (count >= 100) {
+                count = 100;
+                clearInterval(interval);
+                loaderCounter.textContent = count;
+
+                setTimeout(() => {
+                    introLoader.classList.add('is-loaded');
+                    document.body.classList.add('content-ready');
+                    document.body.style.overflow = '';
+                }, 250);
+            } else {
+                loaderCounter.textContent = count;
+            }
+        }, 25);
+    } else {
+        document.body.classList.add('content-ready');
+    }
+
     // --- 1. MOBILE NAVIGATION TOGGLE ---
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
