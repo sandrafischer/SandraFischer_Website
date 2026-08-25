@@ -655,60 +655,6 @@
     </footer>
 </main>
 
-
-<!-- ==========================================================================
-     JAVASCRIPT: MOBILE NAVIGATION & ADAPTIVE GRID FILTER
-     ========================================================================== -->
-<script>
-    // 1. Mobile Menu Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.main-nav a');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('is-active');
-        mainNav.classList.toggle('is-open');
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('is-active');
-            mainNav.classList.remove('is-open');
-        });
-    });
-
-    // 2. Filter-Funktion mit Umschaltung zwischen Asymmetrie & symmetrischem 2er-Raster
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const workCards = document.querySelectorAll('.work-card');
-    const workGrid = document.getElementById('workGrid');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Aktiven Button stylen
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            const filterValue = button.getAttribute('data-filter');
-
-            // Umschalten: Asymmetrisch bei 'all', 2-Spalten bei gefilterten Kategorien
-            if (filterValue === 'all') {
-                workGrid.classList.remove('is-filtered');
-            } else {
-                workGrid.classList.add('is-filtered');
-            }
-
-            // Cards ein-/ausblenden
-            workCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                if (filterValue === 'all' || cardCategory === filterValue) {
-                    card.classList.remove('is-hidden');
-                } else {
-                    card.classList.add('is-hidden');
-                }
-            });
-        });
-    });
-</script>
 <script src="js/main.js"></script>
 </body>
 </html>

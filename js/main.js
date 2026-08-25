@@ -64,16 +64,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.main-nav a');
 
     if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             menuToggle.classList.toggle('is-active');
             mainNav.classList.toggle('is-open');
         });
 
+        // Schließen bei Klick auf einen Navigations-Link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('is-active');
                 mainNav.classList.remove('is-open');
             });
+        });
+
+        // Schließen bei Klick außerhalb des Menüs
+        document.addEventListener('click', (e) => {
+            if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('is-active');
+                mainNav.classList.remove('is-open');
+            }
         });
     }
 
