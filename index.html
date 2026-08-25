@@ -14,6 +14,17 @@
 <body>
 <a href="#hero" class="SkipLink">Skip to main content</a>
 
+<!-- ==========================================================================
+     CINEMATIC INTRO OVERLAY (LOGO VIDEO REVEAL)
+     ========================================================================== -->
+<div class="cinematic-intro-overlay" id="introOverlay">
+    <div class="intro-video-wrapper">
+        <video id="introVideo" playsinline muted preload="auto">
+            <source src="images/intro-logo2.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
 <!-- Custom Cursor Element -->
 <div class="custom-cursor" id="customCursor"></div>
 <!-- Page Transition Overlay -->
@@ -69,49 +80,55 @@
 
 <main>
 
-    <!-- INTRO PRELOADER OVERLAY -->
-    <div class="intro-loader" id="introLoader">
-        <div class="loader-content">
-            <span class="loader-name">Sandra Fischer</span>
-            <span class="loader-counter" id="loaderCounter">0</span>
-        </div>
-    </div>
-
+    <!-- HERO SECTION -->
     <section class="hero-section-editorial" id="hero">
+        <!-- Zarter Ambient Glow im Hintergrund -->
+        <div class="hero-ambient-glow"></div>
+
         <div class="hero-full-width-wrap">
 
-            <!-- 1. Badge ganz links am Rand -->
-            <div class="hero-badge-row hero-fade-in">
+            <!-- 1. Status Badge ganz links -->
+            <div class="hero-badge-row anim-badge">
                 <div class="status-badge">
                     <span class="status-dot"></span>
                     <span>Currently available for new projects</span>
                 </div>
             </div>
 
-            <!-- 2. Typo-Block (zentriert mit mehr Margin) -->
-            <div class="hero-editorial-box">
+            <!-- 2. Typo-Block (mit 3D-Perspektive für Maus-Tilt) -->
+            <div class="hero-editorial-box" id="heroTiltBox">
                 <div class="hero-monumental-wrap">
-                    <div class="hero-line hero-line-first hero-fade-in">
-                        <h1 class="hero-huge-title">SANDRA</h1>
+
+                    <!-- Zeile 1: SANDRA (Gegenbewegung von links) -->
+                    <div class="hero-line hero-line-first typo-mask">
+                        <h1 class="hero-huge-title anim-title-sandra">SANDRA</h1>
                     </div>
 
-                    <div class="hero-line hero-line-second hero-fade-in">
-                        <div class="hero-offset-name">
-                            <h1 class="hero-huge-title">FISCHER</h1>
+                    <!-- Zeile 2: FISCHER (Gegenbewegung von rechts + Nachhall) -->
+                    <div class="hero-line hero-line-second">
+                        <div class="hero-offset-name typo-mask">
+                            <h1 class="hero-huge-title anim-title-fischer">FISCHER</h1>
                         </div>
 
-                        <div class="hero-disciplines-subblock">
-                            <a href="#disciplines" class="discipline-link is-default-active">web design & development</a>
-                            <a href="#disciplines" class="discipline-link">brand identity & print</a>
-                            <a href="#disciplines" class="discipline-link">photography</a>
+                        <!-- 3 Untertitel (3D-Falttür / Lamellen-Klappen) -->
+                        <div class="hero-disciplines-subblock sublines-3d-wrap">
+                            <div class="subline-flip-wrap anim-sub-1">
+                                <a href="#disciplines" class="discipline-link is-default-active">web design & development</a>
+                            </div>
+                            <div class="subline-flip-wrap anim-sub-2">
+                                <a href="#disciplines" class="discipline-link">brand identity & print</a>
+                            </div>
+                            <div class="subline-flip-wrap anim-sub-3">
+                                <a href="#disciplines" class="discipline-link">photography</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Explore Works Button -->
-                <div class="hero-bottom-action hero-fade-in">
-                    <a href="#projects" class="hero-explore-btn">
-                        <span>Explore Works</span>
+                <!-- 3. Explore Works Button (Kreis -> Pill Expansion) -->
+                <div class="hero-bottom-action">
+                    <a href="#projects" class="hero-explore-btn anim-expand-btn">
+                        <span class="btn-pill-label">Explore Works</span>
                         <span class="explore-arrow">↓</span>
                     </a>
                 </div>
