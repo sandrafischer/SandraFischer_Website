@@ -236,12 +236,23 @@ body.hero-master-active .hero-ambient-glow {
 .work-grid:not(.is-filtered) .work-card.span-4 .work-card-img,
 .work-grid:not(.is-filtered) .work-card.span-8 .work-card-img { height: 370px; }
 
-/* Disciplines Section */
+/* ==========================================================================
+   DISCIPLINES SECTION (FIX FÜR WEISSE SCHRIFT)
+   ========================================================================== */
 .disciplines-section {
     background-color: var(--color-text-dark, #181716);
     color: #F6F4EF;
     padding: 6rem 0 7rem 0;
     margin: 3rem 0;
+}
+
+/* Erzwingt weißen Titel auf dunklem Grund */
+.disciplines-section .disciplines-title {
+    color: #F6F4EF;
+}
+
+.disciplines-section .subheadline-tag {
+    color: var(--color-eucalyptus);
 }
 
 .disciplines-grid {
@@ -364,14 +375,19 @@ body.hero-master-active .hero-ambient-glow {
     height: 45px;
     background-color: #DCD6CA;
 }
-
-/* FAQ & Contact Section */
+/* ==========================================================================
+   FAQ & CONTACT SECTION (FIX FÜR BREITE & TITEL-STIL)
+   ========================================================================== */
 .faq-section {
     padding: 5rem 0 6rem 0;
 }
 
+/* FIX: Volle Container-Breite wie bei allen anderen Sektionen */
 .faq-container {
-    max-width: 58rem;
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .faq-header {
@@ -379,10 +395,21 @@ body.hero-master-active .hero-ambient-glow {
     text-align: left;
 }
 
+.faq-title {
+    font-family: "Clash Display", system-ui, sans-serif;
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--color-text-dark);
+    margin: 0 0 0.75rem 0;
+}
+
 .faq-subtitle {
     font-size: 1.05rem;
     color: #63605A;
     margin: 0;
+    max-width: 700px;
 }
 
 .contact-section {
