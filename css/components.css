@@ -56,13 +56,16 @@ header {
 }
 
 .logo-name {
-    font-weight: 700;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-weight: 600; /* Semibold */
     font-size: 1rem;
-    color: var(--neutral-dark);
+    text-transform: uppercase; /* Großbuchstaben */
+    letter-spacing: 0.04em;
+    color: var(--neutral-dark, #181716);
 }
 
 .logo-title {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #757575;
 }
 
@@ -236,18 +239,38 @@ nav a:active {
     font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
+
+
 /* ==========================================================================
-   3. HERO SECTION
+   3. HERO SECTION (NATURAL KERNING & LEFT-ALIGNED BADGE)
    ========================================================================== */
-.hero-section {
-    padding: 2.5rem 0 5rem 0;
+/* ==========================================================================
+   3. HERO SECTION (LEFT-ALIGNED BADGE & CENTERED OFFSET TYPO)
+   ========================================================================== */
+.hero-section-editorial {
+    padding: 1.5rem 0 2rem 0;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 3.5rem;
-    align-items: center;
+/* Gesamter Hero-Bereich nutzt die volle Seitenbreite auf Logo-Höhe */
+.hero-full-width-wrap {
+    width: min(1350px, calc(100% - 3rem));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 1. Status Badge ganz links (bündig mit Nav-Logo) */
+.hero-badge-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .status-badge {
@@ -256,227 +279,196 @@ nav a:active {
     gap: 8px;
     background-color: #ECE7DE;
     border: 1px solid #DCD6CA;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 999px;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.82rem;
     font-weight: 500;
-    color: var(--color-text-dark);
-    margin-bottom: 1.5rem;
+    letter-spacing: normal;
+    color: var(--color-text-dark, #181716);
 }
 
 .status-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--color-eucalyptus);
+    background-color: var(--color-eucalyptus, #449E9E);
 }
 
-.hero-title {
-    font-family: "Clash Display", system-ui, sans-serif;
-    font-size: clamp(2.2rem, 3.8vw, 3.4rem);
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    font-weight: 700;
-    color: var(--color-text-dark);
-    margin-bottom: 1.5rem;
-}
-
-.hero-subtext {
-    font-size: 1.05rem;
-    line-height: 1.55;
-    color: #5A5854;
-    max-width: 480px;
-    margin-bottom: 2rem;
-}
-
-.hero-cta-group {
+/* 2. Zentrierte Typo-Box (mit vergrößertem Seitenabstand) */
+.hero-editorial-box {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    gap: 12px;
-}
-
-.btn-hero-primary {
-    background-color: var(--color-petrol);
-    color: #ffffff;
-    padding: 0.85rem 1.6rem;
-    border-radius: 999px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box;
 }
 
-.btn-hero-secondary {
-    background-color: transparent;
-    color: var(--color-text-dark);
-    border: 1.5px solid var(--color-text-dark);
-    padding: 0.85rem 1.6rem;
-    border-radius: 999px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease, color 0.2s ease;
+.hero-monumental-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2.5rem;
 }
 
-.btn-hero-primary:hover {
-    background-color: var(--color-petrol-dark);
-    transform: translateY(-2px);
+.hero-line {
+    width: 100%;
+    display: flex;
 }
 
-.btn-hero-secondary:hover {
-    background-color: var(--color-text-dark);
-    color: #F6F4EF;
+.hero-huge-title {
+    font-family: "Clash Display", system-ui, sans-serif;
+    font-size: clamp(4.8rem, 13.2vw, 12rem);
+    font-weight: 800;
+    line-height: 0.84;
+    letter-spacing: normal;
+    color: var(--color-text-dark, #181716);
+    margin: 0;
+    text-transform: uppercase;
 }
 
-/* Bild-Collage */
-.hero-visual-col {
-    position: relative;
+.hero-line-second {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0.5rem;
+}
+
+.hero-offset-name {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
-.collage-container {
-    position: relative;
-    width: 100%;
-    max-width: 540px;
-    height: 560px;
-}
-
-.mockup-browser {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: 82%;
-    background-color: #262524;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    z-index: 1;
-}
-
-.browser-bar {
+/* 3. Untertitel in Clash Grotesk, bündig unter dem R von FISCHER */
+.hero-disciplines-subblock {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    margin-top: 1.5rem;
+}
+
+.discipline-link {
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+    font-weight: 500;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: #8C8880;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+}
+
+.discipline-link.is-default-active {
+    color: var(--color-petrol, #0D5C63);
+}
+
+.hero-disciplines-subblock:hover .discipline-link.is-default-active {
+    color: #8C8880;
+}
+
+.hero-disciplines-subblock .discipline-link:hover {
+    color: var(--color-petrol, #0D5C63) !important;
+    transform: translateX(-4px);
+}
+
+/* 4. Explore Works Button */
+.hero-bottom-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.hero-explore-btn {
+    display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 18px;
-    background-color: #262524;
-}
-
-.browser-dots {
-    display: flex;
-    gap: 6px;
-}
-
-.browser-dots .dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-}
-
-.dot-red { background-color: #ED6A5E; }
-.dot-yellow { background-color: #F4BF4F; }
-.dot-green { background-color: #61C554; }
-
-.browser-address-bar {
-    flex: 1;
-    height: 16px;
-    background-color: #3A3836;
+    background-color: var(--color-petrol, #0D5C63);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.95rem 2.2rem;
     border-radius: 999px;
-    margin-right: 20px;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    box-shadow: 0 10px 30px rgba(13, 92, 99, 0.2);
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.browser-content img {
-    width: 100%;
-    height: 290px;
-    object-fit: cover;
-    display: block;
+.hero-explore-btn:hover {
+    background-color: #084349;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(13, 92, 99, 0.3);
 }
 
-.card-photo {
-    position: absolute;
-    top: 260px;
-    left: -15px;
-    width: 44%;
-    background-color: #ECE7DE;
-    border: 1.5px solid #DCD6CA;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
-    transform: rotate(-2deg);
-    z-index: 2;
+.explore-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
 }
 
-.photo-inner {
-    border-radius: 14px;
-    overflow: hidden;
-    height: 200px;
+.hero-explore-btn:hover .explore-arrow {
+    transform: translateY(3px);
 }
 
-.photo-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* ==========================================================================
+   INITIAL LOAD ANIMATION
+   ========================================================================== */
+.hero-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.photo-badge {
-    display: block;
-    padding: 10px 4px 4px 8px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--color-eucalyptus);
+body.content-ready .hero-badge-row.hero-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.05s;
 }
 
-.card-brand {
-    position: absolute;
-    top: 140px;
-    right: -70px;
-    width: 62%;
-    background-color: #FFFFFF;
-    border: 1.5px solid #DCD6CA;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.22);
-    transform: rotate(-5deg);
-    z-index: 3;
+body.content-ready .hero-line-first.hero-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s;
 }
 
-.brand-image {
-    width: 100%;
-    height: 175px;
-    overflow: hidden;
+body.content-ready .hero-line-second.hero-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s;
 }
 
-.brand-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+body.content-ready .hero-bottom-action.hero-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
 }
 
-.brand-info {
-    padding: 14px 18px 18px 18px;
-    background-color: #FFFFFF;
+/* Responsive Anpassungen */
+@media (max-width: 850px) {
+    .hero-full-width-wrap {
+        width: calc(100% - 2rem);
+    }
+    .hero-huge-title {
+        font-size: clamp(3.2rem, 15vw, 5.5rem);
+    }
+    .hero-offset-name {
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+    .hero-line-second,
+    .hero-disciplines-subblock {
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+    .hero-bottom-action {
+        justify-content: flex-start;
+    }
 }
-
-.brand-info h4 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--color-text-dark);
-}
-
-.brand-info p {
-    margin: 4px 0 0 0;
-    font-size: 0.85rem;
-    color: #7A7874;
-}
-
 
 /* ==========================================================================
    4. FEATURED WORK SECTION
