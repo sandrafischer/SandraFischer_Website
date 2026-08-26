@@ -177,9 +177,7 @@ nav a:active {
 
 .work-title,
 .disciplines-title,
-.process-title,
-.about-title,
-.contact-title {
+.about-title {
     font-family: "Clash Display", system-ui, sans-serif;
     font-size: clamp(2.2rem, 3.8vw, 3rem);
     font-weight: 600;
@@ -191,9 +189,7 @@ nav a:active {
 
 .work-header,
 .disciplines-header,
-.process-header,
-.about-header,
-.contact-header {
+.about-header {
     margin-bottom: 2.75rem;
 }
 
@@ -712,7 +708,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 }
 
 /* ==========================================================================
-   7. CONTACT SECTION & FOOTER (MINIMALIST EDITORIAL DARK THEME)
+   7. COMBINED FAQ & CONTACT (EDITORIAL DARK SPLIT-HUB - HIGH CONTRAST)
    ========================================================================== */
 .contact-footer-wrapper {
     background-color: var(--color-text-dark, #181716);
@@ -721,272 +717,131 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    /* Großzügiger Abstand oben, damit die fixierte Navbar nichts verdeckt */
-    padding-top: 7.5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
-.contact-section-dark {
+.split-hub-section {
     flex: 1;
     display: flex;
-    align-items: center;
-    padding: 1rem 0 2rem 0;
+    align-items: start;        /* Nicht mehr vertikal zentrieren/nach unten schieben */
+    padding: 6rem 0 3.5rem 0;  /* Exakt die 6rem von Capabilities */
     color: #F6F4EF;
 }
 
-.contact-section-dark .subheadline-tag {
-    color: var(--color-eucalyptus, #449E9E);
-    margin-bottom: 0.65rem;
-}
-
-.contact-section-dark .contact-title {
-    color: #F6F4EF;
-    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    margin: 0;
-}
-
-.contact-section-dark .contact-subtitle {
-    font-size: 1.05rem;
-    color: #8C8880;
-    margin: 0.75rem 0 0 0;
-}
-
-.contact-header {
+/* ==========================================================================
+   CONTACT HEADER (1:1 KONSISTENT MIT DEN ANDEREN SEKTIONEN)
+   ========================================================================== */
+.split-hub-header {
     margin-bottom: 3.5rem;
 }
 
-.contact-grid {
+.split-hub-header .subheadline-tag {
+    display: inline-block;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-eucalyptus, #449E9E);
+    margin-bottom: 0.5rem;
+}
+
+.split-hub-title {
+    font-family: "Clash Display", system-ui, sans-serif;
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: #F6F4EF;
+    margin: 0;
+}
+
+.split-hub-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #8C8880;
+    margin: 0.85rem 0 0 0;
+}
+
+/* 2-Spalten Grid */
+.split-hub-grid {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 4.5rem;
     align-items: start;
 }
 
-/* --- MINIMALISTISCHE FORMULAR CARD --- */
-.contact-form-card {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-}
-
-.inquiry-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-}
-
-.form-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-field label {
-    font-family: "Clash Grotesk", system-ui, sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #8C8880;
-}
-
-/* Feine Underline-/Border-Inputs */
-.form-field input,
-.form-field textarea {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1.5px solid #2B2927;
-    border-radius: 14px;
-    padding: 1rem 1.2rem;
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: #F6F4EF;
-    outline: none;
-    transition: all 0.25s ease;
-    resize: none;
-}
-
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-    color: #55524E;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    border-color: var(--color-eucalyptus, #449E9E);
-    background-color: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 0 0 4px rgba(68, 158, 158, 0.12);
-}
-
-.btn-submit {
-    background-color: var(--color-petrol, #0D5C63);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 999px;
-    padding: 1rem 2rem;
-    font-family: "Clash Grotesk", system-ui, sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: fit-content;
-    transition: all 0.25s ease;
-    margin-top: 0.5rem;
-}
-
-.btn-submit:hover {
-    background-color: #084349;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(13, 92, 99, 0.35);
-}
-
-.submit-arrow {
-    transition: transform 0.25s ease;
-}
-
-.btn-submit:hover .submit-arrow {
-    transform: translateX(4px);
-}
-
-/* --- INFO SPALTE RECHTS --- */
-.contact-info-col {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0.5rem;
-}
-
-.contact-info-col .info-block h4 {
-    font-family: "Clash Grotesk", system-ui, sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #8C8880;
-    margin: 0 0 0.85rem 0;
-}
-
-.contact-info-col .direct-link {
-    display: block;
-    font-family: "Clash Display", sans-serif;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: #F6F4EF;
-    text-decoration: none;
-    line-height: 1.4;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.contact-info-col .direct-link:hover {
-    color: var(--color-eucalyptus, #449E9E);
-    transform: translateX(4px);
-}
-
-.contact-info-col .info-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #262422;
-    margin: 2rem 0;
-}
-
-.contact-info-col .expect-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.contact-info-col .expect-list li {
-    font-size: 0.95rem;
-    color: #9C9890;
-    position: relative;
-    padding-left: 1.4rem;
-    line-height: 1.4;
-}
-
-.contact-info-col .expect-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--color-eucalyptus, #449E9E);
-    font-size: 1.3rem;
-    line-height: 1;
-}
-
-.contact-info-col .availability-card {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #201E1D;
-    border: 1px solid #2F2D2B;
-    border-radius: 999px;
-    padding: 10px 18px;
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: #E2DDD3;
-    margin-top: 2.5rem;
-    width: fit-content;
-}
-
-/* Footer Border */
-.site-footer {
-    border-top: 1px solid #242220;
-    padding: 2rem 0;
-}
-
+/* 4. Deutliche Spalten-Überschriften */
 /* ==========================================================================
-   8. FAQ ACCORDION & VIDEO CARDS
+   SPALTE & FAQ LABELS (EDITORIAL BADGE DESIGN)
    ========================================================================== */
+
+/* Feines Magazin-Badge statt Sternchen-Emoji */
+.split-col-label {
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-eucalyptus, #449E9E);
+    margin: 0 0 2rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(68, 158, 158, 0.1);
+    border: 1px solid rgba(68, 158, 158, 0.25);
+    padding: 6px 14px;
+    border-radius: 999px;
+    width: fit-content;
+}
+
+/* Entfernt das alte Stern-Symbol komplett */
+.split-col-label::before {
+    content: none !important;
+}
+
+/* FAQ Akkordeon Abgrenzung */
 .faq-accordion {
     display: flex;
     flex-direction: column;
-    border-top: 1.5px solid #DCD6CA;
+    border-top: 1px solid #363330;
+    margin-top: 0.5rem;
 }
 
 .faq-item {
-    border-bottom: 1.5px solid #DCD6CA;
+    border-bottom: 1px solid #363330;
 }
 
+/* Fragen heben sich typografisch klar vom Badge ab */
 .faq-question {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.6rem 0;
+    padding: 1.5rem 0;
     background: transparent;
     border: none;
     text-align: left;
     font-family: "Clash Display", system-ui, sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-text-dark);
-    transition: color 0.2s ease;
+    letter-spacing: -0.01em;
+    color: #F6F4EF;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .faq-question:hover {
-    color: var(--color-petrol);
+    color: var(--color-eucalyptus, #449E9E);
+    transform: translateX(4px);
 }
 
 .faq-icon {
     font-family: system-ui, sans-serif;
     font-size: 1.6rem;
-    font-weight: 400;
     line-height: 1;
-    color: var(--color-petrol);
-    transition: transform 0.3s ease;
-    margin-left: 1rem;
+    color: var(--color-eucalyptus, #449E9E);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-left: 1.25rem;
     flex-shrink: 0;
 }
 
@@ -1002,7 +857,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 }
 
 .faq-item.is-open .faq-answer {
-    max-height: 250px;
+    max-height: 220px;
     opacity: 1;
 }
 
@@ -1011,9 +866,269 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     margin: 0;
     font-size: 1rem;
     line-height: 1.65;
-    color: #63605A;
+    color: #D2CDC4;
 }
 
+/* --- 3. PRÄSENTE & EDLE FORMULAR-BOX --- */
+.contact-col {
+    background-color: rgba(255, 255, 255, 0.025);
+    border: 1.5px solid #363330;
+    border-radius: 28px;
+    padding: 2.25rem 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* 2. Gut lesbare Labels */
+.form-field label {
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #D2CDC4;
+    transition: color 0.2s ease;
+}
+
+/* 2. Klare, kontrastreiche Eingabefelder */
+.form-field input,
+.form-field textarea {
+    background-color: #1F1D1C !important;
+    border: 1.5px solid #3D3A37 !important;
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #FFFFFF !important;
+    outline: none;
+    transition: all 0.25s ease;
+    resize: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #8A867E; /* Deutlich sichtbarer Placeholder */
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--color-eucalyptus, #449E9E) !important;
+    background-color: #262422 !important;
+    box-shadow: 0 0 0 3px rgba(68, 158, 158, 0.2);
+}
+
+.form-field:focus-within label {
+    color: var(--color-eucalyptus, #449E9E);
+}
+
+/* 3. Auffallender Call-to-Action Button */
+.form-action-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.btn-submit {
+    background-color: var(--color-petrol, #0D5C63);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 999px;
+    padding: 1.05rem 2.4rem;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(13, 92, 99, 0.35);
+    transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0A484E;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(13, 92, 99, 0.5);
+}
+
+.submit-arrow {
+    transition: transform 0.25s ease;
+}
+
+.btn-submit:hover .submit-arrow {
+    transform: translateX(4px);
+}
+
+.direct-mail-inline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.92rem;
+    color: #A6A29A;
+}
+
+.direct-mail-inline a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.direct-mail-inline a:hover {
+    color: var(--color-eucalyptus, #449E9E);
+}
+
+/* 2. Subtiler, aber lesbarer Meta-Bereich */
+.contact-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #363330;
+}
+
+.availability-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #F6F4EF;
+}
+
+.response-time {
+    font-size: 0.82rem;
+    color: #A6A29A;
+}
+
+/* ==========================================================================
+   8. FOOTER SECTION
+   ========================================================================== */
+.site-footer {
+    background-color: var(--color-text-dark);
+    color: #9C9890;
+    padding: 2rem 0;
+    border-top: 1px solid #242220;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-copyright {
+    font-size: 0.88rem;
+    color: #8A867E;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.footer-legal a {
+    color: #8A867E;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: #F6F4EF;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-pills {
+    display: flex;
+    gap: 8px;
+}
+
+.social-pill {
+    background-color: #242220;
+    border: 1px solid #363330;
+    color: #D2CDC4;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 7px 18px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.social-pill:hover {
+    background-color: var(--color-petrol);
+    border-color: var(--color-petrol);
+    color: #FFFFFF;
+}
+
+.back-to-top-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #242220;
+    border: 1px solid #363330;
+    color: #F6F4EF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: var(--color-petrol);
+    border-color: var(--color-petrol);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   9. VIDEO CARDS & DETAIL PAGE COMPONENTS
+   ========================================================================== */
 .video-card {
     position: relative;
     cursor: pointer;
@@ -1063,9 +1178,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     pointer-events: none;
 }
 
-/* ==========================================================================
-   9. DETAIL PAGE MOTION & 3D ASSET CARDS
-   ========================================================================== */
 .motion-states-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1119,7 +1231,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     line-height: 1.4;
 }
 
-/* Experiments Block */
 .motion-experiments-block {
     padding-top: 2rem;
     margin-bottom: 5rem;
@@ -1142,7 +1253,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     max-width: 650px;
 }
 
-/* Cozy Place Hero Gruppe */
 .cozy-showcase-group {
     margin-bottom: 4.5rem;
 }
@@ -1155,13 +1265,11 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     margin-bottom: 0;
 }
 
-/* Castle 3er Grid Spalten */
 .gallery-item.span-4 {
     grid-column: span 4;
     height: 380px;
 }
 
-/* Interactive Meta Links */
 .meta-link,
 .meta-value a {
     color: var(--color-petrol, #0D5C63) !important;
