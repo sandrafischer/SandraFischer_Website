@@ -472,3 +472,82 @@
         gap: 1rem;
     }
 }
+
+/* ==========================================================================
+   MORE RECENT PROJECTS (2-CARDS ROW)
+   ========================================================================== */
+.more-projects-section {
+    padding: 4.5rem 0 6rem 0;
+    border-top: 1.5px solid #E2DDD3;
+    margin-top: 2rem;
+}
+
+.more-projects-header {
+    margin-bottom: 2.5rem;
+}
+
+.more-projects-title {
+    font-family: "Clash Display", sans-serif;
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    font-weight: 600;
+    color: var(--color-text-dark, #181716);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* 2 Spalten nebeneinander */
+.more-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.more-projects-grid .work-card {
+    width: 100%;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-projects-grid .work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.more-projects-grid .work-card-img {
+    width: 100%;
+    height: 320px;
+    background-color: #ECE7DE;
+    overflow: hidden;
+    position: relative;
+}
+
+.more-projects-grid .work-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.more-projects-grid .work-card:hover .work-card-img img {
+    transform: scale(1.03);
+}
+
+/* Breakpoint für Mobile */
+@media (max-width: 768px) {
+    .more-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .more-projects-grid .work-card-img {
+        height: 240px;
+    }
+}

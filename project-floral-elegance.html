@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Floral Elegance Fashion & Editorial Photography by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Elegance Fashion & Editorial — Sandra Fischer</title>
+    <title>Floral Elegance | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,93 +54,156 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">EDITORIAL & FASHION PHOTOGRAPHY</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">EDITORIAL & FASHION PHOTOGRAPHY</span>
+                </div>
+
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Floral Elegance</span>
+                        <span>Editorial Series</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A soft-light fashion and portrait editorial created during the HTL Braunau media workshop — exploring organic natural textures, tactile denim details, and summer minimalism.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip (Outlined) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Context</span>
+                        <span class="meta-field-val">HTL Media Workshop</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Fashion & Editorial Portrait</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">Media Week</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Setup</span>
+                        <span class="meta-field-val">High-Key Studio Diffuser</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Denim Detail with Wildflowers" data-zoomable>
             </div>
 
-            <h1 class="project-main-title">Floral Elegance Editorial Series</h1>
-            <p class="project-lead-text">
-                A soft-light fashion and portrait editorial created during the HTL Braunau media workshop — exploring organic natural textures, tactile denim details, and summer minimalism.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Context</span>
-                    <span class="meta-value">HTL Media Workshop</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">Media Week</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Discipline</span>
-                    <span class="meta-value">Editorial & Fashion Portrait</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Lighting Setup</span>
-                    <span class="meta-value">High-Key Studio Diffuser</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Showcase (Denim Pocket Close-up) -->
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Denim Detail with Wildflowers">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
                     <h3>Concept & Tactile Textures</h3>
                     <p>
-                        <em>Floral Elegance</em> focuses on the delicate interplay between raw textile surfaces and fragile botanical elements. By placing freshly picked wild field daisies directly into washed denim pockets, the shoot creates a tactile contrast between structured casual fashion and pure organic lightness.
+                        <em>Floral Elegance</em> focuses on the delicate interplay between raw textile surfaces and fragile botanical elements.
+                    </p>
+                    <p>
+                        By placing freshly picked wild field daisies directly into washed denim pockets, the shoot creates a tactile contrast between structured casual fashion and pure organic lightness.
                     </p>
                 </div>
 
-                <div class="project-text-block">
+                <div class="project-story-col">
                     <h3>Soft Light Studio Direction</h3>
                     <p>
-                        The session utilized clean high-key studio diffusion against seamless neutral grey-to-white gradients. Careful reflector positioning eliminated harsh shadows while preserving the natural skin tones, fine fabric weaves, and delicate petal structures of the flower bouquets.
+                        The session utilized clean high-key studio diffusion against seamless neutral grey-to-white gradients.
+                    </p>
+                    <p>
+                        Careful reflector positioning eliminated harsh shadows while preserving the natural skin tones, fine fabric weaves, and delicate petal structures of the flower bouquets.
                     </p>
                 </div>
-
             </div>
-
-            <!-- Secondary Image Grid Showcase -->
-            <div class="project-gallery-grid">
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-floral-elegance/mw-andrea-seitlich.png" alt="Seated Editorial Portrait with Floral Bouquet">
-                </div>
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-floral-elegance/hose.png" alt="Denim and Daisy Close-up Macro">
-                </div>
-            </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-color-portraits.html" class="next-project-link">
-                    <h2 class="next-project-title">Dual-Tone Studio Portraits</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 4. Full-Bleed Masonry Galerie -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-floral-elegance/mw-andrea-seitlich.png" alt="Seated Editorial Portrait with Floral Bouquet" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-floral-elegance/hose.png" alt="Denim and Daisy Close-up Macro" data-zoomable>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Floral Elegance) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-color-portraits.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-color-portraits/Silvio.jpg" alt="Dual-Tone Studio Portrait Series">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Dual-Tone Studio Portraits</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Photography</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-website-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-website-feichtinger/1mockup-feichtinger.png" alt="Ortungstechnik Feichtinger Website">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Website Ortungstechnik Feichtinger</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Web Design & Dev</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container (Click anywhere to close) -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -157,7 +219,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>
