@@ -58,7 +58,7 @@ header {
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: normal;
     color: var(--neutral-dark, #181716);
 }
 
@@ -169,7 +169,7 @@ nav a:active {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: normal;
     text-transform: uppercase;
     color: var(--color-eucalyptus);
     margin-bottom: 0.5rem;
@@ -182,7 +182,7 @@ nav a:active {
     font-size: clamp(2.2rem, 3.8vw, 3rem);
     font-weight: 600;
     line-height: 1.08;
-    letter-spacing: -0.025em;
+    letter-spacing: normal;
     color: var(--color-text-dark);
     margin: 0;
 }
@@ -338,14 +338,14 @@ nav a:active {
 /* Keyframes */
 .anim-title-sandra {
     opacity: 0;
-    letter-spacing: 0.16em;
+    letter-spacing: normal;
     transform: translate3d(-40px, 110%, 0);
     transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 1.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
 }
 
 .anim-title-fischer {
     opacity: 0;
-    letter-spacing: 0.16em;
+    letter-spacing: normal;
     transform: translate3d(40px, 110%, 0);
     transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 1.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
 }
@@ -440,7 +440,7 @@ body.hero-instant-view .subline-flip-wrap,
 body.hero-instant-view .anim-badge {
     opacity: 1 !important;
     transform: none !important;
-    letter-spacing: normal !important;
+    letter-spacing: normal;
     transition: none !important;
 }
 
@@ -574,7 +574,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-weight: 600;
     color: var(--color-text-dark);
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
     flex: 1;
     min-width: 0;
     word-break: break-word;
@@ -738,7 +738,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: normal;
     text-transform: uppercase;
     color: var(--color-eucalyptus, #449E9E);
     margin-bottom: 0.5rem;
@@ -749,7 +749,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-size: clamp(2.2rem, 3.8vw, 3rem);
     font-weight: 600;
     line-height: 1.08;
-    letter-spacing: -0.025em;
+    letter-spacing: normal;
     color: #F6F4EF;
     margin: 0;
 }
@@ -772,7 +772,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.76rem;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: normal;
     text-transform: uppercase;
     color: var(--color-eucalyptus, #449E9E);
     margin: 0 0 2rem 0;
@@ -813,7 +813,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-family: "Clash Display", system-ui, sans-serif;
     font-size: 1.25rem;
     font-weight: 550;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
     color: #F6F4EF;
     transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -887,7 +887,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: normal;
     text-transform: uppercase;
     color: #D2CDC4;
     transition: color 0.2s ease;
@@ -941,7 +941,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.98rem;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: normal;
     display: inline-flex;
     align-items: center;
     gap: 8px;
