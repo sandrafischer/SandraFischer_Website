@@ -199,7 +199,9 @@
     margin: 0 0 1rem 0;
 }
 
-/* 5. Full-Bleed Masonry Galerie */
+/* ==========================================================================
+   5. FULL-BLEED DYNAMIC MASONRY GALERIE (FLEXIBLES REIHEN-RASTER)
+   ========================================================================== */
 .gallery-fullbleed-wrap {
     width: 100vw;
     position: relative;
@@ -207,66 +209,67 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    padding: 0 1.25rem;
+    padding: 0 0.65rem;
     box-sizing: border-box;
-    margin-bottom: 6.5rem;
+    margin-bottom: 6rem;
 }
 
+/* 3 gleichwertige Spalten mit exakt 0.65rem Abstand in alle Richtungen */
 .gallery-masonry {
-    column-count: 3;
-    column-gap: 1.25rem;
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 0.65rem;
+    width: 100%;
     margin: 0 auto;
 }
 
 .masonry-tile {
-    break-inside: avoid;
-    margin-bottom: 1.25rem;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
     overflow: hidden;
-    background-color: transparent;
-    border: none;
-    box-shadow: 0 8px 24px rgba(24, 23, 22, 0.04);
-    position: relative;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     cursor: zoom-in;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .masonry-tile img,
 .masonry-tile video {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* Füllt die Zelle sauber ohne weißen Freiraum */
     display: block;
-    transition: transform 0.35s ease;
+    border-radius: 6px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
 .masonry-tile:hover img,
 .masonry-tile:hover video {
-    transform: scale(1.02);
+    transform: scale(1.015);
+    opacity: 0.95;
 }
 
-/* 6. More Projects 2er-Reihe */
-.more-projects-section {
-    padding: 3.5rem 0 6rem 0;
-    border-top: 1.5px solid #E2DDD3;
+/* Breakpoints */
+@media (max-width: 1024px) {
+    .gallery-masonry {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .gallery-fullbleed-wrap {
+        padding: 0 0.5rem;
+    }
 }
 
-.more-projects-header {
-    margin-bottom: 2.5rem;
-}
-
-.more-projects-title {
-    font-family: "Clash Display", sans-serif;
-    font-size: clamp(2rem, 3.5vw, 2.6rem);
-    font-weight: 600;
-    color: var(--color-text-dark, #181716);
-    margin: 0;
-    letter-spacing: -0.02em;
-}
-
-.more-projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+@media (max-width: 680px) {
+    .gallery-masonry {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
 }
 
 /* ==========================================================================
