@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Personal Brand Identity & Broadcast Motion Kit by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Identity & Motion Kit — Sandra Fischer</title>
+    <title>Personal Brand & Motion Kit | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,136 +54,184 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">SELF-BRANDING & MOTION DESIGN</span>
-            </div>
-
-            <h1 class="project-main-title">Personal Brand Identity & Broadcast Motion Kit</h1>
-            <p class="project-lead-text">
-                A holistic personal design system created at FH Hagenberg — uniting a flexible wordmark and monogram across light/dark palettes, tactile print stationery, and a dynamic broadcast motion toolkit.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Context</span>
-                    <span class="meta-value">FH Hagenberg (MTD)</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">SELF-BRANDING & MOTION DESIGN</span>
                 </div>
-                <div class="meta-col">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">2025 – 2026</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Print Scope</span>
-                    <span class="meta-value">Logo, Brandbook, Cards, Paper</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Motion Scope</span>
-                    <span class="meta-value">Logo Reveal, Lower Thirds, Intro</span>
-                </div>
-            </div>
 
-            <!-- Hero Image Showcase -->
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-self-brand/Mockup.png" alt="Sandra Fischer Personal Identity Brand Showcase">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-                <div class="project-text-block">
-                    <h3>The Visual Identity & Brandbook</h3>
-                    <p>
-                        Developed as a core project during my studies, this identity defines my practice at the intersection of technical craft and graphic elegance. The system includes positive and negative variations of the combined wordmark and monogram for versatile use across digital and physical media. An in-depth brand guide documents typography scales, clear space guidelines, color values, and tactile print finishes for letterheads and business cards.
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Personal Brand</span>
+                        <span>& Motion Kit</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A cohesive personal identity system developed at FH Hagenberg — uniting an expressive monogram based on the initials FS, refined typography, print collateral, and a dynamic broadcast motion design kit.
                     </p>
                 </div>
 
-                <div class="project-text-block">
-                    <h3>The Broadcast Motion Design Kit</h3>
+                <!-- Meta Info Strip (Outlined) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Context</span>
+                        <span class="meta-field-val">FH Hagenberg (MTD)</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Brand Identity & Motion</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">2026</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">Monogram, Print & Motion Kit</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-self-brand/Mockup.png" alt="Sandra Fischer Personal Identity Brand Showcase" data-zoomable>
+            </div>
+
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
+                    <h3>The Monogram & Brand System</h3>
                     <p>
-                        As the final capstone in Motion Design, the static identity was translated into kinetic space. Built in Adobe After Effects, the motion toolkit features an organic logo reveal, modular lower thirds, animated dividers, content inserts, and an atmospheric intro sequence engineered for showreels and video presentations.
+                        Created as an identity coursework project at FH Hagenberg, the design captures my approach at the intersection of media technology and graphic precision. The core mark merges the initials <em>FS</em> into a fluid, continuous loop that balances geometric clarity with organic movement.
+                    </p>
+                    <p>
+                        The visual system operates across high-contrast dark tones, warm neutral paper backgrounds, and eucalyptus accents, establishing a confident presence across business cards, digital portfolios, and editorial documents.
+                    </p>
+                </div>
+
+                <div class="project-story-col">
+                    <h3>Broadcast Motion Toolkit</h3>
+                    <p>
+                        To extend the brand into time-based media, the static marks were translated into kinetic elements in Adobe After Effects. The motion kit establishes a consistent visual language for video presentations, showreels, and multimedia projects.
+                    </p>
+                    <p>
+                        The kit includes five modular animation assets: an organic logo reveal, minimalist lower thirds for speaker identification, animated content inserts, kinetic dividers, and a full intro sequence.
                     </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Secondary Video Grid Showcase -->
-            <div class="project-gallery-grid">
-
-                <!-- Item 1 (Reihe 1: 4 Spalten) -->
-                <div class="gallery-item span-4 video-card">
-                    <video preload="metadata" playsinline>
+        <!-- 4. Full-Bleed Masonry Galerie (5 Motion Kit Video-Assets) -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <!-- 01 Logo Animation -->
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
                         <source src="images/projects/project-self-brand/animations/01_Logoanimation_Fischer.mp4" type="video/mp4">
                     </video>
-                    <button class="video-play-btn" aria-label="Play video">
-                        <span class="play-icon">▶</span>
-                    </button>
                 </div>
 
-                <!-- Item 2 (Reihe 1: 4 Spalten) -->
-                <div class="gallery-item span-4 video-card">
-                    <video preload="metadata" playsinline>
+                <!-- 02 Lower Third -->
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
                         <source src="images/projects/project-self-brand/animations/02_LowerThird_Fischer.mp4" type="video/mp4">
                     </video>
-                    <button class="video-play-btn" aria-label="Play video">
-                        <span class="play-icon">▶</span>
-                    </button>
                 </div>
 
-                <!-- Item 3 (Reihe 1: 4 Spalten) -->
-                <div class="gallery-item span-4 video-card">
-                    <video preload="metadata" playsinline>
+                <!-- 03 Inserts -->
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
                         <source src="images/projects/project-self-brand/animations/03_Inserts_Fischer.mp4" type="video/mp4">
                     </video>
-                    <button class="video-play-btn" aria-label="Play video">
-                        <span class="play-icon">▶</span>
-                    </button>
                 </div>
 
-                <!-- Item 4 (Reihe 2: 6 Spalten) -->
-                <div class="gallery-item span-6 video-card">
-                    <video preload="metadata" playsinline>
+                <!-- 04 Divider -->
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
                         <source src="images/projects/project-self-brand/animations/04_Divider_Fischer.mp4" type="video/mp4">
                     </video>
-                    <button class="video-play-btn" aria-label="Play video">
-                        <span class="play-icon">▶</span>
-                    </button>
                 </div>
 
-                <!-- Item 5 (Reihe 2: 6 Spalten) -->
-                <div class="gallery-item span-6 video-card">
-                    <video preload="metadata" playsinline>
+                <!-- 05 Intro -->
+                <div class="masonry-tile">
+                    <video preload="metadata is-video" playsinline data-zoomable>
                         <source src="images/projects/project-self-brand/animations/05_Intro_Fischer.mp4" type="video/mp4">
                     </video>
-                    <button class="video-play-btn" aria-label="Play video">
-                        <span class="play-icon">▶</span>
-                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Self-Brand) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
                 </div>
 
-            </div>
+                <div class="more-projects-grid">
+                    <a href="project-3d.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Design">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">The Alpine Sanctuary (3D)</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">3D Design</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
 
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-website-feichtinger.html" class="next-project-link">
-                    <h2 class="next-project-title">Website Ortungstechnik Feichtinger</h2>
-                    <span class="next-arrow">→</span>
-                </a>
+                    <a href="project-good-eats.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Good Eats Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Brand & Print</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-
-        </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container (Click anywhere to close) -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -200,7 +247,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>

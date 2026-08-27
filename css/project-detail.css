@@ -200,7 +200,7 @@
 }
 
 /* ==========================================================================
-   5. FULL-BLEED DYNAMIC MASONRY GALERIE (FLEXIBLES REIHEN-RASTER)
+   6. FULL-BLEED DYNAMIC MASONRY GALERIE (INKL. VIDEO PLAY BADGE)
    ========================================================================== */
 .gallery-fullbleed-wrap {
     width: 100vw;
@@ -214,19 +214,19 @@
     margin-bottom: 6rem;
 }
 
-/* 3 gleichwertige Spalten mit exakt 0.65rem Abstand in alle Richtungen */
 .gallery-masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: dense;
-    gap: 0.65rem;
-    width: 100%;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    margin: 0 auto !important;
 }
 
 .masonry-tile {
+    position: relative; /* Wichtig für die Positionierung des Play-Buttons */
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 6px;
     overflow: hidden;
     background: transparent !important;
@@ -241,8 +241,9 @@
 .masonry-tile img,
 .masonry-tile video {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover; /* Füllt die Zelle sauber ohne weißen Freiraum */
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
     border-radius: 6px;
     transition: transform 0.25s ease, opacity 0.2s ease;
@@ -254,22 +255,38 @@
     opacity: 0.95;
 }
 
-/* Breakpoints */
-@media (max-width: 1024px) {
-    .gallery-masonry {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-    }
-    .gallery-fullbleed-wrap {
-        padding: 0 0.5rem;
-    }
+/* Play Button Indikator für Video-Kacheln */
+.masonry-tile:has(video)::after,
+.masonry-tile.is-video::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 52px;
+    height: 52px;
+    background: rgba(24, 23, 22, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    pointer-events: none; /* Klick geht direkt auf das Video durch */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
+    padding-left: 3px; /* Optische Korrektur für die Pfeilspitze */
+    box-sizing: border-box;
 }
 
-@media (max-width: 680px) {
-    .gallery-masonry {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
+.masonry-tile:has(video):hover::after,
+.masonry-tile.is-video:hover::after {
+    transform: translate(-50%, -50%) scale(1.08);
+    background-color: var(--color-petrol, #0D5C63);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* ==========================================================================

@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Character Rigging, Interactive Web Motion & 2D Animation by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character & 2D Motion Design — Sandra Fischer</title>
+    <title>Interactive Motion Design | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- Lottie Player Web Component -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -40,7 +40,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -57,53 +56,63 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">2D MOTION & CHARACTER DESIGN</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">2D MOTION & CHARACTER RIGGING</span>
+                </div>
+
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Interactive Motion</span>
+                        <span>& 2D Animation</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        Character rigging, vector choreography, and lightweight web animation — transforming a print mascot into interactive Lottie web micro-interactions, alongside experimental 2D narrative shorts.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip (Outlined) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Context</span>
+                        <span class="meta-field-val">Ortungstechnik Feichtinger & FH</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Character Design & Motion</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">2026</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">Vector Rigs, Lottie JSON & Shorts</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
             </div>
+        </section>
 
-            <h1 class="project-main-title">Interactive Motion & 2D Animation</h1>
-            <p class="project-lead-text">
-                Character rigging, vector choreography, and lightweight web animation — from modular mascot interactions for Ortungstechnik Feichtinger to narrative motion short films.
-            </p>
+        <!-- 2. Erst beim Scrollen sichtbar: 4 Interactive Lottie Cards -->
+        <div class="container" id="projectShowcase">
 
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Client / Context</span>
-                    <span class="meta-value">Feichtinger & Academic</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Software</span>
-                    <span class="meta-value">Illustrator, After Effects</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Web Tech</span>
-                    <span class="meta-value">Bodymovin / Lottie JSON</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Discipline</span>
-                    <span class="meta-value">Character Design & Motion</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Showcase
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-picture1.jpg" alt="Character Animation Rigging Showcase">
-            </div>-->
-
-
-
-            <!-- 4 Character Moves Grid -->
-                    <div id="hero-lottie-container" class="lottie-container">
-
-
-            <div class="motion-states-grid">
+            <div class="asset-4-grid">
+                <!-- 01 Search -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
                         <lottie-player
@@ -121,6 +130,7 @@
                     </div>
                 </div>
 
+                <!-- 02 Wink -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
                         <lottie-player
@@ -138,6 +148,7 @@
                     </div>
                 </div>
 
+                <!-- 03 Walk -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
                         <lottie-player
@@ -151,10 +162,11 @@
                     </div>
                     <div class="motion-card-footer">
                         <h4>03. Locating Walk Cycle</h4>
-                        <p>Dynamic stride across sections</p>
+                        <p>Dynamic stride across web sections</p>
                     </div>
                 </div>
 
+                <!-- 04 Button Lift -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
                         <lottie-player
@@ -173,73 +185,102 @@
                 </div>
             </div>
 
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
-                    <h3>The Character Pipeline</h3>
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
+                    <h3>From Print Mascot to Interactive Web Element</h3>
                     <p>
-                        To give technical leak detection a friendly, approachable face, an illustrated locator character was created in Adobe Illustrator with segmented body rigs. In Adobe After Effects, 4 key choreographies were keyframed: searching with a magnifying glass, giving a confident thumbs-up with a wink, a looping walk cycle, and an interactive micro-motion lifting up from a CTA button.
+                        The illustrated locator character was originally created for print and branding materials of Ortungstechnik Feichtinger. To bring technical leak detection to life on the web, the segmented vector layers from Adobe Illustrator were rigged and animated in Adobe After Effects.
+                    </p>
+                    <p>
+                        Four distinct interaction states were choreographed: searching with a magnifying glass, giving a confident thumbs-up confirmation with a wink, a walk cycle, and a micro-motion rising directly from the main CTA button.
                     </p>
                 </div>
 
-                <div class="project-text-block">
-                    <h3>Performance via Bodymovin / Lottie</h3>
+                <div class="project-story-col">
+                    <h3>Performance via Bodymovin & Lottie JSON</h3>
                     <p>
-                        Instead of heavy video files or GIFs, animations were exported via Bodymovin as lightweight, vector-based Lottie JSON files. This ensures crystal-sharp rendering on Retina displays, instant loading times, and full programmatic control (triggering on hover, scroll, or click).
+                        Rather than using heavy GIF files or video clips, all animations were exported via the Bodymovin extension as lightweight vector JSON files.
+                    </p>
+                    <p>
+                        This approach guarantees sub-second loading performance, sharp rendering on high-DPI Retina screens, and precise programmatic control to trigger playback on scroll or hover events.
                     </p>
                 </div>
-
             </div>
-
-            <!-- Further Experiments Section (Wildlife Camping Short Film & Cycling) -->
-            <div class="motion-experiments-block">
-                <span class="subheadline-tag">ACADEMIC & EXPERIMENTAL</span>
-                <h3 class="experiments-title">Further Motion Projects & 2D Shorts</h3>
-                <p class="experiments-lead">
-                    Explorations in ambient vector scene transitions, organic kinetic typography, and character physics.
-                </p>
-
-                <div class="project-gallery-grid">
-                    <div class="gallery-item span-6 video-card">
-                        <video preload="metadata" playsinline>
-                            <source src="images/projects/project-motion/Spring.mp4" type="video/mp4">
-                        </video>
-                        <button class="video-play-btn" aria-label="Play video">
-                            <span class="play-icon">▶</span>
-                        </button>
-                    </div>
-
-                    <div class="gallery-item span-6 video-card">
-                        <video preload="metadata" playsinline>
-                            <source src="images/projects/project-motion/Wildlife_Camping.mp4" type="video/mp4">
-                        </video>
-                        <button class="video-play-btn" aria-label="Play video">
-                            <span class="play-icon">▶</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-ff-mettmach.html" class="next-project-link">
-                    <h2 class="next-project-title">FF Mettmach Visual Identity</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 4. Full-Bleed Masonry Galerie (FH-Kurzfilme mit Video-Playback) -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
+                        <source src="images/projects/project-motion/Spring.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="masonry-tile is-video">
+                    <video preload="metadata" playsinline data-zoomable>
+                        <source src="images/projects/project-motion/Wildlife_Camping.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Motion) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-ff-mettmach.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">FF Mettmach Media & Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Print & Social</span>
+                                <span class="work-year">since 2022</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-alufefa.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="Corporate Identity ALUFEFA">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Corporate Identity ALUFEFA</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Branding & Strategy</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container (Click anywhere to close) -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -255,7 +296,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>
