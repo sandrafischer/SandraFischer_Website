@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="3D Spatial Design & Architectural Modeling by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Spatial Design & Modeling — Sandra Fischer</title>
+    <title>3D Spatial Design | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,184 +54,229 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">3D DESIGN & SPATIAL MODELING</span>
-            </div>
-
-            <h1 class="project-main-title">The Alpine Sanctuary & 3D Explorations</h1>
-            <p class="project-lead-text">
-                A high-immersion architectural wellness retreat modeled and rendered entirely in Blender — exploring atmospheric lighting contrasts, material tactile physics, and asset development.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Context</span>
-                    <span class="meta-value">FH Hagenberg (3D Design)</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">WS 2025/26</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Tool</span>
-                    <span class="meta-value">Blender (Cycles Render)</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Focus</span>
-                    <span class="meta-value">Lighting, Materials & Sculpting</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Showcase: Tag, Nacht & Wireframe -->
-            <div class="cozy-showcase-group">
-                <!-- 1. Großes Hauptbild: Night Render -->
-                <div class="project-showcase-hero">
-                    <img src="images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Cozy Place — Night Atmosphere">
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">3D DESIGN & SPATIAL MODELING</span>
                 </div>
 
-                <!-- 2. Zwei Quere Halbbilder: Day Render & Wireframe -->
-                <div class="project-gallery-grid cozy-comparison-grid">
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-3d/cozyplace/complete/day.png" alt="The Alpine Sanctuary 3D Cozy Place — Daylight Mood">
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>The Alpine Sanctuary</span>
+                        <span>& 3D Explorations</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A high-immersion architectural wellness retreat modeled and rendered entirely in Blender — exploring atmospheric lighting contrasts, material tactile physics, and custom asset development.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip (Outlined) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Context</span>
+                        <span class="meta-field-val">FH Hagenberg</span>
                     </div>
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-3d/cozyplace/complete/wireframes.png" alt="The Alpine Sanctuary 3D Cozy Place — Topology Wireframe">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">3D Spatial Design</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">WS 2025/26</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">Lighting, Assets & Renders</span>
                     </div>
                 </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Cozy Place — Night Atmosphere" data-zoomable>
             </div>
 
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
                     <h3>The Concept: Warmth vs. Winter</h3>
                     <p>
-                        <em>The Alpine Sanctuary</em> was developed as the comprehensive final term project in 3D Design. The spatial concept creates tension between the freezing mountain outdoors and a safe, protective sanctuary within. Anchored around a custom marble hot tub situated by a floor-to-ceiling panoramic window, the scene balances rustic stone masonry, heavy timber ceiling beams, an open wood fireplace, and an integrated rain shower.
+                        <em>The Alpine Sanctuary</em> was developed as a comprehensive final project in 3D Design. The spatial concept creates tension between the freezing mountain outdoors and a safe, protective sanctuary within.
+                    </p>
+                    <p>
+                        Anchored around a custom marble hot tub situated by a floor-to-ceiling panoramic window, the scene balances rustic stone masonry, heavy timber ceiling beams, an open wood fireplace, and an integrated rain shower.
                     </p>
                 </div>
 
-                <div class="project-text-block">
+                <div class="project-story-col">
                     <h3>Materiality, Sculpting & Lighting</h3>
                     <p>
-                        From initial floor plan sketches to final Cycles rendering, each asset was custom built. Pillar candles were crafted with organic wax melting profiles via digital sculpting, silver wall lanterns cast warm ambient accents, and stone texture displacement maps provide physical tactile depth. Atmospheric lighting utilizes volumetric warmth from the fireplace and glowing candle wicks against the cool winter exterior.
+                        From initial floor plan sketches to final Cycles rendering, each asset was custom built. Pillar candles were crafted with organic wax melting profiles via digital sculpting, and stone texture displacement maps provide tactile physical depth.
+                    </p>
+                    <p>
+                        Atmospheric lighting utilizes volumetric warmth from the fireplace and glowing candle wicks set in direct contrast against the cool winter exterior.
                     </p>
                 </div>
-
             </div>
 
-            <!-- 5 Core Asset Breakdown Grid (inklusive Laterne) -->
-            <div class="motion-states-grid asset-5-grid">
+            <!-- 4. Die 5 Core Asset Breakdown Cards (Alle mit Klick-Vergrößerung) -->
+            <div class="asset-5-grid">
                 <!-- 01 Whirlpool -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/1_Pool/top.png" alt="Whirlpool 3D Asset Render">
+                        <img src="images/projects/project-3d/cozyplace/1_Pool/top.png" alt="Marble Whirlpool 3D Asset Render" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>01. Marble Whirlpool</h4>
-                        <p>Custom sunken tub & panoramic frame</p>
+                        <h4>01. Whirlpool</h4>
+                        <p>Sunken tub & frame</p>
                     </div>
                 </div>
 
                 <!-- 02 Rain Shower -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/2_Shower/front2.png" alt="Rain Shower 3D Asset Render">
+                        <img src="images/projects/project-3d/cozyplace/2_Shower/front2.png" alt="Stone Rain Shower 3D Asset Render" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>02. Stone Rain Shower</h4>
-                        <p>Detailed chrome head & fluid simulation</p>
+                        <h4>02. Rain Shower</h4>
+                        <p>Chrome & fluid physics</p>
                     </div>
                 </div>
 
                 <!-- 03 Fireplace -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/3_Fireplace/front.png" alt="Fireplace 3D Asset Render">
+                        <img src="images/projects/project-3d/cozyplace/3_Fireplace/front.png" alt="Masonry Fireplace 3D Asset Render" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>03. Masonry Fireplace</h4>
-                        <p>Stacked firewood & integrated shelving</p>
+                        <h4>03. Fireplace</h4>
+                        <p>Stacked wood masonry</p>
                     </div>
                 </div>
 
                 <!-- 04 Lantern -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/4_Lantern/front.png" alt="Silver Wall Lantern 3D Asset Render">
+                        <img src="images/projects/project-3d/cozyplace/4_Lantern/front.png" alt="Silver Wall Lantern 3D Asset Render" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>04. Silver Wall Lantern</h4>
-                        <p>Metal finish & glowing filament bulb</p>
+                        <h4>04. Wall Lantern</h4>
+                        <p>Metal finish & bulb</p>
                     </div>
                 </div>
 
                 <!-- 05 Candles -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/5_candles/front1.png" alt="Sculpted Candles 3D Asset Render">
+                        <img src="images/projects/project-3d/cozyplace/5_candles/front1.png" alt="Sculpted Candles 3D Asset Render" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>05. Sculpted Candles</h4>
-                        <p>Subsurface scattering & Bezier wicks</p>
+                        <h4>05. Candles</h4>
+                        <p>Subsurface scattering</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Further 3D Assignments Section -->
-            <div class="motion-experiments-block">
-                <span class="subheadline-tag">ACADEMIC EXERCISES</span>
-                <h3 class="experiments-title">Further 3D Modeling & Rendering Projects</h3>
-                <p class="experiments-lead">
-                    Semester assignments exploring product modeling, realistic procedural wood shaders, hard-surface topology, and stylized low-poly architecture.
-                </p>
-
-                <!-- Obere Reihe: Nightstand & Seifenspender (je 6 Spalten) -->
-                <div class="project-gallery-grid">
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-3d/highpoly-nightstand/front4.png" alt="Wooden Nightstand 3D Furniture Render">
-                    </div>
-                    <div class="gallery-item span-6">
-                        <img src="images/projects/project-3d/highpoly_soap/front.png" alt="High Poly Bathroom Soap Dispenser Set">
-                    </div>
-
-                    <!-- Untere Reihe: 3 verschiedene Perspektiven vom Castle (je 4 Spalten) -->
-                    <div class="gallery-item span-4">
-                        <img src="images/projects/project-3d/highpoly-nightstand/ABOVE3.png" alt="Stylized Low Poly Castle Front Perspective">
-                    </div>
-                    <div class="gallery-item span-4">
-                        <img src="images/projects/project-3d/castle/n1.png" alt="Stylized Low Poly Castle Side Perspective">
-                    </div>
-                    <div class="gallery-item span-4">
-                        <img src="images/projects/project-3d/castle/neu.png" alt="Stylized Low Poly Castle Isometric Perspective">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-self-brand.html" class="next-project-link">
-                    <h2 class="next-project-title">Personal Brand & Motion Kit</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 5. Full-Bleed Masonry Galerie (Weitere Renderings & Semesterübungen) -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/cozyplace/complete/day.png" alt="The Alpine Sanctuary 3D Cozy Place — Daylight Mood" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/cozyplace/complete/wireframes.png" alt="The Alpine Sanctuary 3D Cozy Place — Topology Wireframe" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/highpoly-nightstand/front4.png" alt="Wooden Nightstand 3D Furniture Render" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/highpoly_soap/front.png" alt="High Poly Bathroom Soap Dispenser Set" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/highpoly-nightstand/ABOVE3.png" alt="Stylized Low Poly Castle Front Perspective" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/castle/n1.png" alt="Stylized Low Poly Castle Side Perspective" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-3d/castle/neu.png" alt="Stylized Low Poly Castle Isometric Perspective" data-zoomable>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. More Projects (Kuratierte 2er-Reihe chronologisch nach 3D) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-good-eats.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Good Eats Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Brand & Print</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-floral-elegance.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Editorial Photography">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Floral Elegance Editorial</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Photography</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container (Ohne X-Button, Klick schließt) -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -248,7 +292,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>

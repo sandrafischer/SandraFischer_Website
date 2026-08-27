@@ -269,10 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // 2. Interactive Frosted Lightbox
+    // 2. Interactive Frosted Lightbox (Klick überall schließt)
     const lightbox = document.getElementById("lightboxOverlay");
     const lightboxContent = document.getElementById("lightboxContent");
-    const closeBtn = document.getElementById("lightboxClose");
     const zoomableItems = document.querySelectorAll("[data-zoomable]");
 
     if (lightbox && lightboxContent) {
@@ -304,19 +303,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         zoomableItems.forEach(item => {
-            item.addEventListener("click", () => {
+            item.addEventListener("click", (e) => {
+                e.stopPropagation();
                 const isVideo = item.tagName.toLowerCase() === "video";
                 const source = isVideo ? item.querySelector("source")?.src || item.src : item.src;
                 openLightbox(source, item.alt, isVideo);
             });
         });
 
-        if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-        lightbox.addEventListener("click", (e) => {
-            if (e.target === lightbox || e.target === lightboxContent) closeLightbox();
-        });
+        // Klick irgendwo schließt
+        lightbox.addEventListener("click", closeLightbox);
+
+        // Escape Taste schließt ebenfalls
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && lightbox.classList.contains("is-active")) closeLightbox();
+            if (e.key === "Escape" && lightbox.classList.contains("is-active")) {
+                closeLightbox();
+            }
         });
     }
 });
