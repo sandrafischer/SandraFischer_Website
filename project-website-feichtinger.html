@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Website & UI/UX Design for Ortungstechnik Feichtinger by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Ortungstechnik Feichtinger — Sandra Fischer</title>
+    <title>Website Feichtinger | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,96 +54,161 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">WEB DESIGN & DEV</span>
-            </div>
-
-            <h1 class="project-main-title">Website Feichtinger Ortungstechnik</h1>
-            <p class="project-lead-text">
-                A digital presence for an independent leak detection & locating specialist — combining rugged industrial reliability with high-precision UI engineering and interactive motion design.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Client</span>
-                    <span class="meta-value">Feichtinger Ortungstechnik</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">WEB DESIGN & DEVELOPMENT</span>
                 </div>
-                <div class="meta-col">
-                    <span class="meta-label">Year</span>
-                    <span class="meta-value">2026</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Disciplines</span>
-                    <span class="meta-value">UI/UX Design, Web Dev, Motion</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Live Link</span>
-                    <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" class="meta-link">Live Prototype ↗</a>
-                </div>
-            </div>
 
-            <!-- Hero Image Showcase -->
-            <div class="project-showcase-hero">
-                <img src="images/hero-avatar.jpg" alt="Ortungstechnik Feichtinger Platform Showcase">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
-                    <h3>The Challenge</h3>
-                    <p>
-                        Launching an independent locating and leak-detection practice requires instant credibility and frictionless emergency routing. The digital experience had to serve two distinct user groups: stressed homeowners in need of urgent water damage help and B2B professionals such as insurance assessors and plumbing firms requiring technical rigor.
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Website Ortungstechnik</span>
+                        <span>Feichtinger</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A modern, high-performance web experience for an independent leak detection specialist — featuring instant emergency calling, automated appointment booking, clear service hierarchies, and an interactive mascot.
                     </p>
                 </div>
 
-                <div class="project-text-block">
-                    <h3>The Solution</h3>
+                <!-- Meta Info Strip (4 feste Standard-Spalten) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Client</span>
+                        <span class="meta-field-val">Ortungstechnik Feichtinger</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Web Design & Development</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Year</span>
+                        <span class="meta-field-val">2026</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">
+                            <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Framer Prototype & Web App ↗</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. 16:9 Hero Bild -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-website-feichtinger/1mockup-feichtinger.png" alt="Ortungstechnik Feichtinger Website Hero Mockup" data-zoomable>
+            </div>
+
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
+                    <h3>Emergency Routing & Clear Service Structure</h3>
                     <p>
-                        We established a confident layout structured around clear service hierarchies, tactile emergency CTAs, and a technical aesthetic that reflects the precision of acoustic and thermographic locating. Custom motion choreographies illustrate the non-destructive measurement techniques before drilling begins.
+                        In the event of acute water damage or pipe bursts, rapid assistance is critical. The interface prioritizes a prominent emergency call trigger that connects stressed property owners directly with the specialist with a single tap.
+                    </p>
+                    <p>
+                        The core structure clearly presents non-destructive locating methods, distinct benefits, and service areas, establishing immediate trust for both private homeowners and B2B partners such as plumbers and insurance assessors.
                     </p>
                 </div>
 
-            </div>
-
-            <!-- Secondary Image Grid Showcase -->
-            <div class="project-gallery-grid">
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-picture1.jpg" alt="Mobile navigation and emergency contact flow">
-                </div>
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-picture6.jpg" alt="Technical locating methods interface">
-                </div>
-                <div class="gallery-item span-12">
-                    <img src="images/projects/project-picture4.jpg" alt="Full responsive page design system">
+                <div class="project-story-col">
+                    <h3>Interactive Mascot & Direct Appointment Booking</h3>
+                    <p>
+                        Alongside a structured inquiry form, the website integrates a self-service appointment scheduler, enabling clients to book non-emergency diagnostic sessions smoothly online.
+                    </p>
+                    <p>
+                        To give the technical trade a warm, approachable character, the custom locator mascot was animated as lightweight Lottie micro-interactions throughout the responsive layout, guiding users dynamically toward key actions.
+                    </p>
                 </div>
             </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-brand-feichtinger.html" class="next-project-link">
-                    <h2 class="next-project-title">Brand System Feichtinger Ortungstechnik</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 4. Full-Bleed Masonry Galerie -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-website-feichtinger/web-mockup1.png" alt="Emergency Call Action & Service Grid Mockup" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-website-feichtinger/web-mockup2.png" alt="Appointment Booking Flow & Interactive Character" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-website-feichtinger/web-mockup3.png" alt="Responsive Mobile & Desktop System" data-zoomable>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Website Feichtinger) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-brand-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture4.jpg" alt="Corporate Identity Feichtinger">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Feichtinger Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Corporate Identity</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-motion-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture1.jpg" alt="Interactive Motion & 2D Animation">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Interactive Motion & 2D</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Motion Design</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -160,7 +224,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>

@@ -103,7 +103,7 @@ nav a:active {
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
@@ -275,7 +275,7 @@ nav a:active {
 .discipline-link {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: clamp(0.95rem, 1.4vw, 1.25rem);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: normal;
     text-decoration: none;
     color: #8C8880;
@@ -307,7 +307,7 @@ nav a:active {
     border-radius: 999px;
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: 0 10px 30px rgba(13, 92, 99, 0.2);
     overflow: hidden;
     white-space: nowrap;
@@ -571,7 +571,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 
 .work-name {
     font-size: 1.08rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--color-text-dark);
     margin: 0;
     letter-spacing: -0.01em;
@@ -591,7 +591,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     background-color: rgba(68, 158, 158, 0.18);
     color: #0D5C63;
     font-size: 0.76rem;
-    font-weight: 600;
+    font-weight: 500;
     padding: 4px 12px;
     border-radius: 999px;
     white-space: nowrap;
@@ -600,7 +600,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 .work-year {
     font-size: 0.82rem;
     color: #9C9890;
-    font-weight: 500;
+    font-weight: 400;
     white-space: nowrap;
 }
 
@@ -637,10 +637,11 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 
 .discipline-name {
     font-size: 1.55rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #F6F4EF;
     line-height: 1.25;
     margin: 0 0 1.25rem 0;
+    letter-spacing: normal;
 }
 
 .discipline-description {
@@ -811,7 +812,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     text-align: left;
     font-family: "Clash Display", system-ui, sans-serif;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 550;
     letter-spacing: -0.01em;
     color: #F6F4EF;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -939,7 +940,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     padding: 1.05rem 2.4rem;
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.98rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.02em;
     display: inline-flex;
     align-items: center;

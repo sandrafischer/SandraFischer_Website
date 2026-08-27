@@ -51,7 +51,7 @@
 .project-detail-tag {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--color-eucalyptus, #449E9E);

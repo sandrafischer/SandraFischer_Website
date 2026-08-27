@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Corporate Brand Identity System for Ortungstechnik Feichtinger by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Identity Feichtinger — Sandra Fischer</title>
+    <title>Feichtinger Brand Identity | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,96 +54,159 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">BRAND IDENTITY & PRINT</span>
-            </div>
-
-            <h1 class="project-main-title">Brand System Feichtinger Ortungstechnik</h1>
-            <p class="project-lead-text">
-                A holistic corporate identity for an independent locating specialist — uniting mark precision, tactile stationery, technical flyers, and a comprehensive brand guide.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Client</span>
-                    <span class="meta-value">Feichtinger Ortungstechnik</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">BRAND IDENTITY & PRINT</span>
                 </div>
-                <div class="meta-col">
-                    <span class="meta-label">Year</span>
-                    <span class="meta-value">2026</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Scope</span>
-                    <span class="meta-value">Logo, Stationery, Brandbook, Print</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Discipline</span>
-                    <span class="meta-value">Corporate Identity & Print</span>
-                </div>
-            </div>
 
-            <!-- Hero Image Showcase -->
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-picture4.jpg" alt="Feichtinger Brand Stationery Showcase">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
-                    <h3>The Brand Foundation</h3>
-                    <p>
-                        The visual identity translates the core principles of non-destructive locating: precision, acoustic focus, and technological certainty. The mark pairs a distinctive geometric symbol (visualizing pulse frequencies and structural localization) with a solid, highly legible wordmark designed to stand out on both digital assets and high-visibility workwear.
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Brand System Feichtinger</span>
+                        <span>Ortungstechnik</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A full corporate brand identity for an independent leak detection practice — uniting custom mark geometry, vibrant turquoise and purple color coding, tactile stationery, large-scale construction site banners, and brand guidelines.
                     </p>
                 </div>
 
-                <div class="project-text-block">
-                    <h3>Print Collateral & Brandbook</h3>
+                <!-- Meta Info Strip (4 feste Standard-Spalten) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Client</span>
+                        <span class="meta-field-val">Ortungstechnik Feichtinger</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Corporate Identity & Print</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Year</span>
+                        <span class="meta-field-val">2026</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">Logo, Print Collateral & Brandbook</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. 16:9 Hero Bild -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-picture4.jpg" alt="Feichtinger Brand Stationery Overview" data-zoomable>
+            </div>
+
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
+                    <h3>The Waterdrop & Lettermark Concept</h3>
                     <p>
-                        From premium business cards with tactile finishing to structured corporate stationery, service flyers, and official invoices, every touchpoint reinforces reliability. A detailed Brandbook defines typography scales, strict safety clearance ratios, and color recipes across CMYK, RGB, and vehicle wrap production.
+                        The core emblem visualizes the precision of non-destructive acoustic and thermographic locating. The design seamlessly merges the organic silhouette of a waterdrop with the initial letter <em>A</em>, representing both Feichtinger and advanced measurement technology (Messtechnik).
+                    </p>
+                    <p>
+                        Diverging from conventional trade aesthetics, the system utilizes a vibrant combination of technical turquoise and rich violet. This color palette ensures instant high-contrast recognition across digital interfaces, print collateral, and field equipment.
                     </p>
                 </div>
 
-            </div>
-
-            <!-- Secondary Image Grid Showcase -->
-            <div class="project-gallery-grid">
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-picture5.jpg" alt="Business card tactile mockup">
-                </div>
-                <div class="gallery-item span-6">
-                    <img src="images/projects/project-picture1.jpg" alt="Service flyer layout detail">
-                </div>
-                <div class="gallery-item span-12">
-                    <img src="images/projects/project-picture6.jpg" alt="Comprehensive brandbook and stationery overview">
+                <div class="project-story-col">
+                    <h3>Comprehensive Print Suite & Brandbook</h3>
+                    <p>
+                        The physical brand experience spans premium double-sided business cards, corporate letterheads, detailed service flyers, and heavy-duty construction site fence banners (Bauzaunbanner) engineered for maximum outdoor visibility.
+                    </p>
+                    <p>
+                        The identity is documented in an extensive Brandbook, detailing typography hierarchies, color values across CMYK, RGB, and vehicle vinyl reproduction, alongside rules for utilizing the custom illustrated locator mascot.
+                    </p>
                 </div>
             </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-portrait.html" class="next-project-link">
-                    <h2 class="next-project-title">Editorial Portrait Series</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 4. Full-Bleed Masonry Galerie -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture5.jpg" alt="Business Cards & Stationery Mockup" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture1.jpg" alt="Construction Site Banner & Service Flyer" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture6.jpg" alt="Brandbook Guidelines & Color System" data-zoomable>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Brand Feichtinger) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-motion-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture1.jpg" alt="Interactive Motion & 2D Animation">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Interactive Motion & 2D</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Motion Design</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-ff-mettmach.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">FF Mettmach Media & Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Print & Social</span>
+                                <span class="work-year">since 2022</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -160,7 +222,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>
