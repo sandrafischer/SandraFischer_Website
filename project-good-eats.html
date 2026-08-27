@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Good Eats Organic Restaurant Brand Identity by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Eats Brand Identity & System — Sandra Fischer</title>
+    <title>Good Eats Brand Identity | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,100 +54,126 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">BRAND IDENTITY & PACKAGING</span>
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">BRAND IDENTITY & PACKAGING</span>
+                </div>
+
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Good Eats Organic</span>
+                        <span>Restaurant Identity</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        An academic concept identity created at HTL Braunau — developing a modern brand system for a healthy food franchise, uniting custom mark typography, organic color coding, corporate stationery, and apparel mockups.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip (Outlined) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Context</span>
+                        <span class="meta-field-val">HTL Braunau</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Brand Identity & Print</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Year</span>
+                        <span class="meta-field-val">2023</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">Logo, Stationery & Merch</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity & Stationery Overview" data-zoomable>
             </div>
 
-            <h1 class="project-main-title">Good Eats Organic Restaurant Identity</h1>
-            <p class="project-lead-text">
-                A fresh, sustainable corporate design system for a healthy food franchise — combining clean modern typography, custom icon marks, tactile stationery, and branded merchandise.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Context</span>
-                    <span class="meta-value">HTL Braunau (MDS)</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">2022 – 2023</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Claim</span>
-                    <span class="meta-value">Where Flavor & Health Unite</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Scope</span>
-                    <span class="meta-value">Logo, Stationery, Social, Merch</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Showcase -->
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity & Stationery Overview">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
                     <h3>The Brand Concept & Mark</h3>
                     <p>
-                        <em>Good Eats</em> focuses on organic, plant-based nutrition and sustainable quality. The mark merges a chef's hat, culinary cutlery, and three sprouting leaves into an iconic silhouette that doubles as a growing tree. Paired with the sans-serif <em>Barlow</em> typeface family and an earthy palette of natural greens, clean whites, and fresh accents, the design radiates warmth and biological trust.
+                        Developed as a comprehensive coursework assignment in media design, <em>Good Eats</em> represents a modern dining franchise focused on organic, plant-based nutrition. The visual mark combines a chef’s hat, cutlery, and three sprouting leaves into an iconic silhouette that doubles as a growing tree to symbolize natural vitality.
                     </p>
-                </div>
-
-                <div class="project-text-block">
-                    <h3>Stationery, Social & Merchandise</h3>
                     <p>
-                        The visual system scales across every restaurant touchpoint: double-sided business cards with a generous watermark emblem, structured business stationery (envelopes, letterheads, email signatures), promotional campaign flyers, social media templates for <em>World Vegan Month</em>, and apparel including snapback caps and hoodies.
+                        Anchored by the claim <em>„Where Flavor and Health Unite“</em>, the system pairs natural forest and leaf greens with neutral stone tones and crisp yellow accents to project warmth, cleanliness, and culinary quality.
                     </p>
                 </div>
 
+                <div class="project-story-col">
+                    <h3>Typography, Print & Merchandise</h3>
+                    <p>
+                        The geometric sans-serif typeface family <em>Barlow</em> (specifically <em>Barlow Semi Condensed</em>) was chosen for its clean, contemporary rhythm and high legibility across menus, packaging, and digital signage.
+                    </p>
+                    <p>
+                        The identity extends across a full corporate collateral suite, including double-sided business cards, letterheads, branded envelopes, seasonal social media promotional campaign layouts, and embroidered merchandise concepts for caps and hoodies.
+                    </p>
+                </div>
             </div>
 
-            <!-- 4 Deliverables Breakdown Grid -->
-            <div class="motion-states-grid">
+            <!-- 4. Die 4 Core Deliverable Cards (Mit Klick-Vergrößerung) -->
+            <div class="asset-4-grid">
+                <!-- 01 Mark -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-good-eats/logo-green.png" alt="Good Eats Wordmark & Icon Design">
+                        <img src="images/projects/project-good-eats/logo-green.png" alt="Good Eats Wordmark & Icon Design" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>01. Mark & Typography</h4>
-                        <p>Tree-sprout chef emblem & Barlow type</p>
+                        <h4>01. Mark & Identity</h4>
+                        <p>Tree-sprout emblem & Barlow type</p>
                     </div>
                 </div>
 
+                <!-- 02 Stationery -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-good-eats/Business%20Card%20Mockup1.png" alt="Good Eats Business Cards">
+                        <img src="images/projects/project-good-eats/Business%20Card%20Mockup1.png" alt="Good Eats Business Cards" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>02. Business Stationery</h4>
-                        <p>Embossed cards & A4 letterhead set</p>
+                        <h4>02. Stationery Set</h4>
+                        <p>Embossed cards & letterheads</p>
                     </div>
                 </div>
 
+                <!-- 03 Social Promo -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-good-eats/instagrampost.png" alt="Social Media Campaign Graphics">
+                        <img src="images/projects/project-good-eats/instagrampost.png" alt="Social Media Campaign Graphics" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>03. Social Campaigns</h4>
-                        <p>Seasonal promo posts & flyer layout</p>
+                        <p>Seasonal promo posts & layouts</p>
                     </div>
                 </div>
 
+                <!-- 04 Merchandise -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-good-eats/hoodies.png" alt="Apparel & Merchandise Staging">
+                        <img src="images/projects/project-good-eats/hoodies.png" alt="Apparel & Merchandise Staging" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>04. Merchandising</h4>
@@ -156,25 +181,64 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-alufefa.html" class="next-project-link">
-                    <h2 class="next-project-title">Corporate Identity ALUFEFA</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Good Eats) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-floral-elegance.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Editorial Photography">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Floral Elegance Editorial</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Photography</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-color-portraits.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-color-portraits/Silvio.jpg" alt="Dual-Tone Studio Portrait Series">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Dual-Tone Studio Portraits</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Photography</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container (Click anywhere to close) -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -190,7 +254,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>
