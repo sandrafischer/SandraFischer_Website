@@ -723,14 +723,11 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 .split-hub-section {
     flex: 1;
     display: flex;
-    align-items: start;        /* Nicht mehr vertikal zentrieren/nach unten schieben */
-    padding: 6rem 0 3.5rem 0;  /* Exakt die 6rem von Capabilities */
+    align-items: start;
+    padding: 6rem 0 3.5rem 0;
     color: #F6F4EF;
 }
 
-/* ==========================================================================
-   CONTACT HEADER (1:1 KONSISTENT MIT DEN ANDEREN SEKTIONEN)
-   ========================================================================== */
 .split-hub-header {
     margin-bottom: 3.5rem;
 }
@@ -763,7 +760,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     margin: 0.85rem 0 0 0;
 }
 
-/* 2-Spalten Grid */
 .split-hub-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -771,12 +767,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     align-items: start;
 }
 
-/* 4. Deutliche Spalten-Überschriften */
-/* ==========================================================================
-   SPALTE & FAQ LABELS (EDITORIAL BADGE DESIGN)
-   ========================================================================== */
-
-/* Feines Magazin-Badge statt Sternchen-Emoji */
 .split-col-label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.76rem;
@@ -795,12 +785,10 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     width: fit-content;
 }
 
-/* Entfernt das alte Stern-Symbol komplett */
 .split-col-label::before {
     content: none !important;
 }
 
-/* FAQ Akkordeon Abgrenzung */
 .faq-accordion {
     display: flex;
     flex-direction: column;
@@ -812,7 +800,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     border-bottom: 1px solid #363330;
 }
 
-/* Fragen heben sich typografisch klar vom Badge ab */
 .faq-question {
     width: 100%;
     display: flex;
@@ -869,7 +856,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     color: #D2CDC4;
 }
 
-/* --- 3. PRÄSENTE & EDLE FORMULAR-BOX --- */
 .contact-col {
     background-color: rgba(255, 255, 255, 0.025);
     border: 1.5px solid #363330;
@@ -896,7 +882,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     gap: 0.5rem;
 }
 
-/* 2. Gut lesbare Labels */
 .form-field label {
     font-family: "Clash Grotesk", system-ui, sans-serif;
     font-size: 0.78rem;
@@ -907,7 +892,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     transition: color 0.2s ease;
 }
 
-/* 2. Klare, kontrastreiche Eingabefelder */
 .form-field input,
 .form-field textarea {
     background-color: #1F1D1C !important;
@@ -924,7 +908,7 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-    color: #8A867E; /* Deutlich sichtbarer Placeholder */
+    color: #8A867E;
 }
 
 .form-field input:focus,
@@ -938,7 +922,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     color: var(--color-eucalyptus, #449E9E);
 }
 
-/* 3. Auffallender Call-to-Action Button */
 .form-action-row {
     display: flex;
     align-items: center;
@@ -1000,7 +983,6 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     color: var(--color-eucalyptus, #449E9E);
 }
 
-/* 2. Subtiler, aber lesbarer Meta-Bereich */
 .contact-meta-row {
     display: flex;
     align-items: center;
@@ -1020,8 +1002,8 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 }
 
 .response-time {
-    font-size: 0.82rem;
-    color: #A6A29A;
+    font-size: 0.78rem;
+    color: #6E6B65;
 }
 
 /* ==========================================================================
@@ -1124,180 +1106,4 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     background-color: var(--color-petrol);
     border-color: var(--color-petrol);
     transform: translateY(-2px);
-}
-
-/* ==========================================================================
-   9. VIDEO CARDS & DETAIL PAGE COMPONENTS
-   ========================================================================== */
-.video-card {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.video-card video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: inherit;
-}
-
-.video-play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgba(24, 23, 22, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(246, 244, 239, 0.2);
-    color: #F6F4EF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.25s ease, background-color 0.25s ease, opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.video-play-btn .play-icon {
-    font-size: 1.1rem;
-    margin-left: 3px;
-}
-
-.video-card:hover .video-play-btn {
-    transform: translate(-50%, -50%) scale(1.1);
-    background-color: var(--color-petrol, #0D5C63);
-}
-
-.video-card.is-playing .video-play-btn {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.motion-states-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 5.5rem;
-}
-
-.asset-5-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
-}
-
-.motion-card {
-    background-color: #ECE7DE;
-    border: 1.5px solid #DCD6CA;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.motion-media-placeholder {
-    height: 220px;
-    background-color: #FFFFFF;
-    overflow: hidden;
-}
-
-.motion-media-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.motion-card-footer {
-    padding: 1.2rem;
-}
-
-.motion-card-footer h4 {
-    font-family: "Clash Display", sans-serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-text-dark);
-    margin: 0 0 4px 0;
-}
-
-.motion-card-footer p {
-    font-size: 0.85rem;
-    color: #6E6B65;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.motion-experiments-block {
-    padding-top: 2rem;
-    margin-bottom: 5rem;
-    border-top: 1.5px solid #E5E0D6;
-}
-
-.experiments-title {
-    font-family: "Clash Display", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--color-text-dark);
-    margin: 0 0 0.75rem 0;
-}
-
-.experiments-lead {
-    font-size: 1.05rem;
-    color: #6E6B65;
-    margin: 0 0 3rem 0;
-    max-width: 650px;
-}
-
-.cozy-showcase-group {
-    margin-bottom: 4.5rem;
-}
-
-.cozy-showcase-group .project-showcase-hero {
-    margin-bottom: 2rem;
-}
-
-.cozy-comparison-grid {
-    margin-bottom: 0;
-}
-
-.gallery-item.span-4 {
-    grid-column: span 4;
-    height: 380px;
-}
-
-.meta-link,
-.meta-value a {
-    color: var(--color-petrol, #0D5C63) !important;
-    text-decoration: underline !important;
-    text-underline-offset: 3px !important;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    transition: color 0.2s ease, transform 0.2s ease;
-    cursor: pointer !important;
-}
-
-.meta-link:hover,
-.meta-value a:hover {
-    color: var(--color-petrol-dark, #0A4B52) !important;
-    transform: translateY(-1px);
-}
-
-@media (max-width: 1024px) {
-    .motion-states-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .motion-states-grid,
-    .asset-5-grid {
-        grid-template-columns: 1fr;
-    }
 }

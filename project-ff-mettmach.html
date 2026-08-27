@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="FF Mettmach Media & Visual Identity by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FF Mettmach Visual Identity & Media — Sandra Fischer</title>
+    <title>FF Mettmach | Sandra Fischer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="project-detail-page">
 
-<!-- Custom Cursor Element -->
+<!-- Custom Cursor & Transitions -->
 <div class="custom-cursor" id="customCursor"></div>
-<!-- Page Transition Overlay -->
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Header / Navigation -->
+<!-- Topbar Navigation -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
-
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
@@ -38,7 +38,6 @@
                 <ul>
                     <li><a href="index.html#projects">Works</a></li>
                     <li><a href="index.html#disciplines">Disciplines</a></li>
-                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -55,96 +54,165 @@
 </header>
 
 <main>
-    <!-- Project Hero Section -->
-    <article class="project-hero">
-        <div class="container">
+    <article>
+        <!-- 1. Text & Meta-Bar (dieser Teil fadet beim Scrollen aus) -->
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
 
-            <!-- Back Link & Category -->
-            <div class="project-top-nav">
-                <a href="index.html#projects" class="back-link">← Back to Works</a>
-                <span class="subheadline-tag">BRANDING, PRINT & SOCIAL MEDIA</span>
+                <!-- Top Nav Bar -->
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">BRANDING, PRINT & SOCIAL MEDIA</span>
+                </div>
+
+                <!-- Monumentaler Titelblock -->
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>FF Mettmach</span>
+                        <span>Visual Identity</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        Long-term creative direction and media management for the local volunteer fire department — uniting annual event identity systems, large-scale print banners, social media curation, and active deployment photography.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip am unteren Rand des 1. Screens -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Client</span>
+                        <span class="meta-field-val">FF Mettmach</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Role</span>
+                        <span class="meta-field-val">Volunteer & Media Lead</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">since 2022</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Scope</span>
+                        <span class="meta-field-val">Event CI, Print, Photo, Social</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Arrow -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Erst beim Runterscrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Social Media Grid & Visual Direction" data-zoomable>
             </div>
 
-            <h1 class="project-main-title">FF Mettmach Visual Identity</h1>
-            <p class="project-lead-text">
-                Long-term creative direction and media management for the local volunteer fire department — uniting annual event identity systems, large-scale print banners, social media curation, and active deployment photography.
-            </p>
-
-            <!-- Project Meta Info Bar -->
-            <div class="project-meta-bar">
-                <div class="meta-col">
-                    <span class="meta-label">Client / Org</span>
-                    <span class="meta-value">FF Mettmach</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Role</span>
-                    <span class="meta-value">Volunteer & Media Director</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Scope</span>
-                    <span class="meta-value">Event CI, Print, Photo, Social</span>
-                </div>
-                <div class="meta-col">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">2022 – Present</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Showcase -->
-            <div class="project-showcase-hero">
-                <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Instagram feed">
-            </div>
-
-            <!-- Project Content Sections -->
-            <div class="project-body-grid">
-
-                <div class="project-text-block">
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
                     <h3>Event Identity & Large-Scale Print</h3>
                     <p>
-                        A central focus is shaping a recognizable visual language for traditional recurring events. For the annual <em>Frühschoppen</em>, I developed a distinct, modular design system applied across flyers, tickets, and massive site-fence mesh banners displayed at the station. This visual consistency extends to community events such as the <em>Dämmerschoppen</em>, the youth group's <em>Planenrutschen</em>, and the annual <em>Silvesterglühweinstand</em>.
+                        A central focus is shaping a recognizable visual language for traditional recurring events. For the annual <em>Frühschoppen</em>, I developed a distinct, modular design system applied across flyers, tickets, and massive site-fence mesh banners displayed at the station.
                     </p>
-                </div>
-
-                <div class="project-text-block">
-                    <h3>Social Media & Emergency Photography</h3>
                     <p>
-                        Managing both Instagram and Facebook channels involves end-to-end editorial planning: concepting posts, writing authentic captions, and publishing real-time updates. Being an active brigade member enables authentic, high-stakes photography directly during training drills and emergency response operations, highlighting modern volunteer fire work with respect and emotional resonance.
+                        This consistency extends to community events such as the <em>Dämmerschoppen</em>, the youth group's <em>Planenrutschen</em>, and the annual <em>Silvesterglühweinstand</em>.
                     </p>
                 </div>
 
-            </div>
-
-            <!-- Secondary Image Grid Showcase -->
-            <div class="project-gallery-grid">
-                <div class="gallery-item span-4">
-                    <img src="images/projects/project-ff-mettmach/Flyer%20Mockup.png" alt="FF Mettmach Flyer">
-                </div>
-                <div class="gallery-item span-4">
-                    <img src="images/projects/project-ff-mettmach/Speisekarte%20Mockup.png" alt="FF Mettmach Speisekarten">
-                </div>
-                <div class="gallery-item span-4">
-                    <img src="images/projects/project-ff-mettmach/Banner_quer.png" alt="FF Mettmach Speisekarten">
+                <div class="project-story-col">
+                    <h3>Social Media & Deployment Photography</h3>
+                    <p>
+                        Managing both Instagram and Facebook channels involves end-to-end editorial planning: concepting posts, writing authentic captions, and publishing real-time updates.
+                    </p>
+                    <p>
+                        Being an active brigade member enables authentic photography directly during training drills and emergency response operations, highlighting modern volunteer fire work with respect and emotional resonance.
+                    </p>
                 </div>
             </div>
-
-            <!-- Next Project Footer Navigation -->
-            <div class="next-project-banner">
-                <span class="subheadline-tag">NEXT PROJECT</span>
-                <a href="project-website-feichtinger.html" class="next-project-link">
-                    <h2 class="next-project-title">Ortungstechnik Feichtinger</h2>
-                    <span class="next-arrow">→</span>
-                </a>
-            </div>
-
         </div>
+
+        <!-- 5. Full-Bleed Masonry Galerie (Rand zu Rand) -->
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-ff-mettmach/Flyer%20Mockup.png" alt="FF Mettmach Event Flyer Mockup" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-ff-mettmach/Speisekarte%20Mockup.png" alt="FF Mettmach Menu & Pricing Card Mockup" data-zoomable>
+                </div>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-ff-mettmach/Banner_quer.png" alt="FF Mettmach Outdoor Event Banner" data-zoomable>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. More Projects (Kuratierte 2er-Reihe im Original-Look) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <!-- Karte 1 -->
+                    <a href="project-website-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-website-feichtinger/1mockup-feichtinger.png" alt="Ortungstechnik Feichtinger Website">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Website Ortungstechnik Feichtinger</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Web Design & Dev</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Karte 2 -->
+                    <a href="project-brand-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="images/projects/project-picture4.jpg" alt="Corporate Identity Feichtinger">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Feichtinger Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Corporate Identity</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </article>
 </main>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
 
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-container">
         <div class="footer-left">
-            <a href="#" class="footer-logo-link" aria-label="Nach oben scrollen">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
                 <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
@@ -160,7 +228,7 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
             </div>
-            <a href="#" class="back-to-top-btn" aria-label="Zurück zum Seitenanfang">↑</a>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
         </div>
     </div>
 </footer>

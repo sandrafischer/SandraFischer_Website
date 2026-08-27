@@ -236,4 +236,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+/* ==========================================================================
+   PROJECT DETAIL: HERO PARALLAX REVEAL & FROSTED LIGHTBOX
+   ========================================================================== */
+    // Butterweicher Hero Scroll-Fade & Parallax Reveal
+    const heroContent = document.getElementById("projectHeroContent");
+    if (heroContent && window.innerWidth > 768) {
+        let isTicking = false;
+
+        window.addEventListener("scroll", () => {
+            if (!isTicking) {
+                window.requestAnimationFrame(() => {
+                    const scrollPos = window.scrollY;
+                    const maxDistance = 480;
+
+                    if (scrollPos <= maxDistance) {
+                        const progress = scrollPos / maxDistance;
+                        const opacity = Math.max(0, 1 - (progress * 1.2));
+                        const translateY = scrollPos * 0.25;
+
+                        heroContent.style.opacity = opacity.toFixed(3);
+                        heroContent.style.transform = `translate3d(0, -${translateY.toFixed(1)}px, 0)`;
+                    } else if (heroContent.style.opacity !== "0") {
+                        heroContent.style.opacity = "0";
+                    }
+
+                    isTicking = false;
+                });
+                isTicking = true;
+            }
+        }, { passive: true });
+    }
+
+    // 2. Interactive Frosted Lightbox
+    const lightbox = document.getElementById("lightboxOverlay");
+    const lightboxContent = document.getElementById("lightboxContent");
+    const closeBtn = document.getElementById("lightboxClose");
+    const zoomableItems = document.querySelectorAll("[data-zoomable]");
+
+    if (lightbox && lightboxContent) {
+        const openLightbox = (src, alt, isVideo = false) => {
+            lightboxContent.innerHTML = "";
+            if (isVideo) {
+                const video = document.createElement("video");
+                video.src = src;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                lightboxContent.appendChild(video);
+            } else {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = alt || "Enlarged view";
+                lightboxContent.appendChild(img);
+            }
+            lightbox.classList.add("is-active");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove("is-active");
+            lightbox.setAttribute("aria-hidden", "true");
+            lightboxContent.innerHTML = "";
+            document.body.style.overflow = "";
+        };
+
+        zoomableItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const isVideo = item.tagName.toLowerCase() === "video";
+                const source = isVideo ? item.querySelector("source")?.src || item.src : item.src;
+                openLightbox(source, item.alt, isVideo);
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox || e.target === lightboxContent) closeLightbox();
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && lightbox.classList.contains("is-active")) closeLightbox();
+        });
+    }
 });
