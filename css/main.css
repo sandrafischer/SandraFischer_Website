@@ -4,4 +4,5 @@
 @import "theme.css" layer(theme);
 @import "components.css" layer(components);
 @import "layout.css" layer(layout);
-@import "project-detail.css" layer(components);
+@import "project-detail.css" layer(project-detail);
+@import "motion.css" layer(motion);

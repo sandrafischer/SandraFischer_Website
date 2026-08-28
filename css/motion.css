@@ -1,0 +1,97 @@
+/* ==========================================================================
+   SMOOTH SCROLL & SCROLL REVEAL CHOREOGRAPHY
+   ========================================================================== */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+/* Elemente, die beim Scrollen animieren */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    filter: blur(4px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform, filter;
+}
+
+.scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.work-card.scroll-reveal,
+.discipline-card.scroll-reveal {
+    transition-duration: 0.85s;
+}
+
+/* ==========================================================================
+   HERO SCROLL PARALLAX & STACKED CURTAIN (KEIN STICKY / KEIN WEISSRAUM)
+   ========================================================================== */
+
+/* Die bewegten Typo-Elemente */
+.anim-title-sandra,
+.anim-title-fischer {
+    display: inline-block;
+    will-change: transform;
+}
+
+.hero-disciplines-subblock,
+.hero-badge-row {
+    will-change: transform;
+}
+
+/* ==========================================================================
+   HERO SCROLL PARALLAX FIX: OVERFLOW & ANIMATION UNLOCK
+   ========================================================================== */
+/* Erlaubt dem Text, sich beim Scrollen über die Maskenkante hinaus zu bewegen */
+.hero-monumental-wrap {
+    overflow: visible !important;
+}
+
+.hero-line,
+.hero-offset-name {
+    overflow: visible !important;
+}
+
+/* Kinetische Typo-Zeilen für JS-Transform vorbereiten */
+.hero-huge-title {
+    display: inline-block !important;
+    will-change: transform;
+}
+
+/* ==========================================================================
+   HERO PARALLAX PIN & STACKED CURTAIN OVERLAP
+   ========================================================================== */
+.hero-section-editorial {
+    position: relative;
+    z-index: 1;
+    will-change: transform, filter, opacity;
+}
+
+/* Works Box als übergeordnete Schicht mit Schatten zur Tiefenwirkung */
+.work-section {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    margin-top: 0;
+}
+
+.work-box-container {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -35px 70px rgba(0, 0, 0, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    transform-origin: top center;
+    will-change: transform;
+}

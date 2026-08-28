@@ -321,4 +321,116 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- 8. ULTRA-SMOOTH SCROLL (LENIS) & HERO PARALLAX CONTROLLER ---
+    const heroSection = document.getElementById('hero');
+    const lineSandra = document.querySelector('.hero-line-first');
+    const lineFischer = document.querySelector('.hero-offset-name');
+    const heroDisciplines = document.querySelector('.hero-disciplines-subblock');
+    const heroBadge = document.querySelector('.hero-badge-row');
+    const workBoxContainer = document.querySelector('.work-box-container');
+
+    function renderHeroParallax(scrollPos) {
+        if (window.innerWidth <= 768) return;
+
+        const maxDistance = 750;
+        const progress = Math.min(1, Math.max(0, scrollPos / maxDistance));
+
+        // 1. Hero scrollt langsamer mit und wird progressiv unschärfer
+        if (heroSection && scrollPos <= maxDistance * 1.5) {
+            const blurAmount = (progress * 8).toFixed(1); // 0px bis max 8px Blur
+            const opacityAmount = Math.max(0.2, 1 - (progress * 0.55)).toFixed(2); // Sanftes Abdunkeln
+
+            heroSection.style.transform = `translate3d(0, ${(scrollPos * 0.45).toFixed(1)}px, 0)`;
+            heroSection.style.filter = `blur(${blurAmount}px)`;
+            heroSection.style.opacity = opacityAmount;
+        }
+
+        // 2. Kinetische Typo-Gegenbewegung
+        if (lineSandra) {
+            lineSandra.style.transform = `translate3d(-${(progress * 80).toFixed(1)}px, 0, 0)`;
+        }
+        if (lineFischer) {
+            lineFischer.style.transform = `translate3d(${(progress * 80).toFixed(1)}px, 0, 0)`;
+        }
+
+        // 3. Sublines nach unten, Badge nach oben
+        if (heroDisciplines) {
+            heroDisciplines.style.transform = `translate3d(0, ${(progress * 40).toFixed(1)}px, 0)`;
+        }
+        if (heroBadge) {
+            heroBadge.style.transform = `translate3d(0, -${(progress * 25).toFixed(1)}px, 0)`;
+        }
+
+        // 4. Works-Box zieht sich dynamisch auf
+        if (workBoxContainer) {
+            const scale = 0.985 + (progress * 0.015);
+            workBoxContainer.style.transform = `scale(${Math.min(1, scale).toFixed(3)})`;
+        }
+    }
+
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1.05,
+            touchMultiplier: 1.8
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Synchronisation bei jedem Scroll-Frame
+        lenis.on('scroll', (e) => {
+            renderHeroParallax(e.scroll);
+        });
+
+        // Anker-Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '#hero') {
+                    e.preventDefault();
+                    lenis.scrollTo(0, { duration: 1.4 });
+                } else {
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        lenis.scrollTo(targetEl, { offset: -40, duration: 1.3 });
+                    }
+                }
+            });
+        });
+    } else {
+        window.addEventListener('scroll', () => {
+            renderHeroParallax(window.scrollY);
+        }, { passive: true });
+    }
+
+    // --- 9. SCROLL REVEAL OBSERVER ---
+    const revealTargets = document.querySelectorAll(
+        '.work-header, .work-card, .disciplines-header, .discipline-card, .about-grid, .split-hub-header, .faq-col, .contact-col'
+    );
+
+    revealTargets.forEach(el => el.classList.add('scroll-reveal'));
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealTargets.forEach(el => scrollObserver.observe(el));
 });
