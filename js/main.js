@@ -237,36 +237,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-/* ==========================================================================
-   PROJECT DETAIL: HERO PARALLAX REVEAL & FROSTED LIGHTBOX
-   ========================================================================== */
-    // Butterweicher Hero Scroll-Fade & Parallax Reveal
-    const heroContent = document.getElementById("projectHeroContent");
-    if (heroContent && window.innerWidth > 768) {
-        let isTicking = false;
+    /* ==========================================================================
+       PROJECT DETAIL: CINEMATIC HERO PARALLAX & STACKED SHOWCASE OVERLAP
+       ========================================================================== */
+    const detailHero = document.getElementById("projectHeroContent");
+    const detailTitleSpans = document.querySelectorAll(".project-detail-title span");
+    const detailLead = document.querySelector(".project-detail-lead");
+    const detailMeta = document.querySelector(".project-meta-strip");
+    const showcaseFrame = document.querySelector(".project-hero-frame");
 
-        window.addEventListener("scroll", () => {
-            if (!isTicking) {
-                window.requestAnimationFrame(() => {
-                    const scrollPos = window.scrollY;
-                    const maxDistance = 480;
+    function renderDetailHeroParallax(scrollPos) {
+        if (!detailHero || window.innerWidth <= 768) return;
 
-                    if (scrollPos <= maxDistance) {
-                        const progress = scrollPos / maxDistance;
-                        const opacity = Math.max(0, 1 - (progress * 1.2));
-                        const translateY = scrollPos * 0.25;
+        const maxDistance = 700;
+        const progress = Math.min(1, Math.max(0, scrollPos / maxDistance));
 
-                        heroContent.style.opacity = opacity.toFixed(3);
-                        heroContent.style.transform = `translate3d(0, -${translateY.toFixed(1)}px, 0)`;
-                    } else if (heroContent.style.opacity !== "0") {
-                        heroContent.style.opacity = "0";
-                    }
+        if (scrollPos <= maxDistance * 1.5) {
+            // 1. Hero scrollt langsamer mit (Parallaxe 0.45), fadet ab und wird progressiv unschärfer
+            const blurAmount = (progress * 8).toFixed(1);
+            const opacityAmount = Math.max(0.15, 1 - (progress * 0.65)).toFixed(2);
 
-                    isTicking = false;
-                });
-                isTicking = true;
+            detailHero.style.transform = `translate3d(0, ${(scrollPos * 0.45).toFixed(1)}px, 0)`;
+            detailHero.style.filter = `blur(${blurAmount}px)`;
+            detailHero.style.opacity = opacityAmount;
+
+            // 2. Kinetische Typo-Gegenbewegung der beiden Titelzeilen
+            if (detailTitleSpans.length >= 2) {
+                detailTitleSpans[0].style.transform = `translate3d(-${(progress * 60).toFixed(1)}px, 0, 0)`;
+                detailTitleSpans[1].style.transform = `translate3d(${(progress * 60).toFixed(1)}px, 0, 0)`;
             }
-        }, { passive: true });
+
+            // 3. Lead & Meta-Strip Tiefenstaffelung
+            if (detailLead) {
+                detailLead.style.transform = `translate3d(0, ${(progress * 25).toFixed(1)}px, 0)`;
+            }
+            if (detailMeta) {
+                detailMeta.style.transform = `translate3d(0, ${(progress * 40).toFixed(1)}px, 0)`;
+            }
+
+            // 4. Showcase-Bild dehnt sich sanft auf
+            if (showcaseFrame) {
+                const scale = 0.985 + (progress * 0.015);
+                showcaseFrame.style.transform = `scale(${Math.min(1, scale).toFixed(3)})`;
+            }
+        }
     }
 
     // 2. Interactive Frosted Lightbox (Klick überall schließt)
@@ -388,7 +402,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Synchronisation bei jedem Scroll-Frame
         lenis.on('scroll', (e) => {
-            renderHeroParallax(e.scroll);
+            renderHeroParallax(e.scroll);          // Für die Startseite
+            renderDetailHeroParallax(e.scroll);    // Für die Projekt-Detailseiten
         });
 
         // Anker-Navigation
@@ -410,6 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         window.addEventListener('scroll', () => {
             renderHeroParallax(window.scrollY);
+            renderDetailHeroParallax(window.scrollY);
         }, { passive: true });
     }
 

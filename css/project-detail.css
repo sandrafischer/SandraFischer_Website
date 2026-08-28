@@ -592,3 +592,38 @@
         gap: 1rem;
     }
 }
+
+/* ==========================================================================
+   PROJECT DETAIL HERO: KINETIC PARALLAX & CURTAIN OVERLAP
+   ========================================================================== */
+.project-detail-hero {
+    position: relative;
+    z-index: 1;
+    will-change: transform, filter, opacity;
+}
+
+/* Titel-Zeilen für sanfte gegenläufige Typo-Verschiebung */
+.project-detail-title span {
+    display: block;
+    will-change: transform;
+}
+
+.project-meta-strip,
+.project-detail-lead {
+    will-change: transform;
+}
+
+/* 16:9 Hero Frame fährt als übergeordnete Bühne physisch über den Hero drüber */
+#projectShowcase {
+    position: relative;
+    z-index: 10;
+}
+
+.project-hero-frame {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -25px 60px rgba(24, 23, 22, 0.25);
+    border-radius: 16px;
+    transform-origin: top center;
+    will-change: transform;
+}
