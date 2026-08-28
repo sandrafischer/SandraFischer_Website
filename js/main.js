@@ -449,4 +449,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealTargets.forEach(el => scrollObserver.observe(el));
+
+    // --- AUTO-SCALE DESKTOP IFRAME MOCKUP (DESKTOP / MOBILE RESPONSIVE) ---
+    function resizeIframeScale() {
+        const mockupViewport = document.querySelector('.mockup-viewport');
+        const mockupIframe = document.querySelector('.mockup-viewport iframe');
+
+        if (!mockupViewport || !mockupIframe) return;
+
+        // Auf Smartphones (unter 768px) nativen Mobile-View nutzen
+        if (window.innerWidth <= 768) {
+            mockupIframe.style.width = '100%';
+            mockupIframe.style.height = '100%';
+            mockupIframe.style.transform = 'none';
+            return;
+        }
+
+        // Ab Tablet/Desktop: Feste 1440px Referenz proportional herunterzoomen
+        const baseWidth = 1440;
+        const currentContainerWidth = mockupViewport.clientWidth;
+        const currentContainerHeight = mockupViewport.clientHeight;
+        const scale = currentContainerWidth / baseWidth;
+
+        mockupIframe.style.width = `${baseWidth}px`;
+        mockupIframe.style.height = `${currentContainerHeight / scale}px`;
+        mockupIframe.style.transform = `scale(${scale})`;
+        mockupIframe.style.transformOrigin = 'top left';
+    }
+
+    window.addEventListener('resize', resizeIframeScale);
+    window.addEventListener('orientationchange', resizeIframeScale);
+    resizeIframeScale();
 });

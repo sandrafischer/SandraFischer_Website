@@ -138,20 +138,34 @@
             </div>
         </div>
 
-        <!-- 4. Full-Bleed Masonry Galerie -->
-        <section class="gallery-fullbleed-wrap">
-            <div class="gallery-masonry">
-                <div class="masonry-tile">
-                    <img src="images/projects/project-website-feichtinger/web-mockup1.png" alt="Emergency Call Action & Service Grid Mockup" data-zoomable>
+        <div class="interactive-browser-mockup">
+            <!-- Browser Topbar mit Fake-Controls und Adresszeile -->
+            <div class="mockup-chrome-bar">
+                <div class="chrome-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
                 </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-website-feichtinger/web-mockup2.png" alt="Appointment Booking Flow & Interactive Character" data-zoomable>
+                <div class="chrome-url-bar">
+                    <span>https://ortungstechnik-feichtinger.at</span>
                 </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-website-feichtinger/web-mockup3.png" alt="Responsive Mobile & Desktop System" data-zoomable>
+                <div class="chrome-actions">
+                    <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" class="live-link-badge">
+                        Open Live Site ↗
+                    </a>
                 </div>
             </div>
-        </section>
+
+            <!-- Scrollbare Live-Website (data-lenis-prevent schützt den Scrollflow) -->
+            <div class="mockup-viewport" data-lenis-prevent>
+                <iframe
+                        src="https://ortungstechnik-feichtinger.framer.website/"
+                        title="Live Preview"
+                        loading="lazy"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
         <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Website Feichtinger) -->
         <section class="more-projects-section">
