@@ -339,10 +339,15 @@
                             </div>
                         </div>
                     </a>
-
+                </div>
+                <!-- Button für Mobile: Mehr Projekte laden -->
+                <div class="load-more-mobile-wrap" id="loadMoreWrap">
+                    <button class="btn-load-more" id="loadMoreProjectsBtn">
+                        <span>View All Projects</span>
+                        <span class="load-more-icon">↓</span>
+                    </button>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -496,10 +501,16 @@
                 <div class="split-hub-grid">
 
                     <!-- SPALTE LINKS: Minimalistisches FAQ-Akkordeon -->
-                    <div class="faq-col">
-                        <h3 class="split-col-label">FAQ</h3>
+                    <div class="faq-col" id="faqCol">
+                        <!-- Desktop: Statischer FAQ Tag | Mobile: Klickbarer Toggle Button -->
+                        <h3 class="split-col-label desktop-only-faq-tag">FAQ</h3>
 
-                        <div class="faq-accordion">
+                        <button type="button" class="faq-section-toggle-btn" id="faqSectionToggleBtn" aria-expanded="false">
+                            <span>Show FAQs</span>
+                            <span class="faq-toggle-arrow">↓</span>
+                        </button>
+
+                        <div class="faq-accordion" id="faqAccordion">
                             <!-- FAQ 1 -->
                             <div class="faq-item is-open">
                                 <button class="faq-question" aria-expanded="true">

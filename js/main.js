@@ -480,4 +480,90 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeIframeScale);
     window.addEventListener('orientationchange', resizeIframeScale);
     resizeIframeScale();
+
+    // --- 10. MOBILE STEP-BY-STEP LOAD MORE (3 BY 3) CONTROLLER ---
+    const workGridEl = document.getElementById('workGrid');
+    const loadMoreBtn = document.getElementById('loadMoreProjectsBtn');
+    const loadMoreWrap = document.getElementById('loadMoreWrap');
+
+    let visibleCount = 3; // Startet mit den ersten 3 Projekten
+    const stepCount = 3;    // Schaltet pro Klick jeweils 3 weitere frei
+
+    function updateMobileVisibility() {
+        if (!workGridEl) return;
+
+        const isMobile = window.innerWidth <= 680;
+        // Berücksichtigt auch aktive Filter
+        const activeCards = Array.from(workGridEl.querySelectorAll('.work-card:not(.is-hidden)'));
+
+        if (isMobile) {
+            let hiddenRemaining = 0;
+
+            activeCards.forEach((card, index) => {
+                if (index < visibleCount) {
+                    card.classList.remove('mobile-collapsed');
+                } else {
+                    card.classList.add('mobile-collapsed');
+                    hiddenRemaining++;
+                }
+            });
+
+            // Button nur anzeigen, wenn noch weitere Projekte verborgen sind
+            if (loadMoreWrap) {
+                if (hiddenRemaining > 0) {
+                    loadMoreWrap.classList.remove('is-hidden');
+                    const btnSpan = loadMoreBtn.querySelector('span');
+                    if (btnSpan) {
+                        btnSpan.textContent = `View More Projects (${hiddenRemaining} left)`;
+                    }
+                } else {
+                    loadMoreWrap.classList.add('is-hidden');
+                }
+            }
+        } else {
+            // Auf Tablet & Desktop immer alle Karten einblenden
+            activeCards.forEach(card => card.classList.remove('mobile-collapsed'));
+            if (loadMoreWrap) loadMoreWrap.classList.add('is-hidden');
+        }
+    }
+
+    if (loadMoreBtn && workGridEl) {
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += stepCount; // Erhöht um 3
+            updateMobileVisibility();
+
+            // Sanfte Einblend-Animation für neu hinzugekommene Karten
+            const newlyVisible = workGridEl.querySelectorAll('.work-card:not(.mobile-collapsed)');
+            newlyVisible.forEach(card => card.classList.add('is-revealed'));
+        });
+    }
+
+    // Bei Filter-Klick den Zähler auf die ersten 3 der gefilterten Kategorie zurücksetzen
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            visibleCount = 3;
+            // Kurzer Timeout, damit das Filter-Script die Klassen zuerst aktualisiert
+            setTimeout(updateMobileVisibility, 20);
+        });
+    });
+
+    window.addEventListener('resize', updateMobileVisibility);
+    updateMobileVisibility();
+
+    // --- 11. MOBILE COLLAPSIBLE FAQ SECTION CONTROLLER ---
+    const faqCol = document.getElementById('faqCol');
+    const faqToggleBtn = document.getElementById('faqSectionToggleBtn');
+
+    if (faqCol && faqToggleBtn) {
+        faqToggleBtn.addEventListener('click', () => {
+            const isExpanded = faqCol.classList.toggle('is-expanded');
+            faqToggleBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+
+            const btnText = faqToggleBtn.querySelector('span:first-child');
+            if (btnText) {
+                btnText.textContent = isExpanded ? 'Hide FAQs' : 'Show FAQs';
+            }
+        });
+    }
 });

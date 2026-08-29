@@ -763,10 +763,10 @@ body.hero-master-active .hero-ambient-glow {
 
     .main-nav a {
         font-size: 1.05rem;
-        font-weight: 600;
+        font-weight: 500;
         display: block;
         padding: 0.5rem;
-        pointer-events: auto !important;
+        pointer-events: auto;
     }
 
     .mobile-cta {
@@ -852,14 +852,14 @@ body.hero-master-active .hero-ambient-glow {
 
     .work-grid,
     .work-grid:not(.is-filtered) {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
     .work-grid .work-card,
     .work-grid:not(.is-filtered) .work-card {
-        grid-column: span 1 !important;
-        width: 100% !important;
+        grid-column: span 1;
+        width: 100%;
     }
 
     .work-card-img,
@@ -946,7 +946,7 @@ body.hero-master-active .hero-ambient-glow {
     .hero-huge-title {
         font-size: clamp(3.4rem, 15vw, 4.8rem);
         line-height: 0.86;
-        letter-spacing: -0.03em;
+        letter-spacing: normal;
     }
 
     .hero-line-first {
@@ -975,7 +975,7 @@ body.hero-master-active .hero-ambient-glow {
 
     .discipline-link {
         font-size: clamp(0.95rem, 4vw, 1.15rem);
-        letter-spacing: -0.01em;
+        letter-spacing: normal;
     }
 
     .hero-bottom-action {
@@ -988,32 +988,66 @@ body.hero-master-active .hero-ambient-glow {
         font-size: 0.88rem;
     }
 
-    .work-box-container {
-        padding: 1.5rem 1rem;
-        border-radius: 20px;
+    /* --- Works Section: 1 Spalte & Full-Width Edge-to-Edge --- */
+    .work-section {
+        padding: 1.5rem 0 3.5rem 0;
     }
 
-    .work-grid,
-    .work-grid:not(.is-filtered) {
-        grid-template-columns: 1fr !important;
+    .work-section .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .work-section .work-box-container {
+        padding: 2rem 1.25rem 2.25rem 1.25rem;
+        border-radius: 24px;
+        border-left: none;
+        border-right: none;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .work-header {
+        margin-bottom: 1.5rem;
+        padding: 0 0.25rem;
+    }
+
+    /* 1 Spalte auf Smartphone */
+    .work-section .work-grid,
+    .work-section .work-grid:not(.is-filtered) {
+        grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
-    .work-card-img,
-    .work-grid:not(.is-filtered) .work-card.span-4 .work-card-img,
-    .work-grid:not(.is-filtered) .work-card.span-8 .work-card-img {
-        height: 220px !important;
+    .work-section .work-grid .work-card,
+    .work-section .work-grid:not(.is-filtered) .work-card {
+        grid-column: span 1;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    /* Mobile Collapse: Projekte ab Position 5 ausblenden */
+    .work-grid:not(.is-expanded) .work-card.mobile-collapsed {
+        display: none;
+    }
+
+    .work-section .work-card-img,
+    .work-section .work-grid:not(.is-filtered) .work-card.span-4 .work-card-img,
+    .work-section .work-grid:not(.is-filtered) .work-card.span-8 .work-card-img {
+        height: 230px;
+        aspect-ratio: 16 / 10;
     }
 
     .work-card-content {
-        padding: 1rem;
+        padding: 1rem 1.15rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.6rem;
+        gap: 0.45rem;
     }
 
     .work-name {
-        font-size: 1rem;
+        font-size: 1.02rem;
         line-height: 1.35;
         width: 100%;
     }
@@ -1023,6 +1057,45 @@ body.hero-master-active .hero-ambient-glow {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    /* Load More Button Wrapper */
+    .load-more-mobile-wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        width: 100%;
+    }
+
+    .load-more-mobile-wrap.is-hidden {
+        display: none !important;
+    }
+
+    .btn-load-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--color-petrol, #0D5C63);
+        color: #FFFFFF;
+        border: none;
+        padding: 0.85rem 1.75rem;
+        border-radius: 999px;
+        font-family: "Clash Grotesk", system-ui, sans-serif;
+        font-size: 0.92rem;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(13, 92, 99, 0.25);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-load-more:active {
+        transform: scale(0.97);
+        background-color: #084349;
+    }
+
+    .load-more-icon {
+        font-size: 1.05rem;
+        transition: transform 0.25s ease;
     }
 
     .disciplines-section {
@@ -1049,8 +1122,7 @@ body.hero-master-active .hero-ambient-glow {
     }
 
     .about-section,
-    .faq-section,
-    .contact-section {
+    .faq-section {
         padding: 3rem 0;
     }
 
@@ -1116,110 +1188,18 @@ body.hero-master-active .hero-ambient-glow {
         flex-shrink: 0;
     }
 
-    .faq-question {
-        font-size: 1.05rem;
-        padding: 1.1rem 0;
-    }
-
     .contact-footer-wrapper {
         min-height: auto;
-        padding-top: 4.5rem;
-        margin-top: 3rem;
+        padding-top: 0;
+        margin-top: 2rem;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+    .split-hub-section {
+        padding: 3rem 0 2rem 0;
     }
 
-    .btn-submit {
-        width: 100%;
-    }
-
-    .form-grid-2 {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.25rem;
-    }
-
-    .footer-left,
-    .footer-right {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .footer-legal {
-        gap: 1rem;
-    }
-
-    .project-hero {
-        padding: 1.5rem 0 3.5rem 0;
-    }
-
-    .project-top-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .project-main-title {
-        font-size: clamp(1.8rem, 7vw, 2.6rem);
-    }
-
-    .project-meta-bar {
-        grid-template-columns: 1fr;
-        padding: 1rem 1.25rem;
-        gap: 1rem;
+    .split-hub-header {
         margin-bottom: 2rem;
-    }
-
-    .project-showcase-hero {
-        height: 230px;
-        margin-bottom: 2.5rem;
-        border-radius: 18px;
-    }
-
-    .gallery-item.span-12,
-    .gallery-item.span-6,
-    .gallery-item.span-4 {
-        grid-column: span 12;
-        height: 220px;
-    }
-
-    .motion-states-grid,
-    .asset-5-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .next-project-banner {
-        padding: 1.5rem 1rem;
-        border-radius: 18px;
-    }
-
-    .next-project-title {
-        font-size: clamp(1.3rem, 5vw, 1.8rem);
-    }
-}
-
-@media (max-width: 1024px) {
-    .split-hub-grid {
-        grid-template-columns: 1fr;
-        gap: 3.5rem;
-    }
-}
-
-@media (max-width: 680px) {
-    .contact-footer-wrapper {
-        min-height: auto;
-        padding-top: 5rem;
-        margin-top: 2.5rem;
     }
 
     .form-grid-2 {
@@ -1244,5 +1224,140 @@ body.hero-master-active .hero-ambient-glow {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-legal {
+        gap: 1rem;
+    }
+}
+
+/* Auf Desktop und Tablets bleibt der Load-More Button immer verborgen */
+@media (min-width: 681px) {
+    .load-more-mobile-wrap {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   SPLIT HUB (FAQ & CONTACT) 1-COLUMN MOBILE FIX
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .split-hub-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .split-hub-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* Kontaktformular nach oben setzen */
+    .split-hub-grid .contact-col {
+        order: 1;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* FAQ darunter platzieren */
+    .split-hub-grid .faq-col {
+        order: 2;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   COLLAPSIBLE FAQ SECTION (DESKTOP STATISCH, MOBILE KLICKBAR)
+   ========================================================================== */
+/* Desktop / Tablet Standard: Toggle-Button ausblenden, Tag anzeigen */
+.faq-section-toggle-btn {
+    display: none;
+}
+
+.desktop-only-faq-tag {
+    display: inline-flex;
+}
+
+@media (max-width: 680px) {
+    /* Reihenfolge: FAQ zuerst (oben), Formular als zweites */
+    .split-hub-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .split-hub-grid .faq-col {
+        order: 1;
+        width: 100%;
+    }
+
+    .split-hub-grid .contact-col {
+        order: 2;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Statischen Tag auf Mobile verstecken */
+    .desktop-only-faq-tag {
+        display: none !important;
+    }
+
+    /* Der mobile Ausklapp-Button (sitzt exakt dort, wo vorher der Tag war) */
+    .faq-section-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: rgba(68, 158, 158, 0.1);
+        border: 1px solid rgba(68, 158, 158, 0.25);
+        color: var(--color-eucalyptus, #449E9E);
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-family: "Clash Grotesk", system-ui, sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease;
+    }
+
+    .faq-toggle-arrow {
+        font-size: 0.95rem;
+        line-height: 1;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Eingeklappter Zustand auf Mobile */
+    .faq-col:not(.is-expanded) .faq-accordion {
+        display: none;
+    }
+
+    /* Ausgeklappter Zustand */
+    .faq-col.is-expanded .faq-section-toggle-btn {
+        background-color: var(--color-petrol, #0D5C63);
+        color: #FFFFFF;
+        border-color: var(--color-petrol, #0D5C63);
+    }
+
+    .faq-col.is-expanded .faq-toggle-arrow {
+        transform: rotate(180deg);
     }
 }
