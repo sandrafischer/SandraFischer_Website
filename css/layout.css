@@ -214,13 +214,6 @@ body.hero-master-active .hero-ambient-glow {
     flex-direction: column;
 }
 
-.filter-group {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 .work-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -834,20 +827,19 @@ body.hero-master-active .hero-ambient-glow {
         margin-bottom: 2rem;
     }
 
-    /* 2 Filter-Buttons in 1 Zeile */
-    .filter-group {
+    .work-header .filter-group {
+        display: flex;
+        justify-content: space-between; /* Verteilt alle 4 gleichmäßig */
+        gap: 0;
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        margin: 0;
+        padding-bottom: 6px;
     }
 
-    .filter-btn {
-        width: 100%;
-        padding: 9px 12px;
-        font-size: 0.82rem;
-        text-align: center;
-        box-sizing: border-box;
+    .work-header .filter-btn {
+        margin: 0;
+        padding: 0;
+        font-size: clamp(0.72rem, 2.7vw, 0.85rem);
     }
 
     .work-grid,

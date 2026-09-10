@@ -462,27 +462,55 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
 /* ==========================================================================
    5. WORK CARDS & FILTERS
    ========================================================================== */
+.filter-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem; /* Einheitlicher Abstand zwischen ALLEN Punkten */
+    padding-bottom: 6px;
+    margin: 0;
+}
+
 .filter-btn {
-    background-color: #F6F4EF;
-    border: 1px solid #DCD6CA;
-    color: var(--color-text-dark);
-    border-radius: 999px;
-    padding: 9px 22px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0; /* Keine störenden Margins mehr */
+    font-family: inherit;
     font-size: 0.88rem;
-    font-weight: 500;
+    font-weight: 400;
+    color: rgba(24, 23, 22, 0.45);
     cursor: pointer;
-    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    transition: color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.filter-btn span {
+    display: inline-block;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .filter-btn:hover {
-    background-color: #ECE7DE;
-    border-color: #CFC8BB;
+    color: rgba(24, 23, 22, 0.85);
 }
 
 .filter-btn.active {
+    color: var(--color-petrol);
+    font-weight: 500;
+}
+
+.filter-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
     background-color: var(--color-petrol);
-    border-color: var(--color-petrol);
-    color: #ffffff;
+    pointer-events: none;
+    will-change: transform, width;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .work-card {

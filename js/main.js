@@ -87,16 +87,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. WORK GRID CATEGORY FILTER ---
+    // --- 3. WORK GRID CATEGORY FILTER & SLIDING INDICATOR ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const workCards = document.querySelectorAll('.work-card');
     const workGrid = document.getElementById('workGrid');
+    const filterIndicator = document.querySelector('.filter-indicator');
+    const filterGroup = document.querySelector('.filter-group');
+
+    function updateFilterIndicator(targetBtn) {
+        if (!filterIndicator || !filterGroup || !targetBtn) return;
+
+        const groupRect = filterGroup.getBoundingClientRect();
+        const btnRect = targetBtn.getBoundingClientRect();
+
+        // Horizontale Position relativ zum Container und exakte Breite berechnen
+        const leftOffset = btnRect.left - groupRect.left;
+        const width = btnRect.width;
+
+        filterIndicator.style.width = `${width}px`;
+        filterIndicator.style.transform = `translateX(${leftOffset}px)`;
+    }
 
     if (filterButtons.length > 0 && workCards.length > 0 && workGrid) {
+        // Initiale Position der Linie setzen, sobald die Schriftarten geladen sind
+        const initialActive = document.querySelector('.filter-btn.active') || filterButtons[0];
+        setTimeout(() => updateFilterIndicator(initialActive), 50);
+
+        // Position bei Fenstergrößenänderung neu berechnen
+        window.addEventListener('resize', () => {
+            const currentActive = document.querySelector('.filter-btn.active');
+            updateFilterIndicator(currentActive);
+        });
+
+        // Hält die Linie synchron, falls mobil horizontal gescrollt wird
+        if (filterGroup) {
+            filterGroup.addEventListener('scroll', () => {
+                const currentActive = document.querySelector('.filter-btn.active');
+                updateFilterIndicator(currentActive);
+            }, { passive: true });
+        }
+
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
+
+                // Linie sanft zum geklickten Button gleiten lassen
+                updateFilterIndicator(button);
 
                 const filterValue = button.getAttribute('data-filter');
 
