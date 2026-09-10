@@ -6,7 +6,7 @@
     <meta name="description" content="Character Rigging, Interactive Web Motion & 2D Animation by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Motion Design | Sandra Fischer</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <!-- Lottie Player Web Component -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -16,13 +16,17 @@
 <div class="custom-cursor" id="customCursor"></div>
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Topbar Navigation -->
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
                         <span class="logo-title">Mediatechnology & -design</span>
@@ -30,12 +34,7 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#projects">Work</a></li>
@@ -43,14 +42,41 @@
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
                 <div class="mobile-cta">
                     <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
                 </div>
             </nav>
 
-            <div class="cta-area">
-                <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
             </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
     </div>
 </header>
@@ -214,12 +240,12 @@
             <div class="gallery-masonry">
                 <div class="masonry-tile is-video">
                     <video preload="metadata" playsinline data-zoomable>
-                        <source src="images/projects/project-motion/Spring.mp4" type="video/mp4">
+                        <source src="../images/projects/project-motion/Spring.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="masonry-tile is-video">
                     <video preload="metadata" playsinline data-zoomable>
-                        <source src="images/projects/project-motion/Wildlife_Camping.mp4" type="video/mp4">
+                        <source src="../images/projects/project-motion/Wildlife_Camping.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -236,7 +262,7 @@
                 <div class="more-projects-grid">
                     <a href="project-ff-mettmach.html" class="work-card">
                         <div class="work-card-img">
-                            <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
+                            <img src="../images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
@@ -252,7 +278,7 @@
 
                     <a href="project-alufefa.html" class="work-card">
                         <div class="work-card-img">
-                            <img src="images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="Corporate Identity ALUFEFA">
+                            <img src="../images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="Corporate Identity ALUFEFA">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
@@ -281,7 +307,7 @@
     <div class="container footer-container">
         <div class="footer-left">
             <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
-                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
         </div>
@@ -302,6 +328,6 @@
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>

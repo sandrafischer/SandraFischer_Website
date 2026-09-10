@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sandra Fischer">
+    <meta name="description" content="Website & UI/UX Design for Ortungstechnik Feichtinger by Sandra Fischer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Feichtinger | Sandra Fischer</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body class="project-detail-page">
+
+<!-- Custom Cursor & Transitions -->
+<div class="custom-cursor" id="customCursor"></div>
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
+<header>
+    <div class="topbar-container">
+        <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
+            <div class="logo-area">
+                <a href="index.html" class="logo-link">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <div class="logo-text">
+                        <span class="logo-name">Sandra Fischer</span>
+                        <span class="logo-title">Mediatechnology & -design</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 2. Navigation Links Mitte -->
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html#projects">Work</a></li>
+                    <li><a href="index.html#disciplines">Services</a></li>
+                    <li><a href="index.html#aboutme">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
+                <div class="mobile-cta">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
+            </nav>
+
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
+            </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<main>
+    <article>
+        <!-- 1. Monumentaler Full-Height Hero Screen -->
+        <section class="project-detail-hero" id="projectHeroContent">
+            <div class="container hero-container-flex">
+
+                <div class="project-top-nav">
+                    <a href="index.html#projects" class="back-link">← Back to Works</a>
+                    <span class="project-detail-tag">WEB DESIGN & DEVELOPMENT</span>
+                </div>
+
+                <div class="project-hero-main-group">
+                    <h1 class="project-detail-title">
+                        <span>Website Feichtinger</span>
+                        <span>Ortungstechnik</span>
+                    </h1>
+                    <p class="project-detail-lead">
+                        A modern, high-performance web experience for an independent leak detection specialist — featuring instant emergency calling, automated appointment booking, clear service hierarchies, and an interactive mascot.
+                    </p>
+                </div>
+
+                <!-- Meta Info Strip (4 feste Standard-Spalten) -->
+                <div class="project-meta-strip">
+                    <div class="meta-field">
+                        <span class="meta-field-label">Client</span>
+                        <span class="meta-field-val">Ortungstechnik Feichtinger</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Discipline</span>
+                        <span class="meta-field-val">Web Design & Development</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Year</span>
+                        <span class="meta-field-val">2026</span>
+                    </div>
+                    <div class="meta-field">
+                        <span class="meta-field-label">Deliverables</span>
+                        <span class="meta-field-val">
+                            <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Framer Prototype & Web App ↗</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator">
+                    <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. 16:9 Hero Bild -->
+        <div class="container" id="projectShowcase">
+            <div class="project-hero-frame">
+                <img src="../images/projects/project-website-feichtinger/1mockup-feichtinger.png" alt="Ortungstechnik Feichtinger Website Hero Mockup" data-zoomable>
+            </div>
+
+            <!-- 3. Zweispaltige Story -->
+            <div class="project-story-grid">
+                <div class="project-story-col">
+                    <h3>Emergency Routing & Clear Service Structure</h3>
+                    <p>
+                        In the event of acute water damage or pipe bursts, rapid assistance is critical. The interface prioritizes a prominent emergency call trigger that connects stressed property owners directly with the specialist with a single tap.
+                    </p>
+                    <p>
+                        The core structure clearly presents non-destructive locating methods, distinct benefits, and service areas, establishing immediate trust for both private homeowners and B2B partners such as plumbers and insurance assessors.
+                    </p>
+                </div>
+
+                <div class="project-story-col">
+                    <h3>Interactive Mascot & Direct Appointment Booking</h3>
+                    <p>
+                        Alongside a structured inquiry form, the website integrates a self-service appointment scheduler, enabling clients to book non-emergency diagnostic sessions smoothly online.
+                    </p>
+                    <p>
+                        To give the technical trade a warm, approachable character, the custom locator mascot was animated as lightweight Lottie micro-interactions throughout the responsive layout, guiding users dynamically toward key actions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-browser-mockup">
+            <!-- Browser Topbar mit Fake-Controls und Adresszeile -->
+            <div class="mockup-chrome-bar">
+                <div class="chrome-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="chrome-url-bar">
+                    <span>https://ortungstechnik-feichtinger.at</span>
+                </div>
+                <div class="chrome-actions">
+                    <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" class="live-link-badge">
+                        Open Live Site ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scrollbare Live-Website (data-lenis-prevent schützt den Scrollflow) -->
+            <div class="mockup-viewport" data-lenis-prevent>
+                <iframe
+                        src="https://ortungstechnik-feichtinger.framer.website/"
+                        title="Live Preview"
+                        loading="lazy"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Website Feichtinger) -->
+        <section class="more-projects-section">
+            <div class="container">
+                <div class="more-projects-header">
+                    <span class="project-detail-tag">SELECTED WORKS</span>
+                    <h2 class="more-projects-title">More Recent Projects</h2>
+                </div>
+
+                <div class="more-projects-grid">
+                    <a href="project-brand-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="../images/projects/project-brand-feichtinger/brand-mockup.png" alt="Corporate Identity Feichtinger">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Feichtinger Brand Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Corporate Identity</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="project-motion-feichtinger.html" class="work-card">
+                        <div class="work-card-img">
+                            <lottie-player
+                                    src="images/projects/project-motion/search.json"
+                                    background="transparent"
+                                    speed="1"
+                                    style="width: 100%; height: 100%; position: relative; left:70px; top: 20px"
+                                    loop
+                                    autoplay>
+                            </lottie-player>
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Interactive Motion & 2D</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Motion Design</span>
+                                <span class="work-year">2026</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <div class="lightbox-content-wrap" id="lightboxContent"></div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-left">
+            <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+            </a>
+            <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
+        </div>
+
+        <div class="footer-legal">
+            <a href="imprint.html">Imprint</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-right">
+            <div class="social-pills">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
+            </div>
+            <a href="#" class="back-to-top-btn" aria-label="Scroll to top">↑</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

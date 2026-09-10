@@ -566,4 +566,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- 12. ASYNC AJAX FORM (WEB3FORMS) MIT SUCCESS CARD ---
+    const inquiryForm = document.querySelector('.inquiry-form');
+    if (inquiryForm) {
+        inquiryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = inquiryForm.querySelector('.btn-submit');
+            const btnText = submitBtn ? submitBtn.querySelector('span:first-child') : null;
+            const originalText = btnText ? btnText.textContent : 'Send Message';
+            const isGerman = document.documentElement.lang === 'de';
+
+            if (submitBtn) submitBtn.classList.add('is-loading');
+            if (btnText) btnText.textContent = isGerman ? 'Wird gesendet...' : 'Sending...';
+
+            const formData = new FormData(inquiryForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                if (response.status === 200) {
+                    inquiryForm.innerHTML = `
+                        <div class="form-success-card">
+                            <div class="success-icon">✓</div>
+                            <h3 class="success-title">${isGerman ? 'Nachricht gesendet!' : 'Message Sent!'}</h3>
+                            <p class="success-text">
+                                ${isGerman
+                                        ? 'Vielen Dank für Ihre Nachricht. Ich melde mich innerhalb von 1–2 Werktagen bei Ihnen.'
+                                        : 'Thank you for your message. I will get back to you within 1–2 business days.'}
+                            </p>    
+                        </div>
+                    `;
+                } else {
+                    alert(isGerman ? 'Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an fischer.sandra2904@gmail.com' : 'Submission failed. Please try again or write directly to fischer.sandra2904@gmail.com');
+                }
+            } catch (err) {
+                alert(isGerman ? 'Netzwerkfehler. Bitte schreiben Sie direkt an fischer.sandra2904@gmail.com' : 'Network error. Please write directly to fischer.sandra2904@gmail.com');
+            } finally {
+                if (submitBtn) submitBtn.classList.remove('is-loading');
+                if (btnText) btnText.textContent = originalText;
+            }
+        });
+    }
 });
+

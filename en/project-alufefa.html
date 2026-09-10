@@ -6,7 +6,7 @@
     <meta name="description" content="Corporate Identity & Social Media Strategy for ALUFEFA GmbH by Sandra Fischer & Andrea Gaisbauer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALUFEFA Brand Identity | Sandra Fischer</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="project-detail-page">
 
@@ -14,13 +14,17 @@
 <div class="custom-cursor" id="customCursor"></div>
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Topbar Navigation -->
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
                         <span class="logo-title">Mediatechnology & -design</span>
@@ -28,12 +32,7 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#projects">Work</a></li>
@@ -41,14 +40,41 @@
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
                 <div class="mobile-cta">
                     <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
                 </div>
             </nav>
 
-            <div class="cta-area">
-                <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
             </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
     </div>
 </header>
@@ -109,7 +135,7 @@
         <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
         <div class="container" id="projectShowcase">
             <div class="project-hero-frame">
-                <img src="images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="ALUFEFA Corporate Identity & Social Media Showcase" data-zoomable>
+                <img src="../images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="ALUFEFA Corporate Identity & Social Media Showcase" data-zoomable>
             </div>
 
             <!-- 3. Zweispaltige Story -->
@@ -140,7 +166,7 @@
                 <!-- 01 Templates -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-alufefa/Vorlage.png" alt="Feed Post Template System" data-zoomable>
+                        <img src="../images/projects/project-alufefa/Vorlage.png" alt="Feed Post Template System" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>01. Feed Templates</h4>
@@ -151,7 +177,7 @@
                 <!-- 02 Photography -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-alufefa/Fassadenplanung.JPG" alt="On-Site Industrial Photography" data-zoomable>
+                        <img src="../images/projects/project-alufefa/Fassadenplanung.JPG" alt="On-Site Industrial Photography" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>02. Photography</h4>
@@ -162,7 +188,7 @@
                 <!-- 03 Business Card -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-alufefa/businesscard.png" alt="Corporate Business Card" data-zoomable>
+                        <img src="../images/projects/project-alufefa/businesscard.png" alt="Corporate Business Card" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>03. Business Cards</h4>
@@ -173,7 +199,7 @@
                 <!-- 04 Guidelines -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-alufefa/book.jpg" alt="Social Media Strategy Handbook" data-zoomable>
+                        <img src="../images/projects/project-alufefa/book.jpg" alt="Social Media Strategy Handbook" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
                         <h4>04. Guidelines</h4>
@@ -187,13 +213,13 @@
         <section class="gallery-fullbleed-wrap">
             <div class="gallery-masonry">
                 <div class="masonry-tile">
-                    <img src="images/projects/project-alufefa/shooting1.png" alt="ALUFEFA Facility & Production Staging 1" data-zoomable>
+                    <img src="../images/projects/project-alufefa/shooting1.png" alt="ALUFEFA Facility & Production Staging 1" data-zoomable>
                 </div>
                 <div class="masonry-tile">
-                    <img src="images/projects/project-alufefa/shooting2.png" alt="ALUFEFA Facility & Production Staging 2" data-zoomable>
+                    <img src="../images/projects/project-alufefa/shooting2.png" alt="ALUFEFA Facility & Production Staging 2" data-zoomable>
                 </div>
                 <div class="masonry-tile">
-                    <img src="images/projects/project-alufefa/shooting3.png" alt="ALUFEFA Facility & Production Staging 3" data-zoomable>
+                    <img src="../images/projects/project-alufefa/shooting3.png" alt="ALUFEFA Facility & Production Staging 3" data-zoomable>
                 </div>
             </div>
         </section>
@@ -209,7 +235,7 @@
                 <div class="more-projects-grid">
                     <a href="project-self-brand.html" class="work-card">
                         <div class="work-card-img">
-                            <img src="images/projects/project-self-brand/Mockup.png" alt="Personal Brand & Motion Kit">
+                            <img src="../images/projects/project-self-brand/Mockup.png" alt="Personal Brand & Motion Kit">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
@@ -225,7 +251,7 @@
 
                     <a href="project-3d.html" class="work-card">
                         <div class="work-card-img">
-                            <img src="images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Design">
+                            <img src="../images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Design">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
@@ -254,7 +280,7 @@
     <div class="container footer-container">
         <div class="footer-left">
             <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
-                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
         </div>
@@ -275,6 +301,6 @@
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>

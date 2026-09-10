@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sandra Fischer">
-    <meta name="description" content="Website & UI/UX Design for Ortungstechnik Feichtinger by Sandra Fischer">
+    <meta name="description" content="Corporate Brand Identity System for Ortungstechnik Feichtinger by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Feichtinger | Sandra Fischer</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Feichtinger Brand Identity | Sandra Fischer</title>
+    <link rel="stylesheet" href="../css/main.css">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -16,13 +16,17 @@
 <div class="custom-cursor" id="customCursor"></div>
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Topbar Navigation -->
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
                         <span class="logo-title">Mediatechnology & -design</span>
@@ -30,12 +34,7 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#projects">Work</a></li>
@@ -43,14 +42,41 @@
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
                 <div class="mobile-cta">
                     <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
                 </div>
             </nav>
 
-            <div class="cta-area">
-                <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
             </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
     </div>
 </header>
@@ -63,16 +89,16 @@
 
                 <div class="project-top-nav">
                     <a href="index.html#projects" class="back-link">← Back to Works</a>
-                    <span class="project-detail-tag">WEB DESIGN & DEVELOPMENT</span>
+                    <span class="project-detail-tag">BRAND IDENTITY & PRINT</span>
                 </div>
 
                 <div class="project-hero-main-group">
                     <h1 class="project-detail-title">
-                        <span>Website Ortungstechnik</span>
-                        <span>Feichtinger</span>
+                        <span>Brand System Feichtinger</span>
+                        <span>Ortungstechnik</span>
                     </h1>
                     <p class="project-detail-lead">
-                        A modern, high-performance web experience for an independent leak detection specialist — featuring instant emergency calling, automated appointment booking, clear service hierarchies, and an interactive mascot.
+                        A full corporate brand identity for an independent leak detection practice — uniting custom mark geometry, vibrant turquoise and purple color coding, tactile stationery, large-scale construction site banners, and brand guidelines.
                     </p>
                 </div>
 
@@ -84,7 +110,7 @@
                     </div>
                     <div class="meta-field">
                         <span class="meta-field-label">Discipline</span>
-                        <span class="meta-field-val">Web Design & Development</span>
+                        <span class="meta-field-val">Corporate Identity & Print</span>
                     </div>
                     <div class="meta-field">
                         <span class="meta-field-label">Year</span>
@@ -92,9 +118,7 @@
                     </div>
                     <div class="meta-field">
                         <span class="meta-field-label">Deliverables</span>
-                        <span class="meta-field-val">
-                            <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Framer Prototype & Web App ↗</a>
-                        </span>
+                        <span class="meta-field-val">Logo, Print Collateral & Brandbook</span>
                     </div>
                 </div>
 
@@ -113,63 +137,49 @@
         <!-- 2. 16:9 Hero Bild -->
         <div class="container" id="projectShowcase">
             <div class="project-hero-frame">
-                <img src="images/projects/project-website-feichtinger/1mockup-feichtinger.png" alt="Ortungstechnik Feichtinger Website Hero Mockup" data-zoomable>
+                <img src="../images/projects/project-brand-feichtinger/brand-mockup.png" alt="Feichtinger Brand Stationery Overview" data-zoomable>
             </div>
 
             <!-- 3. Zweispaltige Story -->
             <div class="project-story-grid">
                 <div class="project-story-col">
-                    <h3>Emergency Routing & Clear Service Structure</h3>
+                    <h3>The Waterdrop & Lettermark Concept</h3>
                     <p>
-                        In the event of acute water damage or pipe bursts, rapid assistance is critical. The interface prioritizes a prominent emergency call trigger that connects stressed property owners directly with the specialist with a single tap.
+                        The core emblem visualizes the precision of non-destructive acoustic and thermographic locating. The design seamlessly merges the organic silhouette of a waterdrop with the initial letter <em>A</em>, representing both Feichtinger and advanced measurement technology (Messtechnik).
                     </p>
                     <p>
-                        The core structure clearly presents non-destructive locating methods, distinct benefits, and service areas, establishing immediate trust for both private homeowners and B2B partners such as plumbers and insurance assessors.
+                        Diverging from conventional trade aesthetics, the system utilizes a vibrant combination of technical turquoise and rich violet. This color palette ensures instant high-contrast recognition across digital interfaces, print collateral, and field equipment.
                     </p>
                 </div>
 
                 <div class="project-story-col">
-                    <h3>Interactive Mascot & Direct Appointment Booking</h3>
+                    <h3>Comprehensive Print Suite & Brandbook</h3>
                     <p>
-                        Alongside a structured inquiry form, the website integrates a self-service appointment scheduler, enabling clients to book non-emergency diagnostic sessions smoothly online.
+                        The physical brand experience spans premium double-sided business cards, corporate letterheads, detailed service flyers, and heavy-duty construction site fence banners (Bauzaunbanner) engineered for maximum outdoor visibility.
                     </p>
                     <p>
-                        To give the technical trade a warm, approachable character, the custom locator mascot was animated as lightweight Lottie micro-interactions throughout the responsive layout, guiding users dynamically toward key actions.
+                        The identity is documented in an extensive Brandbook, detailing typography hierarchies, color values across CMYK, RGB, and vehicle vinyl reproduction, alongside rules for utilizing the custom illustrated locator mascot.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="interactive-browser-mockup">
-            <!-- Browser Topbar mit Fake-Controls und Adresszeile -->
-            <div class="mockup-chrome-bar">
-                <div class="chrome-dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
+        <!-- 4. Full-Bleed Masonry Galerie
+        <section class="gallery-fullbleed-wrap">
+            <div class="gallery-masonry">
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture5.jpg" alt="Business Cards & Stationery Mockup" data-zoomable>
                 </div>
-                <div class="chrome-url-bar">
-                    <span>https://ortungstechnik-feichtinger.at</span>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture1.jpg" alt="Construction Site Banner & Service Flyer" data-zoomable>
                 </div>
-                <div class="chrome-actions">
-                    <a href="https://ortungstechnik-feichtinger.framer.website/" target="_blank" rel="noopener" class="live-link-badge">
-                        Open Live Site ↗
-                    </a>
+                <div class="masonry-tile">
+                    <img src="images/projects/project-picture6.jpg" alt="Brandbook Guidelines & Color System" data-zoomable>
                 </div>
             </div>
+        </section>-->
 
-            <!-- Scrollbare Live-Website (data-lenis-prevent schützt den Scrollflow) -->
-            <div class="mockup-viewport" data-lenis-prevent>
-                <iframe
-                        src="https://ortungstechnik-feichtinger.framer.website/"
-                        title="Live Preview"
-                        loading="lazy"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Website Feichtinger) -->
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Brand Feichtinger) -->
         <section class="more-projects-section">
             <div class="container">
                 <div class="more-projects-header">
@@ -178,22 +188,6 @@
                 </div>
 
                 <div class="more-projects-grid">
-                    <a href="project-brand-feichtinger.html" class="work-card">
-                        <div class="work-card-img">
-                            <img src="images/projects/project-brand-feichtinger/brand-mockup.png" alt="Corporate Identity Feichtinger">
-                            <div class="work-overlay">
-                                <span class="view-project-btn">View Project →</span>
-                            </div>
-                        </div>
-                        <div class="work-card-content">
-                            <h3 class="work-name">Feichtinger Brand Identity</h3>
-                            <div class="work-meta-right">
-                                <span class="work-tag">Corporate Identity</span>
-                                <span class="work-year">2026</span>
-                            </div>
-                        </div>
-                    </a>
-
                     <a href="project-motion-feichtinger.html" class="work-card">
                         <div class="work-card-img">
                             <lottie-player
@@ -216,6 +210,22 @@
                             </div>
                         </div>
                     </a>
+
+                    <a href="project-ff-mettmach.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="../images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">FF Mettmach Media & Identity</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Print & Social</span>
+                                <span class="work-year">since 2022</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -232,7 +242,7 @@
     <div class="container footer-container">
         <div class="footer-left">
             <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
-                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
         </div>
@@ -253,6 +263,6 @@
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>

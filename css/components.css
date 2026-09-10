@@ -1108,3 +1108,138 @@ body.hero-instant-view .anim-expand-btn .btn-pill-label {
     border-color: var(--color-petrol);
     transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   MINIMAL LANGUAGE SWITCHER (DE | EN)
+   ========================================================================== */
+.topbar-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    user-select: none;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 500; /* Identische Schriftstärke, nicht fett */
+    color: #9C9890;   /* Schlichtes Grau für inaktiv */
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: var(--color-text-dark, #181716);
+}
+
+.lang-btn.is-active {
+    color: var(--btn-dark-teal, #0D5C63); /* Exakt der selbe Türkiston wie der CTA-Button */
+    cursor: default;
+}
+
+.lang-divider {
+    color: #C2BCB2; /* Zarter grauer Trennstrich */
+    font-weight: 300;
+    font-size: 0.82rem;
+    line-height: 1;
+}
+
+/* Mobile-Reihe im Menü standardmäßig auf Desktop verstecken */
+.mobile-lang-row {
+    display: none;
+}
+
+/* ==========================================================================
+   MOBILE MENÜ POSITIONIERUNG
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Switcher aus der oberen Kopfzeile entfernen */
+    .desktop-lang-switch {
+        display: none !important;
+    }
+
+    /* Switcher innerhalb des Menü-Dropdowns einblenden */
+    .mobile-lang-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 0.25rem;
+    }
+
+    .mobile-lang-row .lang-switch {
+        font-size: 0.95rem;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   FORM SUCCESS STATE
+   ========================================================================== */
+.form-success-card {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Der Häkchen-Kreis */
+.form-success-card .success-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--color-petrol, #0D5C63);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 8px 24px rgba(13, 92, 99, 0.25);
+}
+
+/* Überschrift "Nachricht gesendet!" */
+.form-success-card .success-title {
+    font-family: "Clash Display", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F6F4EF;
+    margin: 0 0 0.6rem 0;
+}
+
+/* Fließtext darunter */
+.form-success-card .success-text {
+    font-family: "Clash Grotesk", system-ui, sans-serif;
+    color: #A6A29A;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 380px;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

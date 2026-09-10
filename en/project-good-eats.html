@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sandra Fischer">
-    <meta name="description" content="3D Spatial Design & Architectural Modeling by Sandra Fischer">
+    <meta name="description" content="Good Eats Organic Restaurant Brand Identity by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Spatial Design | Sandra Fischer</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Good Eats Brand Identity | Sandra Fischer</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="project-detail-page">
 
@@ -14,13 +14,17 @@
 <div class="custom-cursor" id="customCursor"></div>
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Topbar Navigation -->
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
                         <span class="logo-title">Mediatechnology & -design</span>
@@ -28,12 +32,7 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#projects">Work</a></li>
@@ -41,14 +40,41 @@
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
                 <div class="mobile-cta">
                     <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
                 </div>
             </nav>
 
-            <div class="cta-area">
-                <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
             </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
     </div>
 </header>
@@ -61,16 +87,16 @@
 
                 <div class="project-top-nav">
                     <a href="index.html#projects" class="back-link">← Back to Works</a>
-                    <span class="project-detail-tag">3D DESIGN & SPATIAL MODELING</span>
+                    <span class="project-detail-tag">BRAND IDENTITY & PACKAGING</span>
                 </div>
 
                 <div class="project-hero-main-group">
                     <h1 class="project-detail-title">
-                        <span>The Alpine Sanctuary</span>
-                        <span>& 3D Explorations</span>
+                        <span>Good Eats Organic</span>
+                        <span>Restaurant Identity</span>
                     </h1>
                     <p class="project-detail-lead">
-                        A high-immersion architectural wellness retreat modeled and rendered entirely in Blender — exploring atmospheric lighting contrasts, material tactile physics, and custom asset development.
+                        An academic concept identity created at HTL Braunau — developing a modern brand system for a healthy food franchise, uniting custom mark typography, organic color coding, corporate stationery, and apparel mockups.
                     </p>
                 </div>
 
@@ -78,19 +104,19 @@
                 <div class="project-meta-strip">
                     <div class="meta-field">
                         <span class="meta-field-label">Context</span>
-                        <span class="meta-field-val">FH Hagenberg</span>
+                        <span class="meta-field-val">HTL Braunau</span>
                     </div>
                     <div class="meta-field">
                         <span class="meta-field-label">Discipline</span>
-                        <span class="meta-field-val">3D Spatial Design</span>
+                        <span class="meta-field-val">Brand Identity & Print</span>
                     </div>
                     <div class="meta-field">
-                        <span class="meta-field-label">Timeline</span>
-                        <span class="meta-field-val">WS 2025/26</span>
+                        <span class="meta-field-label">Year</span>
+                        <span class="meta-field-val">2023</span>
                     </div>
                     <div class="meta-field">
                         <span class="meta-field-label">Deliverables</span>
-                        <span class="meta-field-val">Lighting, Assets & Renders</span>
+                        <span class="meta-field-val">Logo, Stationery & Merch</span>
                     </div>
                 </div>
 
@@ -109,119 +135,81 @@
         <!-- 2. Erst beim Scrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
         <div class="container" id="projectShowcase">
             <div class="project-hero-frame">
-                <img src="images/projects/project-3d/cozyplace/complete/night.png" alt="The Alpine Sanctuary 3D Cozy Place — Night Atmosphere" data-zoomable>
+                <img src="../images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity & Stationery Overview" data-zoomable>
             </div>
 
             <!-- 3. Zweispaltige Story -->
             <div class="project-story-grid">
                 <div class="project-story-col">
-                    <h3>The Concept: Warmth vs. Winter</h3>
+                    <h3>The Brand Concept & Mark</h3>
                     <p>
-                        <em>The Alpine Sanctuary</em> was developed as a comprehensive final project in 3D Design. The spatial concept creates tension between the freezing mountain outdoors and a safe, protective sanctuary within.
+                        Developed as a comprehensive coursework assignment in media design, <em>Good Eats</em> represents a modern dining franchise focused on organic, plant-based nutrition. The visual mark combines a chef’s hat, cutlery, and three sprouting leaves into an iconic silhouette that doubles as a growing tree to symbolize natural vitality.
                     </p>
                     <p>
-                        Anchored around a custom marble hot tub situated by a floor-to-ceiling panoramic window, the scene balances rustic stone masonry, heavy timber ceiling beams, an open wood fireplace, and an integrated rain shower.
+                        Anchored by the claim <em>„Where Flavor and Health Unite“</em>, the system pairs natural forest and leaf greens with neutral stone tones and crisp yellow accents to project warmth, cleanliness, and culinary quality.
                     </p>
                 </div>
 
                 <div class="project-story-col">
-                    <h3>Materiality, Sculpting & Lighting</h3>
+                    <h3>Typography, Print & Merchandise</h3>
                     <p>
-                        From initial floor plan sketches to final Cycles rendering, each asset was custom built. Pillar candles were crafted with organic wax melting profiles via digital sculpting, and stone texture displacement maps provide tactile physical depth.
+                        The geometric sans-serif typeface family <em>Barlow</em> (specifically <em>Barlow Semi Condensed</em>) was chosen for its clean, contemporary rhythm and high legibility across menus, packaging, and digital signage.
                     </p>
                     <p>
-                        Atmospheric lighting utilizes volumetric warmth from the fireplace and glowing candle wicks set in direct contrast against the cool winter exterior.
+                        The identity extends across a full corporate collateral suite, including double-sided business cards, letterheads, branded envelopes, seasonal social media promotional campaign layouts, and embroidered merchandise concepts for caps and hoodies.
                     </p>
                 </div>
             </div>
 
-            <!-- 4. Die 5 Core Asset Breakdown Cards (Alle mit Klick-Vergrößerung) -->
-            <div class="asset-5-grid">
-                <!-- 01 Whirlpool -->
+            <!-- 4. Die 4 Core Deliverable Cards (Mit Klick-Vergrößerung) -->
+            <div class="asset-4-grid">
+                <!-- 01 Mark -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/1_Pool/top.png" alt="Marble Whirlpool 3D Asset Render" data-zoomable>
+                        <img src="../images/projects/project-good-eats/logo-green.png" alt="Good Eats Wordmark & Icon Design" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>01. Whirlpool</h4>
-                        <p>Sunken tub & frame</p>
+                        <h4>01. Mark & Identity</h4>
+                        <p>Tree-sprout emblem & Barlow type</p>
                     </div>
                 </div>
 
-                <!-- 02 Rain Shower -->
+                <!-- 02 Stationery -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/2_Shower/front2.png" alt="Stone Rain Shower 3D Asset Render" data-zoomable>
+                        <img src="../images/projects/project-good-eats/Business%20Card%20Mockup1.png" alt="Good Eats Business Cards" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>02. Rain Shower</h4>
-                        <p>Chrome & fluid physics</p>
+                        <h4>02. Stationery Set</h4>
+                        <p>Embossed cards & letterheads</p>
                     </div>
                 </div>
 
-                <!-- 03 Fireplace -->
+                <!-- 03 Social Promo -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/3_Fireplace/front.png" alt="Masonry Fireplace 3D Asset Render" data-zoomable>
+                        <img src="../images/projects/project-good-eats/instagrampost.png" alt="Social Media Campaign Graphics" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>03. Fireplace</h4>
-                        <p>Stacked wood masonry</p>
+                        <h4>03. Social Campaigns</h4>
+                        <p>Seasonal promo posts & layouts</p>
                     </div>
                 </div>
 
-                <!-- 04 Lantern -->
+                <!-- 04 Merchandise -->
                 <div class="motion-card">
                     <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/4_Lantern/front.png" alt="Silver Wall Lantern 3D Asset Render" data-zoomable>
+                        <img src="../images/projects/project-good-eats/hoodies.png" alt="Apparel & Merchandise Staging" data-zoomable>
                     </div>
                     <div class="motion-card-footer">
-                        <h4>04. Wall Lantern</h4>
-                        <p>Metal finish & bulb</p>
-                    </div>
-                </div>
-
-                <!-- 05 Candles -->
-                <div class="motion-card">
-                    <div class="motion-media-placeholder">
-                        <img src="images/projects/project-3d/cozyplace/5_candles/front1.png" alt="Sculpted Candles 3D Asset Render" data-zoomable>
-                    </div>
-                    <div class="motion-card-footer">
-                        <h4>05. Candles</h4>
-                        <p>Subsurface scattering</p>
+                        <h4>04. Merchandising</h4>
+                        <p>Screen-printed hoodies & caps</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 5. Full-Bleed Masonry Galerie (Weitere Renderings & Semesterübungen) -->
-        <section class="gallery-fullbleed-wrap">
-            <div class="gallery-masonry">
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/cozyplace/complete/day.png" alt="The Alpine Sanctuary 3D Cozy Place — Daylight Mood" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/cozyplace/complete/wireframes.png" alt="The Alpine Sanctuary 3D Cozy Place — Topology Wireframe" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/highpoly-nightstand/front4.png" alt="Wooden Nightstand 3D Furniture Render" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/highpoly_soap/front.png" alt="High Poly Bathroom Soap Dispenser Set" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/highpoly-nightstand/ABOVE3.png" alt="Stylized Low Poly Castle Front Perspective" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/castle/n1.png" alt="Stylized Low Poly Castle Side Perspective" data-zoomable>
-                </div>
-                <div class="masonry-tile">
-                    <img src="images/projects/project-3d/castle/neu.png" alt="Stylized Low Poly Castle Isometric Perspective" data-zoomable>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. More Projects (Kuratierte 2er-Reihe chronologisch nach 3D) -->
+        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Good Eats) -->
         <section class="more-projects-section">
             <div class="container">
                 <div class="more-projects-header">
@@ -230,25 +218,9 @@
                 </div>
 
                 <div class="more-projects-grid">
-                    <a href="project-good-eats.html" class="work-card">
-                        <div class="work-card-img">
-                            <img src="images/projects/project-good-eats/Stationery_Mockup_GoodEats.png" alt="Good Eats Brand Identity">
-                            <div class="work-overlay">
-                                <span class="view-project-btn">View Project →</span>
-                            </div>
-                        </div>
-                        <div class="work-card-content">
-                            <h3 class="work-name">Good Eats Brand Identity</h3>
-                            <div class="work-meta-right">
-                                <span class="work-tag">Brand & Print</span>
-                                <span class="work-year">2023</span>
-                            </div>
-                        </div>
-                    </a>
-
                     <a href="project-floral-elegance.html" class="work-card">
                         <div class="work-card-img">
-                            <img src="images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Editorial Photography">
+                            <img src="../images/projects/project-floral-elegance/hose.png" alt="Floral Elegance Editorial Photography">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
@@ -261,13 +233,29 @@
                             </div>
                         </div>
                     </a>
+
+                    <a href="project-color-portraits.html" class="work-card">
+                        <div class="work-card-img">
+                            <img src="../images/projects/project-color-portraits/Silvio.jpg" alt="Dual-Tone Studio Portrait Series">
+                            <div class="work-overlay">
+                                <span class="view-project-btn">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-name">Dual-Tone Studio Portraits</h3>
+                            <div class="work-meta-right">
+                                <span class="work-tag">Photography</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
     </article>
 </main>
 
-<!-- Lightbox Modal Container (Ohne X-Button, Klick schließt) -->
+<!-- Lightbox Modal Container (Click anywhere to close) -->
 <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
     <div class="lightbox-content-wrap" id="lightboxContent"></div>
 </div>
@@ -277,7 +265,7 @@
     <div class="container footer-container">
         <div class="footer-left">
             <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
-                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
         </div>
@@ -298,6 +286,6 @@
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>

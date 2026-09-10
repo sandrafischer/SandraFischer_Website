@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sandra Fischer">
-    <meta name="description" content="Corporate Brand Identity System for Ortungstechnik Feichtinger by Sandra Fischer">
+    <meta name="description" content="FF Mettmach Media & Visual Identity by Sandra Fischer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feichtinger Brand Identity | Sandra Fischer</title>
-    <link rel="stylesheet" href="css/main.css">
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>FF Mettmach | Sandra Fischer</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="project-detail-page">
 
@@ -16,13 +14,17 @@
 <div class="custom-cursor" id="customCursor"></div>
 <div class="page-transition" id="pageTransition"></div>
 
-<!-- Topbar Navigation -->
+<!-- ==========================================================================
+     HEADER / STICKY TOPBAR NAVIGATION (SUBPAGES)
+     ========================================================================== -->
 <header>
     <div class="topbar-container">
         <div class="topbar" id="home">
+
+            <!-- 1. Logo & Name links -->
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
+                    <img src="../images/logo.svg" alt="Sandra Fischer Logo" class="nav-logo">
                     <div class="logo-text">
                         <span class="logo-name">Sandra Fischer</span>
                         <span class="logo-title">Mediatechnology & -design</span>
@@ -30,12 +32,7 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <!-- 2. Navigation Links Mitte -->
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#projects">Work</a></li>
@@ -43,60 +40,90 @@
                     <li><a href="index.html#aboutme">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+
+                <!-- Sprach-Switcher auf Mobile im Menü -->
+                <div class="mobile-lang-row">
+                    <div class="lang-switch" aria-label="Language selection">
+                        <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                        <span class="lang-divider">|</span>
+                        <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                    </div>
+                </div>
+
                 <div class="mobile-cta">
                     <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
                 </div>
             </nav>
 
-            <div class="cta-area">
-                <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+            <!-- 3. Desktop CTA-Button & Switcher rechts -->
+            <div class="topbar-actions-right">
+                <div class="lang-switch desktop-lang-switch" aria-label="Language selection">
+                    <a href="?lang=de" class="lang-btn" data-lang="de">DE</a>
+                    <span class="lang-divider">|</span>
+                    <a href="?lang=en" class="lang-btn is-active" data-lang="en">EN</a>
+                </div>
+
+                <div class="cta-area">
+                    <a href="index.html#contact" class="btn-cta">Get in Touch →</a>
+                </div>
             </div>
+
+            <!-- 4. Hamburger Button ganz rechts -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
     </div>
 </header>
 
 <main>
     <article>
+        <!-- 1. Text & Meta-Bar (dieser Teil fadet beim Scrollen aus) -->
         <!-- 1. Monumentaler Full-Height Hero Screen -->
         <section class="project-detail-hero" id="projectHeroContent">
             <div class="container hero-container-flex">
 
+                <!-- Top Nav Bar -->
                 <div class="project-top-nav">
                     <a href="index.html#projects" class="back-link">← Back to Works</a>
-                    <span class="project-detail-tag">BRAND IDENTITY & PRINT</span>
+                    <span class="project-detail-tag">BRANDING, PRINT & SOCIAL MEDIA</span>
                 </div>
 
+                <!-- Monumentaler Titelblock -->
                 <div class="project-hero-main-group">
                     <h1 class="project-detail-title">
-                        <span>Brand System Feichtinger</span>
-                        <span>Ortungstechnik</span>
+                        <span>FF Mettmach</span>
+                        <span>Visual Identity</span>
                     </h1>
                     <p class="project-detail-lead">
-                        A full corporate brand identity for an independent leak detection practice — uniting custom mark geometry, vibrant turquoise and purple color coding, tactile stationery, large-scale construction site banners, and brand guidelines.
+                        Long-term creative direction and media management for the local volunteer fire department — uniting annual event identity systems, large-scale print banners, social media curation, and active deployment photography.
                     </p>
                 </div>
 
-                <!-- Meta Info Strip (4 feste Standard-Spalten) -->
+                <!-- Meta Info Strip am unteren Rand des 1. Screens -->
                 <div class="project-meta-strip">
                     <div class="meta-field">
                         <span class="meta-field-label">Client</span>
-                        <span class="meta-field-val">Ortungstechnik Feichtinger</span>
+                        <span class="meta-field-val">FF Mettmach</span>
                     </div>
                     <div class="meta-field">
-                        <span class="meta-field-label">Discipline</span>
-                        <span class="meta-field-val">Corporate Identity & Print</span>
+                        <span class="meta-field-label">Role</span>
+                        <span class="meta-field-val">Volunteer & Media Lead</span>
                     </div>
                     <div class="meta-field">
-                        <span class="meta-field-label">Year</span>
-                        <span class="meta-field-val">2026</span>
+                        <span class="meta-field-label">Timeline</span>
+                        <span class="meta-field-val">since 2022</span>
                     </div>
                     <div class="meta-field">
-                        <span class="meta-field-label">Deliverables</span>
-                        <span class="meta-field-val">Logo, Print Collateral & Brandbook</span>
+                        <span class="meta-field-label">Scope</span>
+                        <span class="meta-field-val">Event CI, Print, Photo, Social</span>
                     </div>
                 </div>
 
-                <!-- Scroll Down Indicator -->
+                <!-- Scroll Down Arrow -->
                 <div class="hero-scroll-indicator">
                     <a href="#projectShowcase" class="scroll-arrow-link" aria-label="Scroll down">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -108,52 +135,52 @@
             </div>
         </section>
 
-        <!-- 2. 16:9 Hero Bild -->
+        <!-- 2. Erst beim Runterscrollen sichtbar: 16:9 Hero Bild (ohne Stroke) -->
         <div class="container" id="projectShowcase">
             <div class="project-hero-frame">
-                <img src="images/projects/project-brand-feichtinger/brand-mockup.png" alt="Feichtinger Brand Stationery Overview" data-zoomable>
+                <img src="../images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Social Media Grid & Visual Direction" data-zoomable>
             </div>
 
             <!-- 3. Zweispaltige Story -->
             <div class="project-story-grid">
                 <div class="project-story-col">
-                    <h3>The Waterdrop & Lettermark Concept</h3>
+                    <h3>Event Identity & Large-Scale Print</h3>
                     <p>
-                        The core emblem visualizes the precision of non-destructive acoustic and thermographic locating. The design seamlessly merges the organic silhouette of a waterdrop with the initial letter <em>A</em>, representing both Feichtinger and advanced measurement technology (Messtechnik).
+                        A central focus is shaping a recognizable visual language for traditional recurring events. For the annual <em>Frühschoppen</em>, I developed a distinct, modular design system applied across flyers, tickets, and massive site-fence mesh banners displayed at the station.
                     </p>
                     <p>
-                        Diverging from conventional trade aesthetics, the system utilizes a vibrant combination of technical turquoise and rich violet. This color palette ensures instant high-contrast recognition across digital interfaces, print collateral, and field equipment.
+                        This consistency extends to community events such as the <em>Dämmerschoppen</em>, the youth group's <em>Planenrutschen</em>, and the annual <em>Silvesterglühweinstand</em>.
                     </p>
                 </div>
 
                 <div class="project-story-col">
-                    <h3>Comprehensive Print Suite & Brandbook</h3>
+                    <h3>Social Media & Deployment Photography</h3>
                     <p>
-                        The physical brand experience spans premium double-sided business cards, corporate letterheads, detailed service flyers, and heavy-duty construction site fence banners (Bauzaunbanner) engineered for maximum outdoor visibility.
+                        Managing both Instagram and Facebook channels involves end-to-end editorial planning: concepting posts, writing authentic captions, and publishing real-time updates.
                     </p>
                     <p>
-                        The identity is documented in an extensive Brandbook, detailing typography hierarchies, color values across CMYK, RGB, and vehicle vinyl reproduction, alongside rules for utilizing the custom illustrated locator mascot.
+                        Being an active brigade member enables authentic photography directly during training drills and emergency response operations, highlighting modern volunteer fire work with respect and emotional resonance.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- 4. Full-Bleed Masonry Galerie
+        <!-- 5. Full-Bleed Masonry Galerie (Rand zu Rand) -->
         <section class="gallery-fullbleed-wrap">
             <div class="gallery-masonry">
                 <div class="masonry-tile">
-                    <img src="images/projects/project-picture5.jpg" alt="Business Cards & Stationery Mockup" data-zoomable>
+                    <img src="../images/projects/project-ff-mettmach/Flyer%20Mockup.png" alt="FF Mettmach Event Flyer Mockup" data-zoomable>
                 </div>
                 <div class="masonry-tile">
-                    <img src="images/projects/project-picture1.jpg" alt="Construction Site Banner & Service Flyer" data-zoomable>
+                    <img src="../images/projects/project-ff-mettmach/Speisekarte%20Mockup.png" alt="FF Mettmach Menu & Pricing Card Mockup" data-zoomable>
                 </div>
                 <div class="masonry-tile">
-                    <img src="images/projects/project-picture6.jpg" alt="Brandbook Guidelines & Color System" data-zoomable>
+                    <img src="../images/projects/project-ff-mettmach/Banner_quer.png" alt="FF Mettmach Outdoor Event Banner" data-zoomable>
                 </div>
             </div>
-        </section>-->
+        </section>
 
-        <!-- 5. More Projects (Kuratierte 2er-Reihe chronologisch nach Brand Feichtinger) -->
+        <!-- 6. More Projects (Kuratierte 2er-Reihe im Original-Look) -->
         <section class="more-projects-section">
             <div class="container">
                 <div class="more-projects-header">
@@ -162,41 +189,36 @@
                 </div>
 
                 <div class="more-projects-grid">
-                    <a href="project-motion-feichtinger.html" class="work-card">
+                    <!-- Next Project 1: ALUFEFA -->
+                    <a href="project-alufefa.html" class="work-card span-6" data-category="brand">
                         <div class="work-card-img">
-                            <lottie-player
-                                    src="images/projects/project-motion/search.json"
-                                    background="transparent"
-                                    speed="1"
-                                    style="width: 100%; height: 100%; position: relative; left:70px; top: 20px"
-                                    loop
-                                    autoplay>
-                            </lottie-player>
+                            <img src="../images/projects/project-alufefa/Insta-mockup-alufefa.png" alt="Corporate Identity ALUFEFA">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
                         </div>
                         <div class="work-card-content">
-                            <h3 class="work-name">Interactive Motion & 2D</h3>
+                            <h3 class="work-name">Corporate Identity ALUFEFA</h3>
                             <div class="work-meta-right">
-                                <span class="work-tag">Motion Design</span>
-                                <span class="work-year">2026</span>
+                                <span class="work-tag">Branding & Strategy</span>
+                                <span class="work-year">2024</span>
                             </div>
                         </div>
                     </a>
 
-                    <a href="project-ff-mettmach.html" class="work-card">
+                    <!-- Next Project 2: Personal Brand -->
+                    <a href="project-self-brand.html" class="work-card span-6" data-category="brand">
                         <div class="work-card-img">
-                            <img src="images/projects/project-ff-mettmach/InstaMockup_small.png" alt="FF Mettmach Visual Identity">
+                            <img src="../images/projects/project-self-brand/Mockup.png" alt="Personal Brand & Motion Kit">
                             <div class="work-overlay">
                                 <span class="view-project-btn">View Project →</span>
                             </div>
                         </div>
                         <div class="work-card-content">
-                            <h3 class="work-name">FF Mettmach Media & Identity</h3>
+                            <h3 class="work-name">Personal Brand & Motion Kit</h3>
                             <div class="work-meta-right">
-                                <span class="work-tag">Print & Social</span>
-                                <span class="work-year">since 2022</span>
+                                <span class="work-tag">Identity & Motion</span>
+                                <span class="work-year">2026</span>
                             </div>
                         </div>
                     </a>
@@ -208,6 +230,7 @@
 
 <!-- Lightbox Modal Container -->
 <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog">
+    <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close Lightbox">✕</button>
     <div class="lightbox-content-wrap" id="lightboxContent"></div>
 </div>
 
@@ -216,7 +239,7 @@
     <div class="container footer-container">
         <div class="footer-left">
             <a href="index.html" class="footer-logo-link" aria-label="Scroll to top">
-                <img src="images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
+                <img src="../images/logo-neg.svg" alt="Sandra Fischer Logo" class="footer-logo">
             </a>
             <span class="footer-copyright">© 2026 Sandra Fischer. All rights reserved.</span>
         </div>
@@ -237,6 +260,6 @@
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>
